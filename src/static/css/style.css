@@ -6,6 +6,8 @@ footer{
     background-color: rgb(51, 56, 94);
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    display : flex;
+    justify-content: space-between;
 }
 
 
