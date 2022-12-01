@@ -1,7 +1,17 @@
+
+
 .flexbox  {
     display : flex;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .box_prejuge {
     border : solid 2px black;
+    width : 900px;
+}
+
+.image_prejuge {
+    width : 200px;
+    height : 160px;
 }
