@@ -1,4 +1,3 @@
-
 body{
 	margin: 0px;
 	padding: 0px;
@@ -23,23 +22,31 @@ header{
 header nav{
 	display: flex;
 	padding: 5px;
+	padding: 3%;
 /*	justify-content: space-around;*/
 }
 
 header nav div{
 	width: 100%;
 	text-align: center;
+	margin: auto;
 }
 
-header nav div:nth-child(1) a{
+header nav div:nth-child(1){
 	font-weight: bold;
 }
 
-header nav div:nth-child(5) a{
+header nav div:nth-child(5){
 	border: solid black 1px;
 	border-radius: 3px;
 	padding: 5px;
-	background-color: pink;
+	background-color: hotpink;
+}
+
+header nav div a{
+	vertical-align: sub;
+	font-size: 20px;
+	font-family: "Verdana";
 }
 
 .footerdiv{
