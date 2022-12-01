@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     return "hello"
 
-@app.route("/info_folder")
+@app.route("/simon")
 def prejuge():
     return render_template("info_folder/prejuge.html")
 
