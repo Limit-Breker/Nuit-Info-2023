@@ -1,3 +1,7 @@
+*{
+    border: black solid 1px;
+}
+
 footer{
     background-color: rgb(51, 56, 94);
     color: white;
@@ -6,6 +10,8 @@ footer{
     justify-content: space-around;
 }
 
-
+.leftp{
+    text-align: center;
+}
 
 
