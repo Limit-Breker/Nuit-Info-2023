@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, g, url_for, session, redirect
 import sqlite3
 import re
 
+
 app = Flask(__name__)
 app.secret_key = "test"
 
@@ -18,7 +19,17 @@ def get_db():
 
 @app.route("/")
 def index():
-    return "hello"
+    return render_template("index.html")
+
+
+@app.route("/contact.html")
+def contact():
+    return render_template("contact.html")
+
+
+@app.route("/simon")
+def prejuge():
+    return render_template("info_folder/prejuge.html")
 
 
 @app.route("/register/", methods=["GET", "POST"])
