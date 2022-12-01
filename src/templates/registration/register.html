@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Register</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		
 	</head>
 	<body>
 		<div class="register">
@@ -14,13 +14,19 @@
 				<a href="{{ url_for('register') }}" class="active">Register</a>
 			</div>
 			<form action="{{ url_for('register') }}" method="post" autocomplete="off">
-				<label for="username"><i class="fas fa-user"></i></label>
+				<label for="username">
+					<img src="https://img.icons8.com/ios-glyphs/30/null/user--v1.png"/>
+				</label>
 				<input type="text" name="username" placeholder="Username" id="username"required>
 				
-				<label for="password"><i class="fas fa-lock"></i></label>
+				<label for="password">
+					<img src="https://img.icons8.com/material-rounded/30/null/lock--v1.png"/>
+				</label>
 				<input type="password" name="password" placeholder="Password" id="password" required>
 				
-				<label for="age"><i></i></label>
+				<label for="age">
+					<img src="https://img.icons8.com/material-rounded/30/null/birthday-cake.png"/>
+				</label>
 				<input type="number" name="age" placeholder="Enter your age" id="age">
 
 				<div class="msg">{{ msg }}</div>
