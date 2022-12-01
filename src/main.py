@@ -31,6 +31,9 @@ def contact():
 def prejuge():
     return render_template("info_folder/prejuge.html")
 
+@app.route("/cartes")
+def contact():
+    return render_template("/games_folder/cartes.html")
 
 @app.route("/register/", methods=["GET", "POST"])
 def register():
