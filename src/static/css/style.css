@@ -10,6 +10,7 @@ body{
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
+	background-color: #FFF4FD;
 }
 
 a{
@@ -18,13 +19,13 @@ a{
 }
 
 a:hover{
-	color: red;
+	color: lightpink;
 }
 
 header{
 	margin: 0px;
 	padding: 0px;
-	background-color: lightpink;
+	background-color: #33385E;
 }
 
 header nav{
@@ -45,16 +46,17 @@ header nav div:nth-child(1){
 }
 
 header nav div:nth-child(5){
-	border: solid black 1px;
-	border-radius: 3px;
+	border: solid #745190 1px;
+	border-radius: 7px;
 	padding: 5px;
-	background-color: hotpink;
+	background-color: #745190;
 }
 
 header nav div a{
 	vertical-align: sub;
-	font-size: 20px;
-	font-family: "Verdana";
+	font-size: 32px;
+	font-family: "VT323";
+	color: #EE82EE;
 }
 
 .footerdiv{
@@ -64,7 +66,7 @@ header nav div a{
 footer{
     background-color: rgb(51, 56, 94);
 
-    color: violet;
+    color: rgb(246, 62, 136);
     font-family: 'VT323';
     font-size: 1.1em;
     display : flex;
