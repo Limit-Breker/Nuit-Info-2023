@@ -95,9 +95,14 @@ h1 {
 }
 
 .box_prejuge {
-    border : solid 0.1em black;
-    width : 80%;
-    margin-bottom : 3em;
+    width: auto;
+    border: solid 1px black;
+    display: inline-flex;
+    margin: 2%;
+    font-size: 14px;
+    transition-property: transform;
+    transition-duration: .4s;
+    transition-delay: 0s;
 }
 
 .image_prejuge1 {
