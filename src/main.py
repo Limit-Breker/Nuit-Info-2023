@@ -3,6 +3,7 @@ import sqlite3
 import re
 
 app = Flask(__name__)
+app.secret_key = "test"
 
 database = sqlite3.connect("data/database.db")
 DATABASE = "data/database.db"
@@ -70,5 +71,41 @@ def register():
             return redirect(url_for("index"))
 
     return render_template("registration/register.html", msg=msg)
+
+
+@app.route("/login/", methods=["GET", "POST"])
+def login():
+    # Output message if something goes wrong...
+    msg = ""
+    if (
+        request.method == "POST"
+        and "username" in request.form
+        and "password" in request.form
+    ):
+        # Create variables for easy access
+        username = request.form["username"]
+        password = request.form["password"]
+
+        database = get_db()
+        cursor = database.cursor()
+        cursor.execute(
+            "SELECT username,password FROM users WHERE username = ? AND password = ?",
+            (
+                username,
+                password,
+            ),
+        )
+        account = cursor.fetchone()
+        if account:
+            # Create session data, we can access this data in other routes
+            session["loggedin"] = True
+            session["username"] = account[0]
+            return redirect(url_for("index"))
+        else:
+            # Account doesnt exist or username/password incorrect
+            msg = "Incorrect username or password!"
+
+    return render_template("registration/login.html", msg=msg)
+
 
 app.run(host="0.0.0.0", debug=True)
