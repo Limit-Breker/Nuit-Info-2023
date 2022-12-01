@@ -33,7 +33,7 @@ def prejuge():
 
 @app.route("/cartes")
 def contact():
-    return render_template("/games_folder/cartes.html")
+    return render_template("games_folder/cartes.html")
 
 @app.route("/register/", methods=["GET", "POST"])
 def register():
