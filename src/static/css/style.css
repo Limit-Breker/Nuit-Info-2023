@@ -1,7 +1,63 @@
+
+body{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: red;
+}
+
+header{
+	margin: 0px;
+	padding: 0px;
+	background-color: lightpink;
+}
+
+header nav{
+	display: flex;
+	padding: 5px;
+/*	justify-content: space-around;*/
+}
+
+header nav div{
+	width: 100%;
+	text-align: center;
+}
+
+header nav div:nth-child(1) a{
+	font-weight: bold;
+}
+
+header nav div:nth-child(5) a{
+	border: solid black 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: pink;
+}
+
+.footerdiv{
+    background-color: rgb(15, 17, 42);
+}
+
 footer{
     background-color: rgb(51, 56, 94);
+
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    display : flex;
+    justify-content: space-between;
+}
+
+
+.leftp{
+    text-align: center;
 }
 
 h1 {
