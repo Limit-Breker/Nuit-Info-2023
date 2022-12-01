@@ -1,5 +1,5 @@
 import random
-choix = ["casserole", "", "", ""]
+choix = ["sida", "sexualite", "hepatite", "infection", "virus", "bacterie", "epidemie", "serophobie", "homophobie", "depistage", "maladie", "seropositif", "discrimination", "stigmatisation", "papillomavirus", "gonococcie", "chlamydiae", "herpes", "syphilis", "uretrite", "ulcere", "homosexuel", "penis", "vagin", "spermatozoide", "ejaculation", "penetration", "anale", "genitale", "muqueuse", "sperme", "sang", "verrue", "bouton", "ecoulement", "lesion", "cutane", "buccale", "symptome"]
 solution = random.choice(choix)
 
 tentatives = 7
@@ -13,14 +13,14 @@ print(">> Bienvenue dans le pendu <<")
 
 while tentatives > 0:
   proposition = lettres_trouvees
-  while proposition in lettres_trouvees:
+  while proposition.lower() in lettres_trouvees:
     print("\nMot à deviner : ", affichage)
     proposition = input("proposez une lettre : ")
-    if proposition in lettres_trouvees:
+    if proposition.lower() in lettres_trouvees:
         print("\n\nvous avez déjà propose cela")
 
 
-  if proposition in solution:
+  if proposition.lower() in solution:
       lettres_trouvees = lettres_trouvees + proposition
       print("-> Bien vu!")
   else:
