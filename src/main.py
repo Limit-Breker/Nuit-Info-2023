@@ -16,7 +16,7 @@ def contact():
 
 @app.route("/temoignage")
 def temoignage():
-    return render_template("temoignage.html")
+    return render_template("temoignages.html")
 
 @app.route("/simon")
 def prejuge():
