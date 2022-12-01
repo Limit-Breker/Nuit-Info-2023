@@ -9,12 +9,15 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html")
-@app.route("/contact.html")
+@app.route("/contact")
 def contact():
     return render_template("contact.html")
 
 
-
+@app.route("/temoignage")
+def contact():
+    return render_template("temoignage.html")
+    
 @app.route("/simon")
 def prejuge():
     return render_template("info_folder/prejuge.html")
