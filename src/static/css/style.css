@@ -1,0 +1,7 @@
+.flexbox  {
+    display : flex;
+}
+
+.box_prejuge {
+    border : solid 2px black;
+}
