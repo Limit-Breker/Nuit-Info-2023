@@ -1,5 +1,11 @@
-.footerdiv{
-    background-color: rgb(15, 17, 42);
+footer{
+    background-color: rgb(51, 56, 94);
     color: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Courier New, Courier, monospace';
+    display:flex;
+    justify-content: space-around;
 }
+
+
+
+
