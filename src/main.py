@@ -18,6 +18,10 @@ def contact():
 def temoignage():
     return render_template("temoignages.html")
 
+@app.route("/games")
+def games():
+    return render_template("games.html")
+
 @app.route("/simon")
 def prejuge():
     return render_template("info_folder/prejuge.html")
