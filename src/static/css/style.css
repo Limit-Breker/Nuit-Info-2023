@@ -1,3 +1,4 @@
+
 body{
 	margin: 0px;
 	padding: 0px;
@@ -43,6 +44,59 @@ header nav div:nth-child(5) a{
 
 .footerdiv{
     background-color: rgb(15, 17, 42);
+}
+*{
+    border: black solid 1px;
+}
+
+footer{
+    background-color: rgb(51, 56, 94);
+
     color: white;
-    font
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.leftp{
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.box_principale {
+    align-items: center;
+    justify-content: center;
+}
+
+.flexbox  {
+    display : flex;
+    justify-content: center;
+    margin : auto;
+}
+
+.box_prejuge {
+    border : solid 0.1em black;
+    width : 80%;
+    margin-bottom : 3em;
+}
+
+.image_prejuge1 {
+    width : 200px;
+    height : 160px;
+    margin-right : 1%;
+    display : block;
+}
+
+.image_prejuge2 {
+    width : 200px;
+    height : 160px;
+    margin-left : 1%;
+    display : block;
+}
+
+.texte_prejuge {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 }

@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>{% block title %}{% endblock %} - My Webpage</title>
     
@@ -29,22 +30,22 @@
     <div id="content">{% block content %}{% endblock %}</div>
     
     <footer>
-      	<div class="footerdiv">
-			<table>
-       			 <tr>
-         			 <td>Gagneux Max</td>
-         			 <td>Gikapa Christian</td>
-         			 <td>Bouissou Romain</td>
-          			 <td>Armand Simon</td>
-       			 </tr>
-       			 <tr>
-          			 <td>Gribanova Sofia</td>
-          			 <td>Longuet Cédric</td>
-         			 <td></td>
-         			 <td></td>
-      			  </tr>
-			</table>
-		</div>
+			
+			<div>
+				<h3>Liens</h3>
+				
+			</div>
+			<div>
+				<h3 class="leftp">à propos</h3>
+				<p>GAGNEUX Max / GIKAPA Christian</p>
+				<p>ARMAND Simon / MONKONKALA Brice</p>
+				<p>BOUISSOU Romain / BOUDIN Raphael</p>
+				<p>LONGUET Cédric / GRIBANOVA Sofia</p>
+			</div>
+			<div>
+				<h3>Nous contacter</h3>
+
+			</div>
     </footer>
     
   </body>
