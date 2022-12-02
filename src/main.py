@@ -16,7 +16,15 @@ def contact():
 
 @app.route("/temoignage")
 def temoignage():
-    return render_template("temoignages.html")
+    return render_template("info_folder/temoignages.html")
+
+@app.route("/games")
+def games():
+    return render_template("games.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 @app.route("/simon")
 def prejuge():
