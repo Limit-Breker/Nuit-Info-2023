@@ -3,7 +3,103 @@
 {% block head %}
 {% endblock %}
 {% block content %}
-  <h1>Index</h1>
-  <p class="important">
-    Welcome on my awesome homepage.
+<div class="main">
+  <div id="quiz"></div>
+  <button id="submit">Résultats</button>
+  <div id="results"></div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" language="javascript">
+  console.log("{{url_for('static',filename='js/quizz.json')}}");
+  import liste from 'src/js/quizz.json' assert {type: 'json'};
+
+  var quizContainer = document.getElementById('quiz');
+  var resultsContainer = document.getElementById('results');
+  var submitButton = document.getElementById('submit');
+
+  generateQuiz(liste, quizContainer, resultsContainer, submitButton);
+
+  function generateQuiz(liste, quizContainer, resultsContainer, submitButton) {
+
+    function showQuestions(liste, quizContainer) {
+      // we'll need a place to store the output and the answer choices
+      var output = [];
+      var answers;
+
+      // for each question...
+      for (var i = 0; i < liste.questions.length; i++) {
+
+        // first reset the list of answers
+        answers = [];
+
+        // for each available answer...
+        for (letter in liste.questions[i].answers) {
+
+          // ...add an html radio button
+          answers.push(
+            '<label>'
+            + '<input type="radio" name="question' + i + '" value="' + letter + '">'
+            + letter + ': '
+            + liste.questions[i].answers[letter]
+            + '</label>'
+          );
+        }
+
+        // add this question and its answers to the output
+        output.push(
+          '<div class="question">' + liste.questions[i].question + '</div>'
+          + '<div class="answers">' + answers.join('') + '</div>'
+        );
+      }
+
+      // finally combine our output list into one string of html and put it on the page
+      quizContainer.innerHTML = output.join('');
+    }
+
+
+    function showResults(liste, quizContainer, resultsContainer) {
+
+      // gather answer containers from our quiz
+      var answerContainers = quizContainer.querySelectorAll('.answers');
+
+      // keep track of user's answers
+      var userAnswer = '';
+      var numCorrect = 0;
+
+      // for each question...
+      for (var i = 0; i < liste.questions.length; i++) {
+
+        // find selected answer
+        userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
+
+        // if answer is correct
+        if (userAnswer === questions[i].correctAnswer) {
+          // add to the number of correct answers
+          numCorrect++;
+
+          // color the answers green
+          answerContainers[i].style.color = 'lightgreen';
+        }
+        // if answer is wrong or blank
+        else {
+          // color the answers red
+          answerContainers[i].style.color = 'red';
+        }
+      }
+
+      // show number of correct answers out of total
+      resultsContainer.innerHTML = numCorrect + ' out of ' + liste.questions.length;
+    }
+
+    // show questions right away
+    showQuestions(liste, quizContainer);
+
+    // on submit, show results
+    submitButton.onclick = function () {
+      showResults(liste, quizContainer, resultsContainer);
+    }
+  }
+</script>
 {% endblock %}
