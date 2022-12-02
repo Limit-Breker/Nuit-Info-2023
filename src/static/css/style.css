@@ -298,3 +298,22 @@ h1 {
 h3{
     padding-left: 2%;
 }
+
+.game-list{
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    max-width: calc(3*(250px + 20px));
+}
+
+.game{
+    margin: 10px;
+    background-color: red;
+    width:250px;
+    height: 100px;
+}
+
+.game-description{
+    display: none;
+}
+
