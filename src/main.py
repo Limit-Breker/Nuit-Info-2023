@@ -34,4 +34,8 @@ def prejuge():
 def contraception():
     return render_template("info_folder/contraception.html")
 
+@app.route("/ist")
+def ist():
+    return render_template("info_folder/ist.html")
+
 app.run(host="0.0.0.0", debug=True)
