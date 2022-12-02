@@ -1,23 +1,30 @@
 import random
+
 #variable pour jouer et rejouer
 jouer = "oui"
+#liste des questions deja pose
+questionPose = []
 
 #while jouer = true
 while jouer.lower() == "oui" :
-    #liste des questions deja pose
-    questionPose = []
     while True :
+        print("pute",len(questionPose))
         if len(questionPose) == 0 :
             #random pour trouver la question et la reponse dans des tableaux
             randomQuestion = random.randint(0, 19)
             break
-        else :
-            c = len(questionPose)
-            while c > 0 :
+        elif len(questionPose) < 20 :
+            c = len(questionPose)-1
+            while c >= 0 :
                 if questionPose[c] == randomQuestion :
                     randomQuestion = random.randint(0, 19)
                 else :
-                    c=c+1
+                    c=c-1
+            break
+        else :
+            print("Je n'ai plus de questions, je recommence la liste")
+            questionPose = []
+            randomQuestion = random.randint(0, 19)
             break
     questionPose.append(randomQuestion)
 
@@ -36,10 +43,8 @@ while jouer.lower() == "oui" :
     #liste des reponses
     reponse = [38400000, 2000000, 650000, 6000000, 28700000, 54, 49, 5013, 1062, 65000, 2600000, 2300000, 2400000, 43, 54, 85, 77, 30, 75, 71]
     
-
-
     #demande de la reponse de l'utilisateur
-    userReponse = int(input(question[randomQuestion]))
+    userReponse = int(input(f"{question[randomQuestion]}({reponse[randomQuestion]})"))
     #tant que la reponse de l'utilisateur est different de la reponse
     while userReponse != reponse[randomQuestion] :
         if userReponse < reponse[randomQuestion] :
