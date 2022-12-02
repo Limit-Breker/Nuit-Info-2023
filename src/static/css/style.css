@@ -307,3 +307,9 @@ h3{
 .textdeco:hover{
     color: violet;
 }
+
+@media only screen and (max-width:350px){
+    footer{
+        font-size: 0.8em;
+    }
+}
