@@ -37,11 +37,6 @@ def games():
     return render_template("games.html")
 
 
-@app.route("/login")
-def login():
-    return render_template("login.html")
-
-
 @app.route("/prejuge")
 def prejuge():
     return render_template("info_folder/prejuge.html")
