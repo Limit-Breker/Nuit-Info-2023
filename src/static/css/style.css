@@ -157,7 +157,7 @@ footer{
 
 }
 
-h1 {
+h1{
     font-size: 2.5em;
     text-align: center;
 }
@@ -313,7 +313,7 @@ h3{
     color: violet;
 }
 
-@media only screen and (max-width:350px){
+@media only screen and (min-width:824px){
     footer{
         font-size: 0.8em;
     }
