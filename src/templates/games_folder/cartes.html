@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
+<div class="car_main">
+
+    <div class="car_colonne" id="liste">
+        <div id="grille">
+            <div class="car_case" id="case0"></div>
+            <div class="car_case" id="case1"></div>
+            <div class="car_case" id="case2"></div>
+            <div class="car_case" id="case3"></div>
+
+            <div class="car_case" id="case4"></div>
+            <div class="car_case" id="case5"></div>
+            <div class="car_case" id="case6"></div>
+            <div class="car_case" id="case7"></div>
+
+            <div class="car_case" id="case8"></div>
+            <div class="car_case" id="case9"></div>
+            <div class="car_case" id="case10"></div>
+            <div class="car_case" id="case11"></div>
+
+            <div class="car_case" id="case12"></div>
+            <div class="car_case" id="case13"></div>
+            <div class="car_case" id="case14"></div>
+            <div class="car_case" id="case15"></div>
+        </div>
+        <span>Votre score :<br />
+            <div id="scrore"><strong>20</strong>/20</div>
+            <input type="button" class="car_btn" value="Nouvelle partie" onClick="window.location.reload();" />
+        </span>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" language="javascript">
+    var nb_clics = 0;
+    var mini1 = ""; var mini2 = "";
+    var case1 = ""; var case2 = "";
+    var img_ok = 0; var nb_erreurs = 0;
+    var le_score = 0;
+    var depart = false;
+
+    generation();
+
+    var attente = setTimeout(function () {
+        for (var i = 0; i < 16; i++) {
+            document.getElementById('img' + i).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
+        }
+        depart = true;
+    }, 4000);
+
+    function generation() {
+        var nb_alea; var nb_img = "";
+        var test = true; var chaine = "";
+
+        for (var i = 0; i < 16; i++) {
+            while (test == true) {
+                nb_alea = Math.floor(Math.random() * 16) + 1;
+                if (chaine.indexOf("-" + nb_alea + "-") > -1)
+                    nb_alea = Math.floor(Math.random() * 16) + 1;
+                else {
+                    nb_img = Math.floor((nb_alea + 1) / 2);
+                    //document.getElementById('case' + i).innerHTML = "<img style='cursor:pointer;' id='img'" + i + "src={{url_for('static',filename='img/cartes/mini'"+nb_img+"'.png')}} onClick='verifier(\"img" + i + "\",\"mini" + nb_img + "\")' alt='' />";
+                    document.getElementById('case' + i).innerHTML = `<img style='cursor:pointer;' id='img${i}' src='/static/img/cartes/mini${nb_img}.png' onClick='verifier(\"img${i}\",\"mini${nb_img}\")' alt='' />`;
+                    chaine += "-" + nb_alea + "-";
+                    test = false;
+                }
+            }
+            test = true;
+        }
+    }
+
+    function verifier(limg, source) {
+        if (depart == true) {
+            nb_clics++;
+            document.getElementById(limg).src = "/static/img/cartes/"+source+".png";
+            if (nb_clics == 1) {
+                mini1 = source;
+                case1 = limg;
+            }
+            else {
+                mini2 = source;
+                case2 = limg;
+
+                if (case1 != case2) {
+                    depart = false;
+                    if (mini1 != mini2) {
+                        var attente = setTimeout(function () {
+                            document.getElementById(case1).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
+                            document.getElementById(case2).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
+                            depart = true;
+                            nb_clics = 0;
+                            nb_erreurs++;                            document.getElementById(case2).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
+                            depart = true;
+                            nb_clics = 0;
+                            nb_erreurs++;
+                            if (nb_erreurs < 11) le_score = 20 - nb_erreurs;
+                            document.getElementById("scrore").innerHTML = "<strong>" + le_score + "</strong>/20";
+                        }, 1000);
+                    }
+                    else {
+                        depart = true;
+                        nb_clics = 0;
+                        img_ok += 2;
+                        if (img_ok == 16) {
+                            document.getElementById("scrore").innerHTML = "<strong>" + le_score + "</strong>/10";
+                        }
+                    }
+                }
+                else {
+                    if (nb_clics == 2) nb_clics = 1;
+                }
+            }
+        }
+    }
+</script>
+{% endblock %}
