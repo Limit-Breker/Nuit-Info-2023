@@ -132,4 +132,18 @@ def logout():
 
     return "bye"
 
+
+@app.route("/games/")
+def game():
+    is_logged = session.get("loggedin", None)
+    if is_logged:
+        user = {
+            "username": session["username"],
+            "pp": "",
+            "level": {"bar": 7, "lvl": 1},
+        }
+        return render_template("games_folder/index.html", user=user)
+    return redirect(url_for("login"))
+
+
 app.run(host="0.0.0.0", debug=True)
