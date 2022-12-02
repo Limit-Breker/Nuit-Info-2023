@@ -35,6 +35,10 @@ def prejuge():
 def cartes():
     return render_template("games_folder/cartes.html")
 
+@app.route("/quizz")
+def quizz():
+    return render_template("games_folder/quizz.html")
+
 @app.route("/register/", methods=["GET", "POST"])
 def register():
     # Output message if something goes wrong...

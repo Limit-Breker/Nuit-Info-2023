@@ -41,6 +41,12 @@ header nav div:nth-child(5) a {
     background-color: pink;
 }
 
+.main {
+    margin: auto;
+    max-width: 900px;
+    align-content: center;
+}
+
 .footerdiv {
     background-color: rgb(15, 17, 42);
 }
@@ -163,11 +169,4 @@ h1 {
     height: 100%;
     object-fit: contain;
     transform: scale(2);
-}
-
-
-.car_main {
-    margin: auto;
-    max-width: 900px;
-    align-content: center;
 }
