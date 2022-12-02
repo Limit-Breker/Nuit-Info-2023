@@ -316,29 +316,6 @@ h1{
     padding: 1%;
 }
 
-.page_presentation {
-    padding : 20px;
-    margin : 10px;
-  }
-
-  .vert {
-    background-color: rgb(75, 111, 22);
-    padding : 50px;
-  }
-
-  .bleu {
-    background-color: rgb(47, 51, 156);
-  }
-
-  .jaune {
-    background-color: rgb(234, 255, 47);
-    color : #000;
-  }
-
-  .rose {
-    background-color: rgb(153, 48, 160);
-  }
-
 h3{
     font-size: 2em;
     padding-left: 2%;
@@ -412,11 +389,34 @@ h3 {
     max-width: calc(3*(250px + 20px));
 }
 
-.game{
+.game1{
     margin: 10px;
-    background-color: red;
+    background-image: url("../img/cartes/minizfondecran.png");
     width:250px;
-    height: 100px;
+    height: 250px;
+    color : #000;
+    font-size:xx-large;
+    text-align:center;
+}
+
+.game2{
+  margin: 10px;
+  background-image: url("../img/pendu.png");
+  width:250px;
+  height: 250px;
+  color : #000;
+  font-size:xx-large;
+  text-align:center;
+}
+
+.game3{
+  margin: 10px;
+  background-image: url("../img/justeprix\ \(2\).jpg");
+  width:250px;
+  height: 250px;
+  color : #000;
+  font-size:xx-large;
+  text-align:center;
 }
 
 .game-description{

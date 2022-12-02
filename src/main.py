@@ -66,6 +66,10 @@ def cartes():
 def quizz():
     return render_template("games_folder/quizz.html")
 
+@app.route("/pendu")
+def pendu():
+    return render_template("games_folder/pendu.html")
+
 
 @app.route("/register/", methods=["GET", "POST"])
 def register():
@@ -166,14 +170,12 @@ def logout():
 @app.route("/games/")
 def game():
     is_logged = session.get("loggedin", None)
-    if is_logged:
-        user = {
-            "username": session["username"],
-            "pp": "",
-            "level": {"bar": 7, "lvl": 1},
-        }
-        return render_template("games_folder/index.html", user=user)
-    return redirect(url_for("login"))
+    user = {
+        "username": "moi",
+        "pp": "",
+        "level": {"bar": 7, "lvl": 1},
+    }
+    return render_template("games_folder/index.html", user=user)
 
 
 app.run(host="0.0.0.0", debug=True)
