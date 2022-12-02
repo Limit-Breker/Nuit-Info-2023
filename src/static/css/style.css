@@ -96,7 +96,8 @@ h1 {
 
 .box_prejuge {
     width: 80%;
-    border: solid 1px black;
+    border: solid 5px violet;
+    border-radius: 10px;
     display: inline-flex;
     font-size: 14px;
     transition-property: transform;
@@ -188,3 +189,4 @@ h1 {
   .box_accueil {
     margin:2.1%;
   }
+
