@@ -10,19 +10,19 @@
     <header>
       <nav>
         <div>
-          <a href="games.html">Jouer</a>
+          <a href="{{ url_for('games') }}">Jouer</a>
         </div>
         <div>
           <a href="index.html">Infos</a>
         </div>
         <div>
-          <a href="info_folder/temoignages.html">Témoignages</a>
+          <a href="{{ url_for('temoignage') }}">Témoignages</a>
         </div>
         <div>
-          <a href="contact.html">Nous contacter</a>
+          <a href="{{ url_for('contact') }}">Nous contacter</a>
         </div>
         <div>
-          <a href="login.html">Se connecter/S'inscrire</a>
+          <a href="{{ url_for('login') }}">Se connecter/S'inscrire</a>
         </div>
 
       </nav>
@@ -33,7 +33,16 @@
 			
 			<div class="leftp">
 				<h3>Liens</h3>
-				
+				<div>
+					<a href="https://twitter.com/UT1Capitole"><img src="https://img.icons8.com/neon/50/null/experimental-twitter-neon.png"/></a>
+					<a href="https://www.instagram.com/utcapitole/"><img src="https://img.icons8.com/neon/50/null/experimental-instagram-new-neon.png"/></a>
+					<a href=""></a>
+				</div>
+				<div>
+					<a href=""><img src="" alt=""></a>
+					<a href=""><img src="" alt=""></a>
+					<a href=""><img src="" alt=""></a>
+				</div>
 			</div>
 			<div>
 				<h2 class="lefta">À propos</h2>
@@ -44,10 +53,12 @@
 			</div>
 			<div class="leftr">
 				<h3>Nous contacter</h3>
-				<p>Tel (0) 36303630</p>
-				<p>Capitole UT1, TOULOUSE</p>
+				<p> 2 Rue du Doyen-Gabriel-Marty</p>
+				<p>31042 Toulouse Cedex 9</p>
+				<p>Tél : +33(0)5 61 63 35 00</p>
+				<p>Fax : +33(0)5 61 63 37 98</p>
 			</div>
     </footer>
     
   </body>
-</html>
+</html>     
