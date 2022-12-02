@@ -3,7 +3,7 @@
 {% block head %}
 {% endblock %}
 {% block content %}
-<div class="main">
+<div class="car_main">
 
     <div class="car_colonne" id="liste">
         <div id="grille">
@@ -93,6 +93,9 @@
                         var attente = setTimeout(function () {
                             document.getElementById(case1).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
                             document.getElementById(case2).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
+                            depart = true;
+                            nb_clics = 0;
+                            nb_erreurs++;                            document.getElementById(case2).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
                             depart = true;
                             nb_clics = 0;
                             nb_erreurs++;
