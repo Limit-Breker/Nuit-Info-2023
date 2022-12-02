@@ -31,6 +31,7 @@ def contact():
 def prejuge():
     return render_template("info_folder/prejuge.html")
 
+
 @app.route("/cartes")
 def cartes():
     return render_template("games_folder/cartes.html")
@@ -38,6 +39,7 @@ def cartes():
 @app.route("/quizz")
 def quizz():
     return render_template("games_folder/quizz.html")
+
 
 @app.route("/register/", methods=["GET", "POST"])
 def register():
@@ -124,6 +126,28 @@ def login():
             msg = "Incorrect username or password!"
 
     return render_template("registration/login.html", msg=msg)
+
+
+@app.route("/logout/")
+def logout():
+    remove_data = ["username", "loggedin"]
+    for data in remove_data:
+        session.pop(data, None)
+
+    return "bye"
+
+
+@app.route("/games/")
+def game():
+    is_logged = session.get("loggedin", None)
+    if is_logged:
+        user = {
+            "username": session["username"],
+            "pp": "",
+            "level": {"bar": 7, "lvl": 1},
+        }
+        return render_template("games_folder/index.html", user=user)
+    return redirect(url_for("login"))
 
 
 app.run(host="0.0.0.0", debug=True)

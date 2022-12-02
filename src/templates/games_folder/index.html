@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Games{% endblock %}
+
+{% block content %}
+<div class="user-stats">
+	<img src="{{user.pp}}" alt="">
+	<p>{{user.username}}</p>
+	<div class="user_level">
+		<label for="currentlvl">Level {{user.level.lvl}}</label>
+		<progress max="{{user.level.bar}}" value="{{user.level.lvl}}"></progress>
+	</div>
+</div>
+{% endblock %}
