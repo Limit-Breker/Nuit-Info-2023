@@ -32,6 +32,7 @@ header{
 	margin: 0px;
 	padding: 0px;
 	background-color: #33385E;
+	height: 55px;
 }
 
 header nav{
@@ -45,7 +46,6 @@ header nav{
 
 header nav div{
 	width: 100%;
-	height: 100px;
 /*	text-align: center;*/
 	margin: auto;
 	display: flex;
@@ -96,7 +96,7 @@ header nav div a, header nav div button{
 	outline: none;
 	margin: 0px;
 	width: 80%;
-	height: 125%;
+	height: 55px;
 	padding: 0%;
 }
 
@@ -112,8 +112,8 @@ header nav:hover, .header_submenu:hover .header_submenu{
 	display: none;
 	background-color: #745190;
 	position: absolute;
-	top: 18%;
-	left: 27.2%;
+	top: 55px;
+/*	left: 27.2%;*/
 	width: 17.8%;
 	height: 25%;
 	z-index: 1;
@@ -208,6 +208,7 @@ h1 {
     margin-block-start: 0px;
     margin-block-end: 0px;
     margin-left : 1%;
+    padding-left: 2%;
 }
 .leftr{
     padding-right: 3%;
@@ -270,6 +271,7 @@ h1 {
   }
 
 
+
   .page_presentation {
     padding : 20px;
     margin : 5px;
@@ -292,3 +294,8 @@ h1 {
   .rose {
     background-color: rgb(153, 48, 160);
   }
+
+h3{
+    padding-left: 2%;
+}
+
