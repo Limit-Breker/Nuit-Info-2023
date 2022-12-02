@@ -10,7 +10,9 @@ body{
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
-	background-color: #FFF4FD;
+	background-color: rgb(54, 71, 105);
+    font-family: 'VT323';
+    color: white;
 }
 
 a{
