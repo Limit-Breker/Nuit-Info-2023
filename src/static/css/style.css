@@ -300,3 +300,10 @@ h3{
 
 }
 
+.textdeco{
+    color: white;
+    text-decoration: underline  solid black    ;
+}    
+.textdeco:hover{
+    color: violet;
+}
