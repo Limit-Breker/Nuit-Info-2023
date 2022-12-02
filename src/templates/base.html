@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
   <head>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>{% block title %}{% endblock %} - My Webpage</title>
     
@@ -10,22 +9,23 @@
     <header>
       <nav>
         <div>
-          <a href="{{ url_for('games') }}">Jouer</a>
+          <a href="games">Jouer</a>
         </div>
         <div class="header_submenu">
-          <button class="header_submenu-btn">Infos</button>
+          <button class="header_submenu-btn"><a href="info">Infos</a></button>
           <div class="header_submenu-content">
-            <a href="info/contraception.html">La contraception</a>
-            <a href="info/ist.html">Les IST</a>
-            <a href="info/prejuge.html">Les préjugés</a>
-            <a href="info/temoignages.html">Des témoignages</a>
+            <a href="contraception">La contraception</a>
+            <a href="ist">Les IST</a>
+            <a href="prejuge">Les préjugés</a>
+            <a href="temoignage">Des témoignages</a>
+            <a href="presentation_sis">SIS Association</a>
           </div>
         </div>
         <div>
-          <a href="{{ url_for('contact') }}">Nous contacter</a>
+          <a href="contact">Nous contacter</a>
         </div>
         <div>
-          <a href="{{ url_for('login') }}">Se connecter/S'inscrire</a>
+          <a href="login">Se connecter/S'inscrire</a>
         </div>
 
       </nav>
@@ -50,13 +50,13 @@
 			<div>
 				<h2 class="lefta">À propos</h2>
 				<p>GAGNEUX Max / GIKAPA Christian</p>
-				<p>ARMAND Simon  / MONKONKALA Brice</p>
+				<p>ARMAND Simon / MONKONKALA Brice</p>
 				<p>BOUISSOU Romain / BOUDIN Raphael</p>
 				<p>LONGUET Cédric / GRIBANOVA Sofia</p>
 			</div>
 			<div class="leftr">
 				<h3>Nous contacter</h3>
-				<p> 2 Rue du Doyen-Gabriel-Marty</p>
+				<p> 2 Rue du Doyen-Gabrie<a href = "http://xproger.info/projects/OpenLara/" target="blank_" class = "EE">l</a>-Marty</p>
 				<p>31042 Toulouse Cedex 9</p>
 				<p>Tél : +33(0)5 61 63 35 00</p>
 				<p>Fax : +33(0)5 61 63 37 98</p>
@@ -64,4 +64,5 @@
     </footer>
     
   </body>
-</html>     
+
+</html>    
