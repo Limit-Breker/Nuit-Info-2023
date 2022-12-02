@@ -67,6 +67,7 @@ footer{
     background-color: rgb(51, 56, 94);
 
     color: violet;
+    text-shadow: #FFF4FD 1%;
     font-family: 'VT323';
     font-size: 1.1em;
     display : flex;
