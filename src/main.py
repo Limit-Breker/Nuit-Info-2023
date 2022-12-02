@@ -16,7 +16,7 @@ def contact():
 
 @app.route("/temoignage")
 def temoignage():
-    return render_template("temoignages.html")
+    return render_template("info_folder/temoignages.html")
 
 @app.route("/games")
 def games():
