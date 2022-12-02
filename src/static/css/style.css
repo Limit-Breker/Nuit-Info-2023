@@ -312,12 +312,26 @@ h3{
 .textdeco:hover{
     color: violet;
 }
-
-@media only screen and (min-width:824px){
+@media only screen and (max-width:1200px){
+  .texte_prejuge {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-left : 1%;
+    padding: 1%;
+    font-size:1.8em;
+}
+}
+@media only screen and (max-width:824px){
+  .texte_prejuge {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-left : 1%;
+    padding: 1%;
+    font-size:1.2em;
+}
+}
+@media only screen and (max-width:450px){
     footer{
         font-size: 0.8em;
     }
-    .texte_prejuge{
-        font-size: 0.8em;
-    }
-}
+  }
