@@ -87,7 +87,7 @@ header nav div a, header nav div button{
 }
 
 .header_submenu{
-/*	float: left;*/
+/*	float: left;*/border:0px;
 }
 
 .header_submenu .header_submenu-btn{
@@ -272,11 +272,11 @@ h1 {
 
 .pd2{
     padding: 1%;
+}
 
 
 
-
-  .page_presentation {
+.page_presentation {
     padding : 20px;
     margin : 5px;
   }
