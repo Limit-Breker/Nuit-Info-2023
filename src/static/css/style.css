@@ -158,6 +158,7 @@ footer{
 }
 
 h1 {
+    font-size: 2.5em;
     text-align: center;
 }
 
@@ -207,6 +208,7 @@ h1 {
     margin-block-end: 0px;
     margin-left : 1%;
     padding: 1%;
+    font-size:1.8em;
 }
 .leftr{
     padding-right: 3%;
@@ -269,6 +271,8 @@ h1 {
   }
 
 .pd2{
+    text-align:center;
+    font-size: 1.5em;
     padding: 1%;
 }
 
@@ -296,6 +300,7 @@ h1 {
   }
 
 h3{
+    font-size: 2em;
     padding-left: 2%;
 
 }
@@ -310,6 +315,9 @@ h3{
 
 @media only screen and (max-width:350px){
     footer{
+        font-size: 0.8em;
+    }
+    .texte_prejuge{
         font-size: 0.8em;
     }
 }
