@@ -159,6 +159,13 @@ footer {
 
 .EE {
   color: violet;
+  cursor:text;
+}
+
+.invisible {
+  border : none;
+  background-color: rgb(54, 71, 105);
+  cursor:default;
 }
 
 .lefta {
@@ -231,8 +238,7 @@ h1{
 
 
 
-.button {
-    border: none;
+.button1 {
     display: block;
     text-align: center;
     cursor: pointer;
@@ -246,32 +252,50 @@ h1{
     background-color: #3d0000;
     padding: 15px 50px;
     margin: 0 auto;
+    border: solid violet;
+
+}
+.button2 {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #3d0000;
+    padding: 15px 50px;
+    margin: 0 auto;
+    border: solid violet;
+
 }
 
-.button span {
+.button1 span {
     position: relative;
     z-index: 1;
     color: #fff;
 }
 
-.button:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 440%;
-    width: 100%;
-    background: #b71f1f;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
-    transform: translateX(-100%) translateY(-25%) rotate(45deg);
+.button1:hover {
+    background-image: url("../img/gamingneon.png");
 }
 
-.button:hover:after {
-    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+
+.button2 span {
+    position: relative;
+    z-index: 1;
+    color: red;
 }
+
+.button2:hover {
+    background-image: url("../img/rubanrougepetit.png");
+    color: black;
+}
+
+
 
 .description {
     margin: 2%;

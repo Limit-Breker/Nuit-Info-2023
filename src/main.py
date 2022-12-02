@@ -32,11 +32,6 @@ def temoignage():
     return render_template("info_folder/temoignages.html")
 
 
-@app.route("/games")
-def games():
-    return render_template("games.html")
-
-
 @app.route("/prejuge")
 def prejuge():
     return render_template("info_folder/prejuge.html")
