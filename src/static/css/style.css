@@ -162,6 +162,12 @@ footer {
   cursor:text;
 }
 
+.invisible {
+  border : none;
+  background-color: rgb(54, 71, 105);
+  cursor:default;
+}
+
 .lefta {
     text-align: center;
 
