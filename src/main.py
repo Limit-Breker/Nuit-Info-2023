@@ -30,5 +30,8 @@ def login():
 def prejuge():
     return render_template("info_folder/prejuge.html")
 
+@app.route("/info")
+def info():
+    return render_template("info_folder/info.html")
 
 app.run(host="0.0.0.0", debug=True)
