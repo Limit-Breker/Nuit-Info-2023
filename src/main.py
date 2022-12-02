@@ -30,5 +30,8 @@ def login():
 def prejuge():
     return render_template("info_folder/prejuge.html")
 
+@app.route("/contraception")
+def contraception():
+    return render_template("info_folder/contraception.html")
 
 app.run(host="0.0.0.0", debug=True)
