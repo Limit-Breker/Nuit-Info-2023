@@ -8,13 +8,13 @@
 
   <div class = "box_accueil">
     <button class = "button1">
-      <a href=""><span>SE CONNECTER POUR JOUER</span></a>
+      <a href="{{ url_for('templates',filename='games_folder/index.html' ) }}"><span>SE CONNECTER POUR JOUER</span></a>
     </button>
     <p class="le_OU_en_plein_milieu_de_la_page_d_accueil_qui_est_un_peu_relou_parce_qu_il_faut_une_classe_rien_que_pour_lui">
       OU
     </p>
     <button class = "button2">
-      <a href=""><span>VOIR LES INFORMATIONS</span></a>
+      <a href="{{ url_for('templates',filename='info_folder/info.html') }}"><span>VOIR LES INFORMATIONS</span></a>
     </button>
   </div>
 
