@@ -411,16 +411,12 @@ h3 {
 
 .game3{
   margin: 10px;
-  background-image: ;
+  background-image: url("../img/justeprix\ \(2\).jpg");
   width:250px;
-  height: 100px;
-}
-
-.game4{
-  margin: 10px;
-  background-image: ;
-  width:250px;
-  height: 100px;
+  height: 250px;
+  color : #000;
+  font-size:xx-large;
+  text-align:center;
 }
 
 .game-description{
