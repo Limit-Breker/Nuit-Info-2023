@@ -31,9 +31,11 @@ def contact():
 def prejuge():
     return render_template("info_folder/prejuge.html")
 
+
 @app.route("/cartes")
 def cartes():
     return render_template("games_folder/cartes.html")
+
 
 @app.route("/register/", methods=["GET", "POST"])
 def register():
@@ -121,5 +123,13 @@ def login():
 
     return render_template("registration/login.html", msg=msg)
 
+
+@app.route("/logout/")
+def logout():
+    remove_data = ["username", "loggedin"]
+    for data in remove_data:
+        session.pop(data, None)
+
+    return "bye"
 
 app.run(host="0.0.0.0", debug=True)
