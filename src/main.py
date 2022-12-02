@@ -16,11 +16,26 @@ def contact():
 
 @app.route("/temoignage")
 def temoignage():
-    return render_template("temoignages.html")
+    return render_template("info_folder/temoignages.html")
 
-@app.route("/simon")
+@app.route("/games")
+def games():
+    return render_template("games.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/prejuge")
 def prejuge():
     return render_template("info_folder/prejuge.html")
 
+@app.route("/contraception")
+def contraception():
+    return render_template("info_folder/contraception.html")
+
+@app.route("/ist")
+def ist():
+    return render_template("info_folder/ist.html")
 
 app.run(host="0.0.0.0", debug=True)
