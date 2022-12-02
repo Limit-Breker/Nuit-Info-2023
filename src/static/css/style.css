@@ -96,7 +96,7 @@ header nav div a, header nav div button{
 	outline: none;
 	margin: 0px;
 	width: 80%;
-	height: 125%;
+	height: 55px;
 	padding: 0%;
 }
 
@@ -269,6 +269,38 @@ h1 {
   .box_accueil {
     margin:2.1%;
   }
+
 .pd2{
     padding: 1%;
+
+
+
+
+  .page_presentation {
+    padding : 20px;
+    margin : 5px;
+  }
+
+  .vert {
+    background-color: rgb(75, 111, 22);
+    padding : 50px;
+  }
+
+  .bleu {
+    background-color: rgb(47, 51, 156);
+  }
+
+  .jaune {
+    background-color: rgb(234, 255, 47);
+    color : #000;
+  }
+
+  .rose {
+    background-color: rgb(153, 48, 160);
+  }
+
+h3{
+    padding-left: 2%;
+
 }
+
