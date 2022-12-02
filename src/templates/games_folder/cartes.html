@@ -3,35 +3,35 @@
 {% block head %}
 {% endblock %}
 {% block content %}
-<div class="main">
+<div class="car_main">
 
-    <div class="colonne" id="liste">
+    <div class="car_colonne" id="liste">
         <div id="grille">
-            <div class="case" id="case0"></div>
-            <div class="case" id="case1"></div>
-            <div class="case" id="case2"></div>
-            <div class="case" id="case3"></div>
+            <div class="car_case" id="case0"></div>
+            <div class="car_case" id="case1"></div>
+            <div class="car_case" id="case2"></div>
+            <div class="car_case" id="case3"></div>
 
-            <div class="case" id="case4"></div>
-            <div class="case" id="case5"></div>
-            <div class="case" id="case6"></div>
-            <div class="case" id="case7"></div>
+            <div class="car_case" id="case4"></div>
+            <div class="car_case" id="case5"></div>
+            <div class="car_case" id="case6"></div>
+            <div class="car_case" id="case7"></div>
 
-            <div class="case" id="case8"></div>
-            <div class="case" id="case9"></div>
-            <div class="case" id="case10"></div>
-            <div class="case" id="case11"></div>
+            <div class="car_case" id="case8"></div>
+            <div class="car_case" id="case9"></div>
+            <div class="car_case" id="case10"></div>
+            <div class="car_case" id="case11"></div>
 
-            <div class="case" id="case12"></div>
-            <div class="case" id="case13"></div>
-            <div class="case" id="case14"></div>
-            <div class="case" id="case15"></div>
+            <div class="car_case" id="case12"></div>
+            <div class="car_case" id="case13"></div>
+            <div class="car_case" id="case14"></div>
+            <div class="car_case" id="case15"></div>
         </div>
         <span>Votre score :<br />
             <div id="scrore"><strong>20</strong>/20</div>
             <br /><br />
             <div id="temps"></div><br />
-            <input type="button" class="btn" value="Nouvelle partie" onClick="window.location.reload();" />
+            <input type="button" class="car_btn" value="Nouvelle partie" onClick="window.location.reload();" />
         </span>
     </div>
 
@@ -51,7 +51,7 @@
 
     var attente = setTimeout(function () {
         for (var i = 0; i < 16; i++) {
-            document.getElementById('img' + i).src = "mini/miniz.png";
+            document.getElementById('img' + i).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
         }
         depart = true;
     }, 4000);
@@ -67,7 +67,8 @@
                     nb_alea = Math.floor(Math.random() * 16) + 1;
                 else {
                     nb_img = Math.floor((nb_alea + 1) / 2);
-                    document.getElementById('case' + i).innerHTML = "<img style='cursor:pointer;' id='img" + i + "' src='mini/mini" + nb_img + ".png' onClick='verifier(\"img" + i + "\",\"mini" + nb_img + "\")' alt='' />";
+                    //document.getElementById('case' + i).innerHTML = "<img style='cursor:pointer;' id='img'" + i + "src={{url_for('static',filename='img/cartes/mini'"+nb_img+"'.png')}} onClick='verifier(\"img" + i + "\",\"mini" + nb_img + "\")' alt='' />";
+                    document.getElementById('case' + i).innerHTML = `<img style='cursor:pointer;' id='img${i}' src='/static/img/cartes/mini${nb_img}.png' onClick='verifier(\"img${i}\",\"mini${nb_img}\")' alt='' />`;
                     chaine += "-" + nb_alea + "-";
                     test = false;
                 }
@@ -79,7 +80,7 @@
     function verifier(limg, source) {
         if (depart == true) {
             nb_clics++;
-            document.getElementById(limg).src = "mini/" + source + ".png";
+            document.getElementById(limg).src = "/static/img/cartes/"+source+".png";
             if (nb_clics == 1) {
                 mini1 = source;
                 case1 = limg;
@@ -92,8 +93,8 @@
                     depart = false;
                     if (mini1 != mini2) {
                         var attente = setTimeout(function () {
-                            document.getElementById(case1).src = "mini/miniz.png";
-                            document.getElementById(case2).src = "mini/miniz.png";
+                            document.getElementById(case1).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
+                            document.getElementById(case2).src = "{{url_for('static',filename='img/cartes/miniz.png')}}";
                             depart = true;
                             nb_clics = 0;
                             nb_erreurs++;
@@ -107,11 +108,6 @@
                         img_ok += 2;
                         if (img_ok == 16) {
                             document.getElementById("scrore").innerHTML = "<strong>" + le_score + "</strong>/10";
-                            document.getElementById("temps").innerHTML = "Vous avez mis<strong>" + dif_temps + "</strong> secondes";
-                        }
-                        if (dif_temps > 180) {
-                            document.getElementById("temps").innerHTML = "Le temps imparti est dépassé, vous avez perdu !";
-                            depart = false;
                         }
                     }
                 }

@@ -1,62 +1,61 @@
-
-body{
-	margin: 0px;
-	padding: 0px;
-	height: 100%;
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
 }
 
-a{
-	text-decoration: none;
-	color: black;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-a:hover{
-	color: red;
+a:hover {
+    color: red;
 }
 
-header{
-	margin: 0px;
-	padding: 0px;
-	background-color: lightpink;
+header {
+    margin: 0px;
+    padding: 0px;
+    background-color: lightpink;
 }
 
-header nav{
-	display: flex;
-	padding: 5px;
-/*	justify-content: space-around;*/
+header nav {
+    display: flex;
+    padding: 5px;
+    /*	justify-content: space-around;*/
 }
 
-header nav div{
-	width: 100%;
-	text-align: center;
+header nav div {
+    width: 100%;
+    text-align: center;
 }
 
-header nav div:nth-child(1) a{
-	font-weight: bold;
+header nav div:nth-child(1) a {
+    font-weight: bold;
 }
 
-header nav div:nth-child(5) a{
-	border: solid black 1px;
-	border-radius: 3px;
-	padding: 5px;
-	background-color: pink;
+header nav div:nth-child(5) a {
+    border: solid black 1px;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: pink;
 }
 
-.footerdiv{
+.footerdiv {
     background-color: rgb(15, 17, 42);
 }
 
-footer{
+footer {
     background-color: rgb(51, 56, 94);
 
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    display : flex;
+    display: flex;
     justify-content: space-between;
 }
 
 
-.leftp{
+.leftp {
     text-align: center;
 }
 
@@ -69,33 +68,106 @@ h1 {
     justify-content: center;
 }
 
-.flexbox  {
-    display : flex;
+.flexbox {
+    display: flex;
     justify-content: center;
-    margin : auto;
+    margin: auto;
 }
 
 .box_prejuge {
-    border : solid 0.1em black;
-    width : 80%;
-    margin-bottom : 3em;
+    border: solid 0.1em black;
+    width: 80%;
+    margin-bottom: 3em;
 }
 
 .image_prejuge1 {
-    width : 200px;
-    height : 160px;
-    margin-right : 1%;
-    display : block;
+    width: 200px;
+    height: 160px;
+    margin-right: 1%;
+    display: block;
 }
 
 .image_prejuge2 {
-    width : 200px;
-    height : 160px;
-    margin-left : 1%;
-    display : block;
+    width: 200px;
+    height: 160px;
+    margin-left: 1%;
+    display: block;
 }
 
 .texte_prejuge {
     margin-block-start: 0px;
     margin-block-end: 0px;
+}
+
+
+
+/* Carte CSS */
+
+#grille {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    width: 700px;
+    height: 700px;
+    align-content: center;
+    border: #333 1px solid;
+    border-radius: 10px;
+    background-color: #CCCCCC;
+    background: rgba(100, 100, 100, .1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+
+.car_btn {
+    width: 185px;
+    height: 55px;
+    align-content: center;
+    padding: 0px;
+    margin: 0px;
+    border: #333 1px solid;
+    border-radius: 5px;
+    background: #444;
+    background: linear-gradient(#555, #2C2C2C);
+    text-shadow: 0px 1px 0px white;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8),
+        0 -1px 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 2px 2px 0px #aaa;
+    margin: 5px;
+    font-size: 20px;
+    color: #ccccff;
+}
+
+.car_btn:hover {
+    cursor: pointer;
+    box-shadow: 6px 6px 0px #aaa;
+}
+
+
+.car_case img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.car_case {
+    transition: transform .2s;
+}
+
+.car_case:hover {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(2);
+}
+
+
+.car_main {
+    margin: auto;
+    max-width: 900px;
+    align-content: center;
 }
