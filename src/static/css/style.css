@@ -312,8 +312,12 @@ h3{
 .textdeco:hover{
     color: violet;
 }
-
-@media only screen and (min-width:300px){
+@media only screen and (max-width:1200px){
+  .texte_prejuge{
+    font-size: 1.8em;
+}
+}
+@media only screen and (min-width:350px){
     footer{
         font-size: 0.8em;
     }
