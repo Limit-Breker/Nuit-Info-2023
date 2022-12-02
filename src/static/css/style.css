@@ -269,3 +269,26 @@ h1 {
     margin:2.1%;
   }
 
+
+  .page_presentation {
+    padding : 20px;
+    margin : 5px;
+  }
+
+  .vert {
+    background-color: rgb(75, 111, 22);
+    padding : 50px;
+  }
+
+  .bleu {
+    background-color: rgb(47, 51, 156);
+  }
+
+  .jaune {
+    background-color: rgb(234, 255, 47);
+    color : #000;
+  }
+
+  .rose {
+    background-color: rgb(153, 48, 160);
+  }
