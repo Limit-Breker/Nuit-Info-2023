@@ -1,4 +1,26 @@
 <header>
-    <div id="box_nav">
-    </div>
+    <a href="{{ url_for('communs.index') }}">
+        <img src="{{ url_for('static', filename='image/logo_limit_breker.png') }}" alt="Logo Limit Beker" class="logo">
+    </a>
+    <img src="{{ url_for('static', filename='image/logo_nuit_info.png') }}" alt="Logo Nuit Info" class="logo_nuit_info">
+    <hr>
+    <a href="{{ url_for('jeux.index') }}">
+        <button>
+            Jeux
+        </button>
+    </a>
+    <a href="{{ url_for('communs.solutions') }}">
+        <button>Solutions
+        </button>
+    </a>
+    <a href="{{ url_for('communs.stats') }}">
+        <button>
+            Stats
+        </button>
+    </a>
+    <a href="">
+        <button>
+            Thèmes
+        </button>
+    </a>
 </header>

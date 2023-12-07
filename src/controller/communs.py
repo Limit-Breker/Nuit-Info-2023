@@ -28,3 +28,8 @@ def prejuges():
 @communs.route("/sources", methods=['GET', 'POST'])
 def sources():
     return render_template("communs/sources.html")
+
+
+@communs.route("/solutions", methods=['GET', 'POST'])
+def solutions():
+    return render_template("communs/solutions.html")
