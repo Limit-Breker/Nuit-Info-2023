@@ -1,4 +1,43 @@
 *{
     border:1px solid black;
-    background-color: blue;
+    background-color: rgb(250, 250, 250);
+}
+#titre{
+
+}
+.une_carte_background{
+
+}
+.une_carte{
+    width:50%;
+    margin:auto;
+}
+.titre_carte{
+    font-size: 40px;
+    font-style: bold;
+    font-weight: 400;
+    line-height: normal;
+}
+.description_carte{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.boutons{
+    width:fit-content;
+    margin:auto;
+}
+.bouton{
+    
+    width: 234px;
+    height: 70px; 
+    border-radius: 50px;
+    border: 1px solid #000; 
+}
+.bouton_vrai{
+    background: rgba(82, 210, 79, 0.50);
+}
+.bouton_faux{
+    background: rgba(181, 19, 19, 0.50); 
 }
