@@ -1,6 +1,17 @@
 
 {% extends "common/base.html" %}
+{% block title %}Jeux
+{% endblock %}
 {% block body %}
-<h1>Index Jeux</h1>
+<h1>Choisissez votre jeu</h1>
+<a href="{{ url_for('jeux.earth_survival') }}">
+    <button type="button">Earth Survivor</button>
+</a>
+<a href="{{ url_for('jeux.quizz') }}">
+    <button type="button">FizzQUizz</button>
+</a>
+<a href="{{ url_for('jeux.memory') }}">
+    <button type="button">Memory</button>
+</a>
 
 {% endblock %}
