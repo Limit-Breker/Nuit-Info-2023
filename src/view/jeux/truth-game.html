@@ -1,15 +1,24 @@
-{% include "common/base.html" %}
+
+{% extends "common/base.html" %}
+
+{% block stylesheets  %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/truth-game.css') }}"">
-{% block body %}
+{% endblock %}
+
+{% block body  %}
 <h1 id="titre">Le jeu du VRAI ou FAUX </h1>
 <div class="une_carte_background">
-    <div class="une_carte">
+    <div class="stats">
+        <div class="une_stat"><p>Question /10</p></div>
+        <div class="une_stat stat_score"><p>Score : </p> </div>
+    </div>
+    <div class="contenu">
     <div class="titre_carte"><h2>La France sera peu touchée par le changement climatique</h2></div>
     <div class="description_carte"><p>Il s’agit d’une idée reçue : si le réchauffement climatique va provoquer des catastrophes humanitaires dans les régions déjà arides, les pays plus tempérés comme la France en subiront aussi les effets. La destruction de la faune et de la flore de nombreuses régions, telles que les vignes du Bordelais ou les espèces végétales en haute montagne, pourrait advenir. </p></div>
+    </div>
     <div class="boutons">
         <input class="bouton bouton_faux" type="button" value="FAUX" />
         <input class="bouton bouton_vrai" type="button" value="VRAI" />
-    </div>
     </div>
 </div>
 
