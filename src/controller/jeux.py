@@ -18,6 +18,9 @@ def index():
 @jeux.route("/earth-survival", methods=['GET', 'POST'])
 def earth_survival():
     return render_template("jeux/earth-survival.html")
+@jeux.route("/truth-game", methods=['GET', 'POST'])
+def truth_game():
+    return render_template("jeux/truth-game.html")
 
 
 
