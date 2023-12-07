@@ -69,3 +69,21 @@ p  {
   margin-top: 25px;
   padding: 10px;
 }
+
+#popup-info {
+  position: absolute;
+  max-width: 50%;
+  box-shadow:0 0 0 1920px rgba(0,0,0,50%);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+#fermer-info {
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.invisible {
+  display:none;
+}
