@@ -35,28 +35,13 @@
 <!-- Inclusion de la barre de navigation -->
 {% include "partials/nav.html" %}
 
-<!-- Balise utilisée pour la fonction flash (affichage d'un message lors du chargement de la page -->
-{% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        {% for category, message in messages %}
-            <div style="{% if category == 'message' %}background-color: #6ce56c;{% else %}
-                background-color: #e83c55;
-            {% endif %} color: black">
-                <ul class="flashes" style="margin-top: revert">
-                    <li>{{ message }}</li>
-                </ul>
-            </div>
-        {% endfor %}
-    {% endif %}
-{% endwith %}
-
-<!-- Balise princcipale -->
 <div id="master">
     {% block body %}{% endblock %}
 </div>
 
-<!-- Inclusion du footer -->
+<!-- Inclusion de la barre de navigation -->
 {% include "partials/footer.html" %}
+
 </body>
 
 {% block javascripts2 %}{% endblock %}
