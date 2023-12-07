@@ -16,10 +16,10 @@ def index():
 
 
 @communs.route("/stats", methods=['GET', 'POST'])
-def index():
+def stats():
     return render_template("communs/stats.html")
 
 
-@communs.route("/prejuge", methods=['GET', 'POST'])
-def index():
+@communs.route("/prejuges", methods=['GET', 'POST'])
+def prejuges():
     return render_template("communs/prejuges.html")
