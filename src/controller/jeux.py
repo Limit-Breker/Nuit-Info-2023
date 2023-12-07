@@ -23,4 +23,15 @@ def truth_game():
     return render_template("jeux/truth-game.html")
 
 
+@jeux.route("/quizz", methods=['GET', 'POST'])
+def quizz():
+    return render_template("jeux/quizz.html")
+
+
+@jeux.route("/memory", methods=['GET', 'POST'])
+def memory():
+    return render_template("jeux/memory.html")
+
+
+
 
