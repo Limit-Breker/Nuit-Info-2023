@@ -35,3 +35,5 @@ share/python-wheels/
 *.egg
 MANIFEST
 __pycache__
+
+app.log

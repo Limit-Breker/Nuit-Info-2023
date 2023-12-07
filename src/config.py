@@ -1,9 +1,12 @@
 import os
 
-import pymysql
+import logging
 
-# Necessaire pour la compatibilité sur Linux
-pymysql.install_as_MySQLdb()
+logging.basicConfig(level=logging.ERROR,
+                    filename='app.log',
+                    filemode='a',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S')
 
 
 class DevConfig:
@@ -15,5 +18,4 @@ class DevConfig:
     SESSION_TYPE = "filesystem"
     DEBUG_TB_INTERCEPT_REDIRECTS = False
     SECURITY_PASSWORD_SALT = os.urandom(32)
-    SQLALCHEMY_DATABASE_URI = 'mariadb://local_user:password@localhost:3306/db_fiches_dev'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
