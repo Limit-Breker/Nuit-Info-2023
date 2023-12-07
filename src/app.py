@@ -1,6 +1,5 @@
 import json
 import os
-from flask_debugtoolbar import DebugToolbarExtension
 from flask import Flask, url_for, render_template
 from werkzeug.exceptions import HTTPException
 
@@ -10,7 +9,6 @@ from custom_paquets.gestions_erreur import logging_erreur
 
 app = Flask(__name__, template_folder="view")
 app.config.from_object("config.DevConfig")
-toolbar = DebugToolbarExtension(app)
 app.register_blueprint(communs)
 app.register_blueprint(jeux)
 
