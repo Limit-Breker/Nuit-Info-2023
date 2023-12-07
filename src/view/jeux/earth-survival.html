@@ -1,5 +1,24 @@
 {% include "common/base.html" %}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/earth-survival.css') }}">
+{% endblock %}
 {% block body %}
-<h1>Le jeux earth machin</h1>
-
+<div id="main-earth-survival">
+    <div id="compteurs">
+      <div id="container-compteur-degre" class="boite">
+        <p id="compteur-degre">+0.0°C</p>
+        <p id="augmentation-compteur-degre">+0.1°C /an</p>
+      </div>
+      <p id="date-compteur" >1er janvier 2023</p>
+    </div>
+    <h2 id="titre" class="boite">Earth Survival</h2>
+    <div id="container-question">
+      <p id="question" class="boite">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, corrupti veritatis excepturi dolorem placeat in, ex laboriosam esse aspernatur unde odit tempora optio numquam eos officiis rerum, iure laudantium expedita!</p>
+      <div id="container-reponses">
+        <button class="reponse boite" id="reponse1">Réponse 1</button>
+        <button class="reponse boite" id="reponse2">Réponse 2</button>
+        <button class="reponse boite" id="reponse3">Réponse 3</button>
+      </div>
+    </div>
+</div>
 {% endblock %}

@@ -1,0 +1,71 @@
+#main-earth-survival {
+  height: 100%;
+  background-image: linear-gradient(180deg, green, red);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+}
+p  {
+  margin:0;
+}
+
+.boite {
+  background-color: lightgray;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px black;
+}
+#container-compteur-degre {
+  display:flex;
+  position:relative;
+  background-color:lightgray;
+  border: 3px solid black;
+  padding: 10px;
+  box-shadow: 2px 2px 2px black;
+}
+
+#compteur-degre {
+  font-size: 2.5em;
+  font-style: bold;
+}
+
+#augmentation-compteur-degre {
+  padding-left: 10px;
+  font-size: 1.5em;
+  margin-top: auto;
+}
+
+#date-compteur {
+  font-size: 1.75em;
+  margin-top: 10px;
+}
+
+#titre {
+  font-size: 2.5em;
+  margin: 0;
+  background-color: lightgray;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px black;
+  padding: 0 10px;
+  height:min-content;
+}
+
+#container-question {
+  max-width: 30%;
+}
+
+#question {
+  padding: 0 10px;
+}
+
+#container-reponses {
+  display:flex;
+  flex-direction: column;
+}
+
+.reponse {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  padding: 10px;
+}
