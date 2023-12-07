@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kulim+Park&display=swap');
+
+:root {
+    --color-white: #ffffff;
+    --color-grey: #dcdcdc;
+    --color-grey2: #efefed;
+    --color-black: #151C21;
+    --color-black2: #31383C;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    font-family: Kulim Park;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-black);
+    padding-top: 145px;
+    color: var(--color-white);
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: calc(100vw - 90px);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 10px;
+    background: var(--color-black2);
+    color: var(--color-white);
+    z-index: 9999;
+    border-radius: 16px;
+}
+
+header hr {
+    width: 2px;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    margin-inline: 4%;
+}
+
+header img.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+header img.logo_nuit_info {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: 40%;
+}
+
+header button {
+    display: flex;
+    padding: 12px 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(25px);
+    outline: none;
+    border: none;
+    transition: background .2s;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header button:hover {
+    background: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+header a {
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 25px 150px 25px 45px;
+    background: var(--color-black2);
+    color: var(--color-white);
+    z-index: 9999;
+    border-radius: 16px 16px 0px 0px;
+}
