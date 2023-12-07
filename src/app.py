@@ -4,6 +4,7 @@ from flask import Flask, url_for
 
 from controller.jeux import jeux
 from controller.communs import communs
+from controller.api import api
 from model_db.shared_model import db
 
 
@@ -12,6 +13,7 @@ app.config.from_object("config.DevConfig")
 toolbar = DebugToolbarExtension(app)
 app.register_blueprint(communs)
 app.register_blueprint(jeux)
+app.register_blueprint(api)
 db.init_app(app)
 
 
