@@ -1,15 +1,18 @@
-{% include "common/base.html" %}
+{% extends "common/base.html" %}
 {% block stylesheets %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/earth-survival.css') }}">
+{% endblock %}
+{% block javascripts2 %}
+<script src="{{ url_for('static',filename='js/earth_survival.js') }}"></script>
 {% endblock %}
 {% block body %}
 <div id="main-earth-survival">
     <div id="compteurs">
       <div id="container-compteur-degre" class="boite">
-        <p id="compteur-degre">+0.0°C</p>
-        <p id="augmentation-compteur-degre">+0.1°C /an</p>
+        <p id="compteur-degre"></p>
+        <p id="augmentation-compteur-degre">+0.03°C /an</p>
       </div>
-      <p id="date-compteur" >1er janvier 2023</p>
+      <p id="date-compteur"></p>
     </div>
     <h2 id="titre" class="boite">Earth Survival</h2>
     <div id="container-question">
