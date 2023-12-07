@@ -7,37 +7,55 @@ let reponses = [...document.getElementsByClassName("reponse")];
 const MAUVAISE_FIN = 0;
 const FIN_NEUTRE = 1;
 const BONNE_FIN = 2;
+const DATE_LIMITE = 2030;
 
 class Jeu {
   constructor() {
     this.compteur = 0.0;
     this.increment = 0.03;
     this.date = new Date(Date.now());
+    this.fin = -1;
     console.log(this.date);
   }
+
+  
 }
 
 function jouer() {
   let jeu = new Jeu();
-  let dateLimite = new Date(2400);
-  ecrire(jeu)
+  document.addEventListener('finJeu', function(e) { jeu.fin = e.detail.fin; })
+  ecrire(jeu);
   incrementer(jeu);
-  if (jeu.compteur >= 6.0) {
-    return MAUVAISE_FIN;
-  }
-  else if (jeu.increment == 0) {
-    return BONNE_FIN;
-  }
-  else {
-    return FIN_NEUTRE
-  }
 }
 
 function incrementer(jeu) {
   jeu.compteur += jeu.increment*5/12;
   incrementerDate(jeu.date);
   ecrire(jeu);
-  setTimeout(incrementer,1000/3,jeu);
+  if (jeu.compteur >= 6.0) {
+    document.dispatchEvent(new CustomEvent('finJeu', {
+     detail: {
+      fin: MAUVAISE_FIN
+    }})
+    );
+  }
+  else if (jeu.increment === 0.0) {
+    document.dispatchEvent(new CustomEvent('finJeu', {
+     detail: {
+      fin: BONNE_FIN
+    }})
+    );
+  }
+  else if (jeu.date.getFullYear() >= DATE_LIMITE) {
+    document.dispatchEvent(new CustomEvent('finJeu', {
+     detail: {
+      fin: FIN_NEUTRE
+    }})
+    );
+  }
+  if (jeu.fin < 0) {
+    setTimeout(incrementer,1000/3,jeu);
+  }
 }
 
 function ecrire(jeu) {
