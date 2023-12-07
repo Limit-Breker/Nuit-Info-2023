@@ -23,3 +23,8 @@ def stats():
 @communs.route("/prejuges", methods=['GET', 'POST'])
 def prejuges():
     return render_template("communs/prejuges.html")
+
+
+@communs.route("/prejuges", methods=['GET', 'POST'])
+def prejuges():
+    return render_template("communs/prejuges.html")
