@@ -8,11 +8,13 @@ from werkzeug.exceptions import HTTPException
 from controller.jeux import jeux
 from controller.communs import communs
 from custom_paquets.gestions_erreur import logging_erreur
+from controller.api import api
 
 app = Flask(__name__, template_folder="view")
 app.config.from_object("config.DevConfig")
 app.register_blueprint(communs)
 app.register_blueprint(jeux)
+app.register_blueprint(api)
 
 try:
     open('app.log', 'w').close()
