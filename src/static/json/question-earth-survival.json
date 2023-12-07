@@ -1,0 +1,143 @@
+{
+    "question": [
+    {"q1":"Le gaspillage alimentaire se manifeste tout au long de la chaîne d'approvisionnement. Ordonnez, par ordre décroissant d'empreinte carbone, les causes de gaspillage alimentaire :", 
+    "reponse":[
+        {"r1" : "Le gaspillage lors de la production des aliments" , "increment" : 0.01},
+        {"r2" : "Le gaspillage lors du transport et dans la chaîne de distribution" , "increment" : 0.00},
+        {"r3" : "Le gaspillage des ménages au moment de la consommation" , "increment" : -0.01}
+    ]},
+
+    {"q2":"Le problème principal que rencontrent les projets de parcs éoliens est :", 
+    "reponse":[
+        {"r1" : "Le coût de création des parcs" , "increment" : 0.01},
+        {"r2" : "Le manque d'espaces présentant un potentiel d'exploitation" , "increment" : 0.00},
+        {"r3" : "L'opposition de riverains, d'experts, et de collectifs pro-environnement" , "increment" : -0.01}
+    ]},
+
+    {"q3":"Le problème principal que rencontrent les projets de parcs éoliens est :", 
+    "reponse":[
+        {"r1" : "Les attaques répétées de Don Quijote de la Mancha" , "increment" : 0.01},
+        {"r2" : "La rareté des matières premières utilisées dans la production des éoliennes" , "increment" : 0.00},
+        {"r3" : "L'impact des parcs sur l’écosystème environnant" , "increment" : -0.01}
+    ]},
+
+    {"q4":"Le problème principal que rencontrent les projets de parcs photovoltaïques est :", 
+    "reponse":[
+        {"r1" : "L'opposition de riverains, d'experts, et de collectifs pro-environnement" , "increment" : 0.01},
+        {"r2" : "Le coût de création des parcs" , "increment" : 0.00},
+        {"r3" : "Le manque d'espaces présentant un potentiel d'exploitation" , "increment" : -0.01}
+    ]},
+
+    {"q5":"Le problème principal que rencontrent les projets de parcs photovoltaïques est :", 
+    "reponse":[
+        {"r1" : "L'impact des parcs sur l’écosystème environnant" , "increment" : 0.01},
+        {"r2" : "La rareté des matières premières utilisées dans la production des panneaux" , "increment" : 0.00},
+        {"r3" : "Le manque de lieux accessibles et de grande taille où la lumière est présente tout au long de la journée" , "increment" : -0.01}
+    ]},
+
+    {"q6":"L'amélioration de l'efficacité énergétique passe avant tout par :", 
+    "reponse":[
+        {"r1" : "Le chauffage de l’eau avec l’énergie solaire" , "increment" : 0.01},
+        {"r2" : "L’usage d’électroménager peu énergivore" , "increment" : 0.00},
+        {"r3" : "L'isolation des bâtiments" , "increment" : -0.01}
+    ]},
+
+    {"q7":"L'amélioration de l'efficacité énergétique passe avant tout par :", 
+    "reponse":[
+        {"r1" : "Une réduction du gaspillage à l’échelle globale" , "increment" : 0.00},
+        {"r2" : "Une réduction du gaspillage d’énergie à l’échelle individuelle" , "increment" : 0.00},
+        {"r3" : "Une amélioration de l’efficacité des transports" , "increment" : -0.01}
+    ]},
+
+    {"q8":"Les principaux obstacles à l’électrification du parc automobile sont :", 
+    "reponse":[
+        {"r1" : "Le manque de coopération technique entre constructeurs" , "increment" : 0.01},
+        {"r2" : "Le besoin d'avoir un réseau développé de smart grid (bornes de recharge)" , "increment" : 0.00},
+        {"r3" : "le besoin d'exploiter des métaux rares comme le lithium" , "increment" : -0.01}
+    ]},
+
+    {"q9":"Les principaux obstacles à l’électrification du parc automobile sont :", 
+    "reponse":[
+        {"r1" : "La quantité de pollution supérieure induite par la fabrication d'un véhicule électrique" , "increment" : 0.01},
+        {"r2" : "Le plaisir de conduite moindre procuré par un véhicule électrique" , "increment" : 0.01},
+        {"r3" : "Leur prix, qui les rendent inaccessibles à une partie de la population" , "increment" : -0.01}
+    ]},
+
+    {"q10":"Parmi les propositions suivantes, quels environnements absorbent actuellement du carbone :", 
+    "reponse":[
+        {"r1" : "Les glaciers" , "increment" : 0.01},
+        {"r2" : "La couche d’ozone" , "increment" : 0.01},
+        {"r3" : "Les océans" , "increment" : -0.01}
+    ]},
+
+    {"q11":"Parmi les propositions suivantes, quels environnements absorbent actuellement du carbone :", 
+    "reponse":[
+        {"r1" : "Le permafrost (ou pergélisol)" , "increment" : 0.02},
+        {"r2" : "Les dorsales océaniques" , "increment" : 0.01},
+        {"r3" : "Les forêts" , "increment" : -0.01}
+    ]},
+
+    {"q12":"Au niveau mondial, Quels secteurs émettent le plus de CO2  :", 
+    "reponse":[
+        {"r1" : "Culture" , "increment" : 0.01},
+        {"r2" : "Logement" , "increment" : 0.00},
+        {"r3" : "Industrie" , "increment" : -0.01}
+    ]},
+
+    {"q13":"Au niveau mondial, Quels secteurs émettent le plus de CO2  :", 
+    "reponse":[
+        {"r1" : "Spatial" , "increment" : 0.01},
+        {"r2" : "Transport" , "increment" : -0.01},
+        {"r3" : "Agriculture" , "increment" : 0.00}
+    ]},
+
+    {"q14":"Le cycle du carbone est :", 
+    "reponse":[
+        {"r1" : "Le cycle de vie d'un atome de carbone" , "increment" : 0.01},
+        {"r2" : "Le processus de transformation de la matière organique en matière fossile (charbon, pétrole, gaz) " , "increment" : 0.01},
+        {"r3" : "L'échange de CO2 entre la Terre et l'atmosphère" , "increment" : -0.01}
+    ]},
+
+    {"q15":"Le cycle du carbone est :", 
+    "reponse":[
+        {"r1" : "Causé par l'activité humaine" , "increment" : 0.01},
+        {"r2" : "Indépendant de l'activité humaine" , "increment" : 0.01},
+        {"r3" : "Perturbé par l'activité humaine" , "increment" : -0.01}
+    ]},
+
+    {"q16":"Les tourbières sont :", 
+    "reponse":[
+        {"r1" : "Une source d’émissions de CO2, qu'il est donc nécessaire de reboiser" , "increment" : 0.01},
+        {"r2" : "Des zones à risque qui contiennent du CO2 et qu’il faut sécuriser" , "increment" : 0.01},
+        {"r3" : "Un puits naturel de carbone, qu'il est donc nécessaire de préserver" , "increment" : -0.01}
+    ]},
+
+    {"q17":"Les tourbières sont :", 
+    "reponse":[
+        {"r1" : "Neutres en carbone (n'absorbent ni n'émettent de CO2), mais à préserver pour la biodiversité qu'elles abritent" , "increment" : 0.01},
+        {"r2" : "Neutres en carbone (n'absorbent ni n'émettent de CO2), à cultiver car fertiles" , "increment" : 0.01},
+        {"r3" : "Négatives en carbone, à protéger des industriels en recherche d’expansion" , "increment" : -0.01}
+    ]},
+
+    {"q18":"Quel est, à l'heure actuelle, le(s) principal(aux) obstacle(s) à l'emploi de biocarburant à grande échelle ?", 
+    "reponse":[
+        {"r1" : "Les plantes à l'origine du biocarburant ne poussent que dans des conditions spécifiques, les terres adaptées manquent" , "increment" : 0.01},
+        {"r2" : "Les moteurs à carburants fossiles ne sont pas convertibles, et les véhicules adaptés sont encore rares" , "increment" : 0.01},
+        {"r3" : "Cela nécessite de consacrer beaucoup de terres agricoles pour cultiver la matière première " , "increment" : -0.01}
+    ]},
+
+    {"q19":"Quel est, à l'heure actuelle, le(s) principal(aux) obstacle(s) à l'emploi de biocarburant à grande échelle ?", 
+    "reponse":[
+        {"r1" : "Les coûts de production des biocarburants sont encore trop élevés pour être compétitifs face aux carburants fossiles" , "increment" : 0.01},
+        {"r2" : "De par leur faible efficience, et des émissions issues de leur production, les biocarburants restent trop polluants" , "increment" : 0.01},
+        {"r3" : "Les espaces pour cultiver sont limités" , "increment" : -0.01}
+    ]},
+
+    {"q20":"D’après les connaissances que vous avez acquises pendant votre survie au travers de cette prévision de l’avenir de notre planète bleue, laquelle de ces propositions serait un meilleur exemple de solution de transition écologique ?", 
+    "reponse":[
+        {"r1" : "Le contrôle et la limitation des naissances" , "increment" : 0.04},
+        {"r2" : "La limitation volontaire des avancées techniques, dès lors qu'elles peuvent nuire à la nature" , "increment" : 0.02},
+        {"r3" : "L'amélioration de l'efficacité énergétique des bâtiments (limitation des pertes énergétiques par exemple)" , "increment" : -0.03}
+    ]}
+    ]
+}
