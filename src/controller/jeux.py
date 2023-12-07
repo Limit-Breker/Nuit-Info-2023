@@ -20,4 +20,15 @@ def earth_survival():
     return render_template("jeux/earth-survival.html")
 
 
+@jeux.route("/quizz", methods=['GET', 'POST'])
+def quizz():
+    return render_template("jeux/quizz.html")
+
+
+@jeux.route("/memory", methods=['GET', 'POST'])
+def memory():
+    return render_template("jeux/memory.html")
+
+
+
 
