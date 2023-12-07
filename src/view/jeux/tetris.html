@@ -1,5 +1,25 @@
 {% extends "common/base.html" %}
-{% block body %}
-<h1>Jeux tetris</h1>
 
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/tetris.css') }}">
+{% endblock %}
+
+{% block body %}
+<div id="tetris">
+  <div id="texte_principale">
+    <h1>Erreur 404</h1>
+    <h2>La page que vous avez demandé n'existe pas.</h2>
+  </div>
+  <div id="instructions">
+    <p>flèche droit et gauche pour bouger</p>
+    <p>espace ou flèche haut pour tourner</p>
+    <p>flèche bas pour descendre plus vite</p>
+    <p id="score"></p>
+  </div>
+</div>
+<canvas width="320" height="640" id="game"></canvas>
+{% endblock %}
+
+{% block javascripts2 %}
+<script src="{{ url_for('static',filename='js/tetris.js') }}"></script>
 {% endblock %}
