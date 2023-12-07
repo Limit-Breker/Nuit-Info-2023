@@ -1,6 +1,11 @@
 {% include "common/base.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/truth-game.css') }}"">
 {% block body %}
-<h1>Le jeu du VRAI ou FAUX </h1>
+<h1 id="titre">Le jeu du VRAI ou FAUX </h1>
+<div class="une_carte">
+    <div class="titre_carte"></div>
+
+</div>
 
 
 {% endblock %}
