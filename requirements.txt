@@ -13,3 +13,4 @@ Werkzeug==2.3.7
 WTForms
 sqlacodegen
 flask-sqlacodegen==2.0.0
+wheel
