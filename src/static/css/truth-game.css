@@ -1,25 +1,41 @@
 *{
     border:1px solid black;
-    background-color: rgb(250, 250, 250);
 }
 #titre{
-
-}
-.une_carte_background{
-
-}
-.une_carte{
-    width:50%;
     margin:auto;
 }
+.une_carte_background{
+    border-radius: 50px;
+    width:50%;
+    padding:2%;
+    margin:2%;
+    margin:auto;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background: rgba(217, 217, 217, 0.50);
+}
+.contenu{
+    margin:5%;
+}
+.stats{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.stat_score{
+    right:0;
+}
+.une_stat{
+    width:fit-content;
+}
 .titre_carte{
-    font-size: 40px;
+    font-size: 25px;
     font-style: bold;
     font-weight: 400;
     line-height: normal;
 }
 .description_carte{
-    font-size: 40px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
