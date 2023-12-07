@@ -2,6 +2,7 @@ import os
 from flask_debugtoolbar import DebugToolbarExtension
 from flask import Flask, url_for
 
+from controller.jeux import jeux
 from controller.communs import communs
 from model_db.shared_model import db
 
@@ -10,6 +11,7 @@ app = Flask(__name__, template_folder="view")
 app.config.from_object("config.DevConfig")
 toolbar = DebugToolbarExtension(app)
 app.register_blueprint(communs)
+app.register_blueprint(jeux)
 db.init_app(app)
 
 
