@@ -10,6 +10,11 @@ De cette manière toutes les urls associées a ce controller commenceront par /c
 '''
 
 
+@jeux.route("/", methods=['GET', 'POST'])
+def index():
+    return render_template("jeux/index.html")
+
+
 @jeux.route("/earth-survival", methods=['GET', 'POST'])
 def earth_survival():
     return render_template("jeux/earth-survival.html")
