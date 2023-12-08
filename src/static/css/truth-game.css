@@ -1,64 +1,74 @@
 
-
-#titre{
-    margin:auto;
+#titre {
+    margin: auto;
 }
 
 
-.flip-card{
-    height:40vh;
-    width:50%;
-    
-    margin:auto;
-    
+.flip-card {
+    height: 40vh;
+    width: 50%;
+
+    margin: auto;
+
     perspective: 1000px;
 }
 
-.contenu{
-    margin:5%;
+.contenu {
+    margin: 5%;
 }
-.stats{
+
+.stats {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.stat_score{
-    right:0;
+
+.stat_score {
+    right: 0;
 }
-.une_stat{
-    width:fit-content;
+
+.une_stat {
+    width: fit-content;
 }
-.titre_carte{
+
+.titre_carte {
     font-size: 25px;
     font-style: bold;
     font-weight: 400;
     line-height: normal;
 }
-.description_carte{
+
+.description_carte {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.boutons{
-    width:fit-content;
-    margin:auto;
+
+.boutons {
+    width: fit-content;
+    margin: auto;
 }
-.bouton{
-    
+
+.bouton {
+
     width: 234px;
-    height: 70px; 
+    height: 70px;
     border-radius: 50px;
-    border: 1px solid #000; 
+    border: 1px solid #000;
 }
-.bouton_vrai{
+
+.bouton_vrai {
     background: rgba(82, 210, 79, 0.50);
 }
-.bouton_faux{
-    background: rgba(181, 19, 19, 0.50); 
+
+.bouton_faux {
+    background: rgba(181, 19, 19, 0.50);
 }
-.bouton_question_suivante{
-    margin:2% 30% 2% 20%;
+
+.bouton_question_suivante {
+    margin: 2% 30% 2% 20%;
+    display: none;
 }
 
 .flip-card-inner {
@@ -67,16 +77,16 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding:2%;
-    margin:2%;
+    padding: 2%;
+    margin: 2%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
+}
 
-.rotate-card{
+.rotate-card {
     transform: none;
-    transform: rotateY( 180deg ) ;
+    transform: rotateY(180deg);
     transition: transform 0.5s;
     -moz-transform: rotateY(180deg);
 }
@@ -98,6 +108,6 @@
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
-    -moz-backface-visibility: hidden; 
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-  }
+}
