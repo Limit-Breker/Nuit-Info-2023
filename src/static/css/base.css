@@ -24,7 +24,9 @@ body {
 
 header {
     position: fixed;
-    top: 20px;
+    opacity: 0;
+    top: -100%;
+    transform: scale(.2);
     left: 20px;
     width: calc(100vw - 40px);
     margin-inline: auto;
@@ -36,6 +38,20 @@ header {
     color: var(--color-white);
     z-index: 9999;
     border-radius: 16px;
+    animation: fadeHeader 1s .3s forwards ease-in-out;
+}
+
+@keyframes fadeHeader {
+    from {
+        opacity: 0;
+        transform: scale(.2);
+        top: -100%;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        top: 20px;
+    }
 }
 
 header hr {
@@ -99,7 +115,7 @@ footer {
     padding: 25px 150px 25px 45px;
     background: var(--color-black2);
     color: var(--color-white);
-    z-index: 99999;
+    z-index: 9;
     border-radius: 16px 16px 0px 0px;
 }
 
