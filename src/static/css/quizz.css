@@ -1,0 +1,86 @@
+body {
+    background-image: url('/static/image/background.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Modifier cette ligne pour centrer verticalement */
+    height: 100vh;
+    margin: 0;
+    font-family: "Gill Sans", sans-serif;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transparent-box {
+    width: 300px;
+    height: 100px;
+    background-color: rgba(165, 223, 241, 0.8);
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    margin-left: 170px;
+}
+
+.reponse {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.reponse-box {
+    width: 200px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer; /* Ajoute un curseur pointer pour indiquer que c'est cliquable */
+    transition: background-color 0.3s; /* Ajoute une transition pour un effet de fondu */
+}
+
+.reponse-box:hover {
+    background-color: rgba(200, 200, 200, 0.8); /* Couleur de survol */
+}
+
+.reponse-box.selected {
+    /* Styles pour les reponse-box sélectionnées */
+    border: 5px solid #72bb53;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.reponse-box p {
+    margin: 0; /* Supprime la marge par défaut du paragraphe */
+}
+#confirmButton {
+    background-color: #72bb53;
+    border-radius: 10px;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    justify-content: center;
+    display: none; /* Cacher le bouton par défaut */
+    margin-top: 10px; /* Ajouter une marge pour l'espacement */
+}
+
+.reponse-box.selected #confirmButton {
+    display: block; /* Afficher le bouton lorsque reponse-box est sélectionné */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
