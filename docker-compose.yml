@@ -1,0 +1,13 @@
+version: "3"
+services:
+    limit-breaker:
+        build: ./
+        container_name: limit-breker
+        networks:
+            - proxy-net
+        restart: always
+
+networks:
+    proxy-net:
+        name: proxy-network
+        external: true
