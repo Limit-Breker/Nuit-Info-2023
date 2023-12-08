@@ -26,7 +26,7 @@ header {
     position: fixed;
     top: 20px;
     left: 20px;
-    width: calc(100vw - 90px);
+    width: calc(100vw - 40px);
     margin-inline: auto;
     display: flex;
     justify-content: space-evenly;
@@ -382,11 +382,17 @@ h1.title_pages {
 }
 
 .dropdown-menu {
-    background-color: var(--color-white);
     border-radius: 15px;
     box-shadow: 5px 5px 5px var(--color-black-prim);
+    background: var(--color-black2);
+    color: var(--color-white);
 }
 
 .dropdown-menu li a {
+    color: var(--color-white);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--color-white);
     color: var(--color-black);
 }
