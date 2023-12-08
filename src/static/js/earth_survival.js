@@ -16,7 +16,7 @@ const DATE_LIMITE = 2300;
 class Jeu {
   constructor() {
     this.compteur = 0.0;
-    this.increment = 3;
+    this.increment = 0.03;
     this.date = new Date(Date.now());
     this.fin = -1;
     this.question = null;
@@ -55,8 +55,14 @@ async function incrementer(jeu) {
   incrementerDate(jeu.date);
   if (jeu.question == null) {
     if (Math.random() < 0.1) {
-      question = await getQuestion(Math.round(Math.random() * 20));
-      jeu.question = question;
+      if (jeu.compteur >= 4) {
+        question = await getQuestion(18+Math.round(Math.random() * 4));
+        jeu.question = question;
+      }
+      else {
+        question = await getQuestion(Math.round(Math.random() * 19));
+        jeu.question = question;
+      }
     }
   }
   ecrire(jeu);
@@ -180,7 +186,7 @@ function closePopup(jeu) {
     ouvrePopup(jeu, "Ici la Terre, voici les données : Pour l’instant la qualité de vie sur Terre est agréable, même si les océans subissent une légère augmentation de température, entraînant des perturbations dans les écosystèmes marins. Des phénomènes tels que le blanchissement corallien, bien que sporadiques, signalent des déséquilibres environnementaux préoccupants. Les habitants du monde entier restent sourds à nos messages d’alertes, vous êtes le seul à pouvoir nous conseiller.");
   }
   else if (jeu.fin >= 0) {
-    
+
   }
   else {
     unpause(jeu);
