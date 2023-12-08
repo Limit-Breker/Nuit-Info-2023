@@ -59,6 +59,12 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.reponse-box.falseSelected {
+    /* Styles pour les reponse-box sélectionnées */
+    border: 5px solid red;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 
 
 .reponse-box p {
