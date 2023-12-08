@@ -16,7 +16,7 @@ const DATE_LIMITE = 2300;
 class Jeu {
   constructor() {
     this.compteur = 0.0;
-    this.increment = 0.03;
+    this.increment = 3;
     this.date = new Date(Date.now());
     this.fin = -1;
     this.question = null;
@@ -25,19 +25,32 @@ class Jeu {
 }
 
 function jouer() {
+
   btnOk.onclick=function() {document.dispatchEvent(new Event('closePopup'))};
   for (let i = 0; i<3; i++) {
     reponses[i].onclick = clicReponse;
   }
   let jeu = new Jeu();
-  document.addEventListener('finJeu', function(e) { jeu.fin = e.detail.fin; })
+  
+  document.addEventListener('finJeu', function(e) { fin(jeu,e.detail.fin); })
   document.addEventListener('reponse', async function(e) { await handleReponse(jeu, e.detail) })
   document.addEventListener('closePopup', function(e) {closePopup(jeu)})
+ 
   ecrire(jeu);
   incrementer(jeu);
 }
 
+function fin(jeu,fin) {
+  jeu.fin = fin;
+  switch (fin) {
+    case 0 : ouvrePopup(jeu,"Votre mission a échoué … Les conditions environnementales deviennent si hostiles que toute forme de  vie sur Terre est éradiquée. La planète devient complètement inhabitable, marquant une tragédie écologique inimaginable. GAME OVER la Terre n’est plus une planète capable d’accueillir la vie, sa surface est un désert hostile et inanimé. "); break;
+    case 2 : ouvrePopup(jeu,"<strong>La température s’est stabilisée </strong>, grâce à vos précieux conseils, les quelques ressources qui restent aux survivants leur ont permis de développer des les technologies nécessaires à la décroissance de nos émissions de CO2. La survie à la surface est désormais envisageable. <br>C’est une<strong> faible victoire</strong> mais une lumière d’espoir dans notre monde devenu chaotique ! <br>Les niveaux de pollution atmosphérique sont toujours élevés, et les écosystèmes terrestres et marins<strong> mettront du temps avant de retrouver un équilibre viable </strong>tandis que des régions toujours en proie aux radiations solaires néfastes non protégées par la couche d’ozone resteront des terrains condamnés à des conditions météorologiques extrêmes et désertiques pour l’éternité.<br>L’Humanité va pouvoir se reconstruire au fil des siècles et prendre un nouveau départ grâce à vos connaissances solides. <strong>L’Histoire en retiendra le terrible châtiment que réserve la nature à celui qui ne la respecte pas </strong>.");break;
+    case 1: ouvrePopup("")
+  }
+}
+
 async function incrementer(jeu) {
+  console.log(jeu);
   jeu.compteur += jeu.increment*5/12;
   incrementerDate(jeu.date);
   if (jeu.question == null) {
@@ -48,11 +61,22 @@ async function incrementer(jeu) {
   }
   ecrire(jeu);
   testFin(jeu);
+  testPalier(jeu);
   if (jeu.fin < 0 && !jeu.pause) {
-    setTimeout(incrementer,1000/3,jeu);
+    setTimeout(incrementer,1000 /2,jeu);
   }
 }
-
+function testPalier(jeu) {
+  if (Math.trunc(jeu.compteur)>Math.trunc(jeu.compteur - jeu.increment)) {
+    switch (Math.trunc(jeu.compteur)) {
+      case 1: ouvrePopup(jeu, "Ici la Terre, voici les données :  La situation se dégrade !! Alors que les niveaux de pollution atmosphérique, comprenant des particules fines et des gaz à effet de serre, augmentent, les répercussions se font sentir. La qualité de l'air se détériore, affectant la santé humaine de manière croissante tout en imposant des défis aux écosystèmes terrestres. Les personnes âgées dans notre entourage sont exténuées par les quintes de toux, le monde commence à se rendre compte de la situation, on compte sur vous pour nous tirer de cette affaire !!");break;
+      case 2: ouvrePopup(jeu, "Ici la Terre au rapport ! Les nouvelles de sont pas bonnes ! Avec l'augmentation drastique de la température moyenne sur Terre et de la quantité de CO2 dans l’air, On observe une augmentation des radiations solaires suite à l'altération de la couche d'ozone causée par les émissions de gaz destructeurs de l'ozone, exposant ainsi davantage la planète aux radiations solaires néfastes. Les radiations exposent les populations à de multiples cancers de la peau et le soleil à l’équateur et en Océanie pousse ses habitants à se réfugier. Les canicules seront brutales dans les années qui viennent ! Ne sortez pas trop au soleil mais surtout dépêchez-vous ! Notre temps sur Terre est compté !"); break;
+      case 3: ouvrePopup(jeu, "ICI LA TERRE !! VITE !! Nous avons besoin de vous, la situation est critique !!! Les effets négatifs cumulatifs se multiplient, touchant les océans, les forêts, les écosystèmes, la qualité de l'air et les radiations. Certains changements deviennent irréversibles, menaçant la stabilité globale de la planète. L'urgence d'actions pour atténuer ces impacts devient impérative pour préserver notre environnement sont trop faibles !! Vous devez réagir il en va de la survie de toute l’espèce humaine ! Concentrez-vous !!!");break;
+      case 4: ouvrePopup(jeu, "ICI LA T… AU SECOURS CA BRÛLE !!! La vie est irrespirable, la population s’affole, le monde sombre dans le désespoir ! Les industries sont laissées à l'abandon et les pertes liées aux maladies et aux pollutions sont de plus en plus nombreuses !!! À ce stade, les écosystèmes subissent un effondrement rapide des populations d'espèces en raison des changements climatiques rapides. La perte massive de biodiversité qui en résulte a des conséquences graves pour la stabilité des écosystèmes. En parallèle, la désertification gagne du terrain, transformant radicalement les paysages autrefois riches en diversité biologique. Ce monde est devenu un enfer !!! Même si on réussit à le sauver il ne restera qu’une société survivante apocalyptique dans un désert de pollution, je commence à perdre espoir, vous devez trouver les solutions où nous mourrons tous …");break;
+      case 5: ouvrePopup(jeu, "AAAAAAHHHH !! LE MONDE S’EFFONDRE, IL EST TROP TARD !!! Le monde est plongé dans les ténèbres sans électricité ni eau ! Alors que les effets climatiques s'intensifient, des pénuries alimentaires généralisées surviennent, attribuables à la dégradation des terres et à des conditions météorologiques extrêmes. La perte d'habitabilité dans certaines régions, accentuée par la montée du niveau de la mer, force les populations à se déplacer massivement. Les pressions sur les ressources naturelles déclenchent des conflits géopolitiques et des migrations à grande échelle, exacerbant l’anéantissement mondial. Ma famille est décimée, notre mission a échoué, notre destin à tous tient sur un fil, plus personne ne peut nous sauver, à part vous ??!"); break
+    }
+  }
+}
 function testFin(jeu) {
   if (jeu.compteur >= 6.0) {
     document.dispatchEvent(new CustomEvent('finJeu', {
@@ -151,11 +175,24 @@ return moisEnFrancais[numeroMois];
 
 function closePopup(jeu) {
   document.getElementById("popup-info").classList.add("invisible");
-  jeu.pause = false;
-  console.log(jeu.pause)
-  setTimeout(incrementer(jeu),1000/3);
+  console.log(textPopup.innerHTML)
+  if(textPopup.innerHTML.charAt(0) == 'B') {
+    ouvrePopup(jeu, "Ici la Terre, voici les données : Pour l’instant la qualité de vie sur Terre est agréable, même si les océans subissent une légère augmentation de température, entraînant des perturbations dans les écosystèmes marins. Des phénomènes tels que le blanchissement corallien, bien que sporadiques, signalent des déséquilibres environnementaux préoccupants. Les habitants du monde entier restent sourds à nos messages d’alertes, vous êtes le seul à pouvoir nous conseiller.");
+  }
+  else if (jeu.fin >= 0) {
+    
+  }
+  else {
+    unpause(jeu);
+  }
 }
 
+function unpause(jeu) {
+  if (jeu.pause) {
+    jeu.pause = false;
+    incrementer(jeu);
+  }
+}
 function clicReponse(e) {
   document.dispatchEvent(new CustomEvent('reponse',{detail: e.srcElement.id.charAt(7)-1}));
 }
