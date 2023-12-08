@@ -1,12 +1,13 @@
 from functools import wraps
 
-from flask import session, abort
+from flask import session, redirect, url_for
 
 
-def login_required(func):
+def theme_required(func):
     @wraps(func)
     def decorated_function(*args, **kwargs):
-        if not session.get("name"):
-            abort(403)
+        if not session.get("theme"):
+            return redirect(url_for("communs.default_session"))
         return func(*args, **kwargs)
+    return decorated_function
 
