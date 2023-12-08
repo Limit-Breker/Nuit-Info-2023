@@ -1,0 +1,62 @@
+{
+    "1": {
+        "titre": "L'activité humaine",
+        "solutions": "Le changement climatique est dû à l'activité humaine ?",
+        "response": "Vrai",
+        "explication": "Le changement climatique est réel et est en grande partie dû à l'activité humaine, en particulier à l'émission de gaz à effet de serre tels que le dioxyde de carbone (CO2) et le méthane."
+    },
+    "2": {
+        "titre": "Les scientifiques et le réchauffement climatiques",
+        "description": "Les scientifiques sont d'accord sur l'existence du réchauffement climatique et sur les conséquences. ",
+        "response": "Vrai",
+        "explication": "Les scientifiques du climat s'accordent largement sur le fait que le réchauffement climatique est en cours et qu'il a des conséquences graves, y compris des phénomènes météorologiques extrêmes, la montée du niveau de la mer et des perturbations dans les écosystèmes."
+    },
+    "3": {
+        "titre": "La température en hausse ?",
+        "description": "La température mondiale a augmenté au cours des dernières décennies",
+        "response": "Vrai",
+        "explication": "La température mondiale moyenne à la surface de la Terre a augmenté d'environ 1,1 degré Celsius depuis la fin du XIXe siècle, et les années récentes ont souvent été parmi les plus chaudes jamais enregistrées."
+    },
+    "4": {
+        "titre": "La fonte des glaciers",
+        "description": "La fonte des glaciers est un évènement ayant de réelles conséquences sur la Terre",
+        "response": "Vrai",
+        "explication": "La fonte des glaciers et des calottes glaciaires contribue à l'élévation du niveau de la mer, ce qui peut entraîner des conséquences graves pour les populations côtières."
+    },
+    "5": {
+        "titre": "Les activités humaines",
+        "description": "Les activités humaines ont des conséquences majeures",
+        "response": "Vrai",
+        "explication": "Les activités humaines ont également des effets néfastes sur la biodiversité, provoquant des changements dans les habitats naturels et menaçant de nombreuses espèces."
+    },
+    "6": {
+        "titre": "Un cycle naturel ?",
+        "description": "Le changement climatique n'est qu'un cycle naturel de la Terre.",
+        "response": "Faux",
+        "explication": "Bien que la Terre ait connu des cycles climatiques naturels par le passé, les activités humaines, telles que les émissions de gaz à effet de serre, contribuent de manière significative au changement climatique actuel."
+    },
+    "7": {
+        "titre": "L'hiver",
+        "description": "Les hivers froids contredisent le réchauffement climatique.",
+        "response": "Faux",
+        "explication": "Le changement climatique concerne les tendances à long terme plutôt que des événements météorologiques spécifiques. Même si des hivers froids peuvent encore se produire, les données globales montrent une tendance au réchauffement."
+    },
+    "8": {
+        "titre": "Le CO2",
+        "description": "Les émissions de CO2 ne sont pas liées au changement climatique.",
+        "response": "Faux",
+        "explication": "Les émissions de dioxyde de carbone (CO2) et d'autres gaz à effet de serre provenant des activités humaines contribuent à piéger la chaleur dans l'atmosphère, causant ainsi le réchauffement climatique."
+    },
+    "9": {
+        "titre": "Une arnaque ?",
+        "description": "Le changement climatique n'est qu'une arnaque pour justifier de nouvelles taxes et réglementations.",
+        "response": "Faux",
+        "explication": "Le changement climatique est soutenu par un large consensus scientifique. Les mesures visant à atténuer ses effets sont basées sur des données et des recommandations scientifiques pour protéger l'environnement et les populations."
+    },
+    "10": {
+        "titre": "La technologie, une solution ?",
+        "description": "Les technologies émergentes résoudront automatiquement le problème du changement climatique, donc aucune action immédiate n'est nécessaire.",
+        "response": "Faux",
+        "explication": "Bien que les innovations technologiques soient importantes, des mesures immédiates pour réduire les émissions de gaz à effet de serre et s'adapter aux changements en cours sont également cruciales."
+    }
+}
