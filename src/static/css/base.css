@@ -92,7 +92,7 @@ header a {
 footer {
     /*position: absolute;*/
     bottom: 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -102,6 +102,7 @@ footer {
     color: var(--color-white);
     z-index: 9;
     border-radius: 16px 16px 0px 0px;
+        margin-top: auto;
 }
 
 footer .listes {
