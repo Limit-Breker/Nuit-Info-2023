@@ -1,11 +1,11 @@
 {
-  "400" : {
+  "400": {
     "description": "Requete invalide."
   },
-  "403" : {
+  "403": {
     "description": "Action non autorisée"
   },
-  "404" : {
+  "404": {
     "description": "Page Introuvable."
   }
 }
