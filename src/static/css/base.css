@@ -215,3 +215,26 @@ img.soleil {
     pointer-events: none;
     z-index: 9999;
 }
+
+#listeSrc{
+    list-style: url("../image/logo.png");
+    padding: 0;
+    padding-left: 60px;
+}
+
+#sources{
+    padding-left: 25px;
+}
+
+li{
+    margin-bottom: 3px;
+}
+
+a{
+    color: #e6c619;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
