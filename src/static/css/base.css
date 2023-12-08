@@ -90,6 +90,14 @@ header a {
     text-decoration: none;
 }
 
+body.blockHeader {
+    padding-top: 20px;
+}
+
+header.blockHeader {
+    position: static;
+}
+
 footer {
     /*position: absolute;*/
     bottom: 0;
