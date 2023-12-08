@@ -1,8 +1,25 @@
-// Vérifiez si la classe existe dans le document
-if (document.body.classList.contains('nomDeLaClasse')) {
-    // Récupérez l'élément auquel vous souhaitez ajouter une classe
-    var monElement = document.getElementById('idDeLElement');
+{% extends "common/base.html" %}
+{% block javascripts %}
+<script src="{{ url_for('static',filename='js/index.js') }}" defer></script>
+<script src="{{ url_for('static',filename='js/mainAnimate.js') }}" defer></script>
+{% endblock %}
 
-    // Ajoutez la classe à l'élément
-    monElement.classList.add('nouvelleClasse');
-}
+{% block body %}
+<div class="accueil">
+    {% include "partials/backgrounds.html" %}
+    <h1 class="title">CHANGEMENT CLIMATIQUE</h1>
+    <h3 class="secondary">Le vrai du faux</h3>
+    
+    <div class="btn_jeux_container">
+        <a href="{{ url_for('jeux.index') }}" class="btn_jeux">
+            <button type="button" class="btn_games stroke1 stroke2">Décrouvrir nos jeux</button>
+        </a>
+    </div>
+
+</div>
+
+<img src="{{ url_for('static', filename='image/nuage.png') }}" alt="image nuage" class="nuage" id="image1">
+<img src="{{ url_for('static', filename='image/soleil.png') }}" alt="image nuage" class="soleil" id="image2">
+
+
+{% endblock %}

@@ -29,7 +29,7 @@ image1.addEventListener('drop', (e) => {
     ) {
         document.body.classList.add('dropped');
         createLight(e.clientX, e.clientY);
-        console.log("drop"); //TODO theme sombre
+        //TODO theme sombre
     } else {
         document.body.classList.remove('dropped');
         removeLight();
