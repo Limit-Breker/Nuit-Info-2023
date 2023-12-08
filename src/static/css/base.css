@@ -286,6 +286,18 @@ img.soleil {
     margin: 10px;
 }
 
+img.charlie {
+    position: absolute;
+    right: 10%;
+    bottom: 390px;
+    width: 70px;
+    height: 70px;
+    z-index: 0;
+    object-fit: contain;
+    opacity: .7;
+    margin: 10px;
+}
+
 .dropped {
     background-color: black;
 }

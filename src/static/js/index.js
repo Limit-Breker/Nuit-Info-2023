@@ -48,12 +48,15 @@ function handleMouseMove(e) {
 }
 
 function createLight(x, y) {
+    document.getElementById('image3').removeAttribute("hidden");
+
     light = document.createElement('div');
     light.classList.add('light');
     document.body.appendChild(light);
 }
 
 function removeLight() {
+    document.getElementById('image3').setAttribute("hidden", "");
     if (light) {
         light.remove();
         light = null;
