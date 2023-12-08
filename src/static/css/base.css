@@ -461,7 +461,11 @@ h1.title_pages {
 }
 
 .imgtrop{
-    width: 30%;
+    width: 50%;
+}
+
+.imgtrops{
+    width: 70%;
 }
 
 .row {
@@ -469,6 +473,19 @@ h1.title_pages {
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+
+#titreStats{
+    margin-left: 20px;
+}
+
+.chiffres{
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.number{
+    color: #006900;
 }
 
 section.gauche, section.droite {
