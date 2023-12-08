@@ -10,12 +10,12 @@
     height:fit-content;
     border-radius: 50px;
     padding:2%;
+    margin-right:8%;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.532);
 }
 /* Ajoutez ces styles pour positionner les boutons en bas à droite */
 .boutons {
     width:50%;
-    margin:auto;/* Ajoutez une marge pour un meilleur aspect visuel */
     display: flex; /* Utilisez le modèle flexbox */
     flex-direction: column; /* Disposition verticale des éléments */
     justify-content: space-between /* Alignez les boutons en bas du conteneur */
@@ -41,6 +41,7 @@
     font-weight: 500;
     cursor:pointer;
     text-decoration: none;
+    margin:2%;
 }
 
 #reponse{
