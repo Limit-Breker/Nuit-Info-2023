@@ -1,11 +1,11 @@
 {% if session["theme"] in ["normal", "dark"] %}
-<img src="{{ url_for('static', filename='image/background.png') }}" alt="background image">
+<img src="{{ url_for('static', filename='image/background.jpg') }}" alt="background image">
 {% elif session["theme"] == "noel" %}
 <img src="{{ url_for('static', filename='image/background_noel.png') }}" alt="background image">
 {% elif session["theme"] == "finmonde" %}
 <img src="{{ url_for('static', filename='image/background_fdm.png') }}" alt="background image">
 {% elif session["theme"] == "random" %}
-<img src="{{ url_for('static', filename='image/background.png') }}" alt="background image"
+<img src="{{ url_for('static', filename='image/background.jpg') }}" alt="background image"
 style="filter: hue-rotate({{ range(0, 361) | random }}deg);">
 {% endif %}
 
