@@ -1,4 +1,6 @@
 {% extends "common/base.html" %}
+{% block title %}Solutions
+{% endblock %}
 {% block stylesheets  %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/solution.css') }}">
 {% endblock %}
@@ -9,7 +11,11 @@
 <div>
 <h1 class="title_pages">Les solutions face au changement climatique</h1>
 <div id="greta">
+    {% if session["theme"] == 'noel' %}
+    <div id="greta_img"><img src="{{ url_for('static', filename='image/greta_noel.png') }}"></div>
+    {% else %}
     <div id="greta_img"><img src="{{ url_for('static', filename='image/greta.png') }}"></div>
+    {% endif %}
     <div style="display:flex">
         
     <div id="block_greta"><p>Salut là-bas !
