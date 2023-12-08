@@ -1,4 +1,4 @@
-{% extends "common/base.html" %}
+{% extends "common/base_shf.html" %}
 
 {% block stylesheets %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/tetris.css') }}">
@@ -7,14 +7,15 @@
 {% block body %}
 <div id="tetris">
   <div id="texte_principale">
+    
     <h1>Erreur 404</h1>
     <h2>La page que vous avez demandé n'existe pas.</h2>
+    <p id="score"></p>
   </div>
   <div id="instructions">
     <p>flèche droit et gauche pour bouger</p>
     <p>espace ou flèche haut pour tourner</p>
     <p>flèche bas pour descendre plus vite</p>
-    <p id="score"></p>
   </div>
 </div>
 <canvas width="320" height="640" id="game"></canvas>
