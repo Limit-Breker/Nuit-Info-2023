@@ -1,25 +1,22 @@
-
-
 import json
 import os
+
 from flask import Flask, url_for, render_template
 from werkzeug.exceptions import HTTPException
 
-from controller.jeux import jeux
-from controller.communs import communs
-
-from custom_paquets.gestions_erreur import logging_erreur
 from controller.api import api
+from controller.communs import communs
+from controller.jeux import jeux
+from custom_paquets.gestions_erreur import logging_erreur
 
-
-app = Flask(__name__, template_folder="view")
+app = Flask(__name__, template_folder = "view")
 app.config.from_object("config.DevConfig")
 app.register_blueprint(communs)
 app.register_blueprint(jeux)
 app.register_blueprint(api)
 
 try:
-    open('app.log', 'w').close()
+    open("app.log", "w").close()
 except:
     pass
 
@@ -38,22 +35,38 @@ def handle_error(e):
     if isinstance(e, HTTPException):
         code = e.code
         try:
-            with open('static/error.json') as json_file:
+            with open("static/error.json") as json_file:
                 errors = json.load(json_file)
                 description = errors[f"{code}"]["description"]
         except:
             pass
     if code == 404:
-        return render_template("jeux/tetris.html", titre='erreur', erreur=f"Erreur {code}",
-                               description=description, description_plus=description_plus), code
+        return (
+            render_template(
+                "jeux/tetris.html",
+                titre = "erreur",
+                erreur = f"Erreur {code}",
+                description = description,
+                description_plus = description_plus,
+            ),
+            code,
+        )
     else:
-        return render_template("common/erreur.html", titre='erreur', erreur=f"Erreur {code}",
-                               description=description, description_plus=description_plus), code
+        return (
+            render_template(
+                "common/erreur.html",
+                titre = "erreur",
+                erreur = f"Erreur {code}",
+                description = description,
+                description_plus = description_plus,
+            ),
+            code,
+        )
 
 
 @app.context_processor
 def override_url_for():
-    return dict(url_for=dated_url_for)
+    return dict(url_for = dated_url_for)
 
 
 def dated_url_for(endpoint, **values):
