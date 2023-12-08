@@ -1,4 +1,4 @@
-<header>
+<header {% if pp %} class="blockHeader" {% endif %}>
     <a href="{{ url_for('communs.index') }}">
         <img src="{{ url_for('static', filename='image/logo_limit_breker.png') }}" alt="Logo Limit Beker" class="logo">
     </a>
