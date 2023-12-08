@@ -19,15 +19,4 @@
 
 <img src="{{ url_for('static', filename='image/nuage.png') }}" alt="image nuage" class="nuage" id="image1">
 <img src="{{ url_for('static', filename='image/soleil.png') }}" alt="image nuage" class="soleil" id="image2">
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        if (document.body.classList.contains('accueil')) {
-            console.log("efcyb");
-            var monElement = document.querySelector('header');
-            monElement.classList.add('animate');
-        }
-    });
-</script>
-
 {% endblock %}
