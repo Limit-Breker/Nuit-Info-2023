@@ -23,12 +23,6 @@ def stats():
     return render_template("communs/stats.html")
 
 
-@communs.route("/prejuges", methods = ["GET"])
-@theme_required
-def prejuges():
-    return render_template("communs/prejuges.html")
-
-
 @communs.route("/sources", methods = ["GET"])
 @theme_required
 def sources():
