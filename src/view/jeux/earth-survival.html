@@ -7,27 +7,31 @@
 {% endblock %}
 {% block body %}
 <div id="main-earth-survival">
-  <img id="background" src="{{ url_for('static', filename='image/background.png') }}" alt="background image">
-    <div id="compteurs">
-      <div id="container-compteur-degre" class="boite">
-        <p id="compteur-degre"></p>
-        <p id="augmentation-compteur-degre">+0.03°C /an</p>
-      </div>
-      <p id="date-compteur"></p>
-    </div>
+  <img id="background" src="{{ url_for('static', filename='image/background.png') }}" alt="background image"> 
     <h2 id="titre" class="boite">Earth Survival</h2>
-    <div id="container-question">
-      <p id="question" class="boite">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, corrupti veritatis excepturi dolorem placeat in, ex laboriosam esse aspernatur unde odit tempora optio numquam eos officiis rerum, iure laudantium expedita!</p>
-      <div id="container-reponses">
-        <button class="reponse boite" id="reponse1">Réponse 1</button>
-        <button class="reponse boite" id="reponse2">Réponse 2</button>
-        <button class="reponse boite" id="reponse3">Réponse 3</button>
+    <div class="contenu">
+      <div id="map" class=""><img id=mapBG src="{{ url_for('static', filename='image/orangeEarth.png') }}">
+        <img id=mapFG src="{{ url_for('static', filename='image/greenEarth.png') }}"></div>
+      <div id="game">
+        <div id="compteurs" class="boite">
+          <div id="container-compteur-degre">
+            <p id="compteur-degre"></p>
+            <p id="increment-compteur-degre">+0.03°C /an</p>
+          </div>
+          <p id="date-compteur"></p>
+        </div>
+        <div id="container-question" class="boite">
+          <p id="question" class=""></p>
+          <div id="container-reponses">
+            <button class="reponse boite" id="reponse1"></button>
+            <button class="reponse boite" id="reponse2"></button>
+            <button class="reponse boite" id="reponse3"></button>
+          </div>
+        </div>
       </div>
     </div>
-    
   <div id="popup-info" class="boite invisible">
     <p id="text-info">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut animi sit laborum modi, cumque officia sequi dolorem beatae quidem corrupti perspiciatis quia! Expedita corporis quis a asperiores iusto. Ipsum, nam?
     </p>
     <button id="fermer-info">OK</button>
   </div>

@@ -3,11 +3,14 @@ let compteurDegre = document.getElementById("compteur-degre");
 let fieldDate = document.getElementById("date-compteur");
 let fieldIncrement = document.getElementById("increment-compteur-degre")
 let reponses = [...document.getElementsByClassName("reponse")];
+let containerQuestion = document.getElementById("container-question");
+let btnOk = document.getElementById("fermer-info");
+let imgFG = document.getElementById("mapFG");
 
 const MAUVAISE_FIN = 0;
 const FIN_NEUTRE = 1;
 const BONNE_FIN = 2;
-const DATE_LIMITE = 2030;
+const DATE_LIMITE = 2300;
 
 class Jeu {
   constructor() {
@@ -17,13 +20,16 @@ class Jeu {
     this.fin = -1;
     this.question = null;
   }
-
-  
 }
 
 function jouer() {
+  btnOk.onclick=closePopup;
+  for (let i = 0; i<3; i++) {
+    reponses[i].onclick = clicReponse;
+  }
   let jeu = new Jeu();
   document.addEventListener('finJeu', function(e) { jeu.fin = e.detail.fin; })
+  document.addEventListener('reponse', function(e) { handleReponse(jeu, e.detail) })
   ecrire(jeu);
   incrementer(jeu);
 }
@@ -31,10 +37,9 @@ function jouer() {
 async function incrementer(jeu) {
   jeu.compteur += jeu.increment*5/12;
   incrementerDate(jeu.date);
-  if (jeu.question === null) {
-    if (Math.random() < 1) {
+  if (jeu.question == null) {
+    if (Math.random() < 0.3) {
       question = await getQuestion(Math.round(Math.random() * 20));
-      console.log('question trouvée');
       jeu.question = question;
     }
   }
@@ -54,7 +59,7 @@ function testFin(jeu) {
     })
     );
   }
-  else if (jeu.increment === 0.0) {
+  else if (jeu.increment <= 0.0) {
     document.dispatchEvent(new CustomEvent('finJeu', {
       detail: {
         fin: BONNE_FIN
@@ -73,15 +78,19 @@ function testFin(jeu) {
 }
 
 function ecrire(jeu) {
-  fieldDate.innerHTML = jeu.date.getFullYear();
+  imgFG.style.opacity = 0.8-jeu.compteur/6.0;
+  fieldDate.innerHTML = 'Année : '+jeu.date.getFullYear();
   compteurDegre.innerHTML = '+'+jeu.compteur.toFixed(2) +"°C";
-  console.log(jeu.question);
+  fieldIncrement.innerHTML = '+'+Math.abs(jeu.increment.toFixed(2))+ "°C/an";
   if (jeu.question != null ) {
+    containerQuestion.classList.remove("invisible");
     fieldQuestion.innerHTML = jeu.question.intitule;
     for (let i = 0;i <3; i++) {
-      console.log(jeu.question.reponse)
       reponses[i].innerHTML = jeu.question.reponse[i].intitule;
     }
+  }
+  else {
+    containerQuestion.classList.add("invisible");
   }
 }
 
@@ -135,6 +144,19 @@ const moisEnFrancais = [
 
 // Retourner le mois correspondant
 return moisEnFrancais[numeroMois];
+}
+
+function closePopup() {
+  document.getElementById("popup-info").classList.add("invisible");
+}
+
+function clicReponse(e) {
+  document.dispatchEvent(new CustomEvent('reponse',{detail: e.srcElement.id.charAt(7)-1}));
+}
+
+function handleReponse(jeu, num) {
+  jeu.increment += jeu.question.reponse[num].increment;
+  jeu.question = null;
 }
 
 jouer();
