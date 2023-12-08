@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kulim+Park&display=swap');
 
-:root {
-    --color-white: #ffffff;
-    --color-grey: #dcdcdc;
-    --color-grey2: #efefed;
-    --color-black-prim: #000;
-    --color-black: #151C21;
-    --color-black2: #31383C;
-}
 
 * {
     user-select: none;
