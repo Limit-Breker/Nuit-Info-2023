@@ -14,13 +14,30 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS"
+            crossorigin="anonymous"></script>
+
     <!-- Exemple pour link une police google
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     -->
-
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/color-sets/base.css') }}">
-
+    {% if session["theme"] != "random" %}
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='css/color-sets/'+session['theme']+'.css') }}">
+    {% else %}
+    <style>
+        :root {
+            --color-white: rgb({{ range(0, 256) | random }}, {{ range(0, 256) | random }}, {{ range(0, 256) | random }});
+            --color-grey: rgb({{ range(0, 256) | random }}, {{ range(0, 256) | random }}, {{ range(0, 256) | random }});
+            --color-grey2: rgb({{ range(0, 256) | random }}, {{ range(0, 256) | random }}, {{ range(0, 256) | random }});
+            --color-black: rgb({{ range(0, 256) | random }}, {{ range(0, 256) | random }}, {{ range(0, 256) | random }});
+            --color-black2: rgb({{ range(0, 256) | random }}, {{ range(0, 256) | random }}, {{ range(0, 256) | random }});
+        }
+    </style>
+    {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/base.css') }}">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Balise utilisée link les feuilles css -->
@@ -36,6 +53,7 @@
 <body>
 <!-- Inclusion de la barre de navigation -->
 {% include "partials/nav.html" %}
+
 <div id="master">
     {% block body %}{% endblock %}
 </div>
@@ -46,5 +64,16 @@
 </body>
 
 {% block javascripts2 %}{% endblock %}
+
+<script defer>
+
+    function validate(element) {
+        $.getJSON("/api/changer_theme/" + encodeURIComponent(element), function (data) {
+            if (data["valide"]) {
+
+            }
+        })
+    }
+</script>
 
 </html>
