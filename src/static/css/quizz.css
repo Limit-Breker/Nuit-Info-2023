@@ -1,16 +1,3 @@
-body {
-    background-image: url('/static/image/background.png');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Modifier cette ligne pour centrer verticalement */
-    height: 100vh;
-    margin: 0;
-    font-family: "Gill Sans", sans-serif;
-    color: black
-}
-
-
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -45,8 +32,8 @@ body {
     padding: 10px;
     text-align: center;
     margin-left: 10px;
-    cursor: pointer; /* Ajoute un curseur pointer pour indiquer que c'est cliquable */
-    transition: background-color 0.3s; /* Ajoute une transition pour un effet de fondu */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .reponse-box:hover {
