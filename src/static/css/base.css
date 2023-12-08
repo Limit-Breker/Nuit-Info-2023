@@ -338,7 +338,7 @@ h1.title_pages {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--color-black-prim);
+        color: var(--color-white);
         font-weight: 900;
         width: inherit;
         background-size: cover !important;
