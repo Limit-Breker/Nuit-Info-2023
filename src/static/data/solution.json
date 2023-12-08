@@ -1,19 +1,19 @@
-[
-    "1"{
+{
+    "1":{
       "question": "Comment pouvons-nous réduire le gaspillage alimentaire à la maison pour lutter contre le changement climatique?",
       "reponse": "Nous pouvons planifier nos repas, stocker les aliments correctement et être plus conscients de nos achats."
     },
-    "2"{
-      "question": "Cmment surmonter l'opposition des riverains aux parcs éoliens de manière créative pour favoriser les énergies renouvelables?",
+    "2":{
+      "question": "Comment surmonter l'opposition des riverains aux parcs éoliens de manière créative pour favoriser les énergies renouvelables?",
       "reponse": "Pouvons-nous impliquer les communautés dans la planification, éduquer sur les avantages écologiques et explorer des designs esthétiques?"
     },
-    "3"{
+    "3":{
       "question": "Comment encourager la création de parcs photovoltaïques tout en préservant les espaces naturels?",
       "reponse": "Peut-on explorer des solutions comme l'installation sur des terrains déjà altérés ou intégrer des panneaux solaires dans des structures existantes?"
     },
-    "4"{
+    "4":{
       "question": "Comment promouvoir l'efficacité énergétique des bâtiments à grande échelle dans la lutte contre le changement climatique?",
       "reponse": "Comment pouvons-nous encourager l'adoption de normes strictes, de technologies vertes et sensibiliser à l'importance de la construction durable?"
     }
-  ]
+}
   
