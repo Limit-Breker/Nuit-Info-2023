@@ -21,6 +21,10 @@ class Jeu {
     this.fin = -1;
     this.question = null;
     this.pause = true;
+    this.done = Array();
+    for (let i = 0; i<24;i++) {
+      this.done.push(false);
+    }
   }
 }
 
@@ -56,11 +60,19 @@ async function incrementer(jeu) {
   if (jeu.question == null) {
     if (Math.random() < 0.1) {
       if (jeu.compteur >= 4) {
-        question = await getQuestion(18+Math.round(Math.random() * 4));
+        nb = 18+Math.round(Math.random() * 4);
+        while (jeu.done[nb]) {
+          nb = 18+Math.round(Math.random() * 4);
+        }
+        question = await getQuestion(nb);
         jeu.question = question;
       }
       else {
-        question = await getQuestion(Math.round(Math.random() * 19));
+        nb = Math.round(Math.random() * 19);
+        while (jeu.done[nb]) {
+          nb = Math.round(Math.random() * 19);
+        }
+        question = await getQuestion(nb);
         jeu.question = question;
       }
     }
@@ -205,6 +217,17 @@ function clicReponse(e) {
 
 async function handleReponse(jeu, num) {
   jeu.increment += jeu.question.reponse[num].increment;
+  jeu.done[num] = true;
+  if (jeu.done.filter((x) => x >= 19 || x).length == 19) {
+    for (let i = 0; i<19;i++) {
+      jeu.done[i] = false;
+    }
+  }
+  else if (jeu.done.filter((x) => x < 19 || x).length == 5) {
+    for (let i = 19; i<24;i++) {
+      jeu.done[i] = false;
+    }
+  }
   await ouvrePopup(jeu,jeu.question.popup);
   jeu.question = null;
 }
