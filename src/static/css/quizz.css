@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: "Gill Sans", sans-serif;
+    color: black
 }
 
 
@@ -55,6 +56,12 @@ body {
 .reponse-box.selected {
     /* Styles pour les reponse-box sélectionnées */
     border: 5px solid #72bb53;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.reponse-box.falseSelected {
+    /* Styles pour les reponse-box sélectionnées */
+    border: 5px solid red;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 

@@ -1,32 +1,43 @@
 {% extends "common/base.html" %}
-<<<<<<< HEAD
+
 {% block stylesheets %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/quizz.css') }}">
 {% endblock %}
+
+<<<<<<< Updated upstream
+
 =======
 {% block body %}
 <h1 class="title_pages">Le jeux quizz</h1>
->>>>>>> 0d945464d1eee57f7ee9be71710a7bccd1d4dbb9
+>>>>>>> Stashed changes
 
 {% block body %}
-    <div class="transparent-box">
+    <div class="transparent-box" id="question">
         <p>Lequel de ces transports produit le plus de CO2 par individu ?</p>
     </div>
     <div class="reponse">
-        <div class="reponse-box">
-            <p>avion</p>
+        <div class="reponse-box" id="rep1">
+            <button onclick="reponseClick('rep1')">avion</button>
         </div>
-        <div class="reponse-box">
-            <p>voiture</p>
+        <div class="reponse-box" id="rep2">
+            <button onclick="reponseClick('rep2')">voiture</button>
         </div>
-        <div class="reponse-box">
-            <p>vélo</p>
+        <div class="reponse-box" id="rep3">
+            <button onclick="reponseClick('rep3')">vélo</button>
+        </div>
+        <div class="reponse-box" id="rep4">
+            <button onclick="reponseClick('rep4')">la marche</button>
         </div>
     </div>
     <div class="button-container">
-        <button id="confirmButton" style="display: none;">Confirmer</button>
+        <button id="confirmButton" style="display: none;" onclick="setExpl()">Voir expliquation</button>
     </div>
+    <div class="button-container">
+        <button id="confirmExplButton" style="display: none;" onclick="setQuizz()">Question suivante</button>
+    </div>
+
+    <script src="/static/js/quizz.js"></script>
 {% endblock %}
 
 {% block javascripts %}
