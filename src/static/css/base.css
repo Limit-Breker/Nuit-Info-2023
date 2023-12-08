@@ -318,6 +318,8 @@ h1 {
 
 h1.title_pages {
     margin-left: 20px;
+    text-align: center;
+    font-size: 3em;
 }
 
 .flip {
