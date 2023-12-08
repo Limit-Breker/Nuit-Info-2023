@@ -18,13 +18,14 @@ body {
 .transparent-box {
     width: 75%;
     height: auto;
-    background-color: rgba(165, 223, 241, 0.5); /* Réglez l'opacité ici (0 est transparent, 1 est opaque) */
-    border: 2px solid #000;
+    background-color: var(--color-black-prim); /* Réglez l'opacité ici (0 est transparent, 1 est opaque) */
+    border: 2px solid var(--color-white);
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
     margin: auto;
     margin-bottom: 50px;
+    color: white;
 }
 
 .reponse {
