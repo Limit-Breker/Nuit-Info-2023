@@ -70,7 +70,7 @@
     function validate(element) {
         $.getJSON("/api/changer_theme/" + encodeURIComponent(element), function (data) {
             if (data["valide"]) {
-
+                window.location.reload();
             }
         })
     }
