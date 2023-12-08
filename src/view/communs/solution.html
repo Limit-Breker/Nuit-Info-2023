@@ -10,22 +10,27 @@
 <h1 class="title_pages">Les solutions face au changement climatique</h1>
 <div id="greta">
     <div id="greta_img"><img src="{{ url_for('static', filename='image/greta.png') }}"></div>
+    <div style="display:flex">
+        
     <div id="block_greta"><p>Salut là-bas !
 
-        😺 Salut, humains curieux ! C'est Greta et moi, votre chat écolo préféré. 🌍✨ Je suis ravi de miauler avec vous aujourd'hui pour discuter d'un sujet crucial : le changement climatique. 🌱
+        😺 Salut, humains curieux ! <br>C'est Greta, votre chat écolo préféré.<br> 🌍✨ Je suis ravi de miauler avec vous aujourd'hui pour discuter d'un sujet crucial : le changement climatique. 🌱<br>
         
-        🌈 On sait que c'est un peu compliqué et parfois un peu effrayant, mais ne vous inquiétez pas, on est là pour vous rendre tout ça un peu plus amusant et compréhensible. 🎉
+        🌈 On sait que c'est un peu compliqué et parfois un peu effrayant, mais ne vous inquiétez pas, on est là pour vous rendre tout ça un peu plus amusant et compréhensible. <br>🎉
         
         Alors, préparez-vous à plonger dans l'univers des solutions vertes avec moi, Greta, votre guide félin vers un monde plus sain et plus heureux ! 🐾
         
-        PS : N'oubliez pas de gratter derrière les oreilles, ça détend, même quand on parle de choses sérieuses. 😸💚 
+        <br>PS : N'oubliez pas de gratter derrière les oreilles, ça détend, même quand on parle de choses sérieuses. 😸💚 
         </p></div>
+        <div class="boutons">
+            <input class="bouton" type="button"  onclick="showAnswer('1')" value="Comment pouvons-nous réduire le gaspillage alimentaire à la maison pour lutter contre le changement climatique?" />
+            <input class="bouton" type="button"  onclick="showAnswer('2')" value="Comment surmonter l'opposition des riverains aux parcs éoliens de manière créative pour favoriser les énergies renouvelables?"  />
+            <input class="bouton" type="button"  onclick="showAnswer('3')" value="Comment encourager la création de parcs photovoltaïques tout en préservant les espaces naturels?" />
+            <input class="bouton" type="button"  onclick="showAnswer('4')" value="Comment promouvoir l'efficacité énergétique des bâtiments à grande échelle dans la lutte contre le changement climatique?"  />
+        </div>
+    </div>
 </div>
-<div class="boutons">
-    <input class="bouton " id="bouton1" type="button" value="Comment pouvons-nous réduire le gaspillage alimentaire à la maison pour lutter contre le changement climatique?" />
-    <input class="bouton " id="bouton2" type="button" value="" " />
-    <input class="bouton " id="bouton3" type="button" value="" " />
-    <input class="bouton " id="bouton4" type="button" value="" " />
-</div>
+
+
 </div>
 {% endblock %}

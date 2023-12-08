@@ -9,6 +9,13 @@ function getCardData() {
     xhr.responseType = "json";
     xhr.onload = () => {
         data = xhr.response;
+        if (data.error !== undefined) {
+            carteContenu.style.display = "none";
+            questionSuivante.style.display = "none";
+            let result = document.getElementById("resultat")
+            result.innerHTML = "Votre score est de " + score + " / 10"
+            return;
+        }
         var titre = document.querySelector(".titre_carte h2");
         var description = document.querySelector(".description_carte p");
         titre.innerHTML = data.titre;
@@ -27,8 +34,8 @@ function initializeCard() {
     carteContenu.classList.remove("rotate-card");
     carteContenu.style.backgroundColor = "rgba(217, 217, 217, 0.50)";
 
-    bouton = document.getElementsByClassName("bouton_question_suivante")[0];
-    bouton.style.display = "none";
+    questionSuivante = document.getElementsByClassName("bouton_question_suivante")[0];
+    questionSuivante.style.display = "none";
 
     let current = document.getElementById("current_question")
     current.innerHTML = challengeCounter
@@ -55,7 +62,6 @@ function flipProfile(buttonName) {
         carteContenu.style.backgroundColor = "rgba(181, 19, 19, 0.50)";
     }
     let text = ' <input class="bouton bouton_question_suivante" type="button" value=""/>'
-    bouton.style.display = "block";
+    questionSuivante.style.display = "block";
 
-    console.dir(card);
 }
