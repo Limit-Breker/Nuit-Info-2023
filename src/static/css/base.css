@@ -69,7 +69,6 @@ header hr {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.25);
     margin-inline: 4%;
-    border: orange solid;
 }
 
 header img.logo {
@@ -77,7 +76,6 @@ header img.logo {
     height: 70px;
     object-fit: cover;
     border-radius: 50%;
-    border: red solid;
 }
 
 header img.logo_nuit_info {
@@ -102,7 +100,6 @@ header button {
     color: var(--color-white);
     font-size: 16px;
     font-weight: 500;
-    border: green solid;
 }
 
 header button:hover {
