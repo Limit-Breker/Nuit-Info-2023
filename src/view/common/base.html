@@ -154,6 +154,8 @@
     <!-- Inclusion de la barre de navigation -->
     {% include "partials/nav.html" %}
 
+    <img class="menu_hamburger" src="{{ url_for('static',filename='image/hamburger.png') }}">
+
     <div id="master">
         {% block body %}{% endblock %}
     </div>
@@ -173,6 +175,22 @@
             }
         })
     }
+
+
+    const header = document.querySelector("header");
+    const menuHamburger = document.querySelector(".menu_hamburger");
+    const liens = header.querySelectorAll('a');
+
+    menuHamburger.addEventListener('click', () => {
+        header.classList.toggle('menu_hamburger_active');
+
+        if (header.classList.contains('menu_hamburger_active')) {
+            document.body.style.overflow = "hidden";
+        }
+        else {
+            document.body.style.overflowY = "auto";
+        }
+    })
 </script>
 
 </html>

@@ -119,6 +119,17 @@ header.blockHeader {
     position: static;
 }
 
+.menu_hamburger {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 50px;
+    color: var(--color-black-prim);
+    display: none;
+    cursor: pointer;
+    z-index: 9999999999;
+}
+
 footer {
     /*position: absolute;*/
     bottom: 0;
@@ -411,6 +422,7 @@ h1.title_pages {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .flip .back a button {
@@ -446,24 +458,24 @@ h1.title_pages {
     color: var(--color-black);
 }
 
-@media screen and (max-width: 1000px) {
-    header img.logo_nuit_info {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        margin-left: 2%;
-    }
-    footer .listes {
-        flex-direction: column;
-    }
-}
-
 .imgtrop{
     width: 30%;
-    height: 30%;
 }
 
-.gauche {
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section.gauche, section.droite {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+/* .gauche {
     position: absolute;
     left: 40px;
 }
@@ -471,5 +483,97 @@ h1.title_pages {
 .droite {
     position: absolute;
     right: 20px;
+} */
+
+@media screen and (max-width: 1000px) {
+    header img.logo_nuit_info {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-left: 2%;
+    }
+    header hr {
+        margin-inline: 1%;
+    }    
+    footer .listes {
+        flex-direction: column;
+    }
+    #greta_img img {
+        width: 40vw;
+    }
+    .boutons input {
+        width: 80%;
+        margin-inline: auto;
+        white-space: wrap;
+    }
+    .row {
+        flex-direction: column;
+    }
 }
 
+@media screen and (max-width: 730px) {
+    body {
+        padding-top: 25px;
+    }
+    .body_content {
+        min-height: calc(100vh - (25px + 43vh));
+    }
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        margin-left: 100%;
+        padding-block: 50px;
+        transition: margin .5s ease-out;
+        overflow-y: auto;
+        border: none;
+        border-radius: 0;
+    }
+    header hr {
+        display: none;
+    }
+    .menu_hamburger_active { /* menu hamburger visibilité */
+        margin-left: 0;
+    }
+    .menu_hamburger {
+        display: block;
+    }
+    img.nuage {
+        position: absolute;
+        left: -40px;
+        top: 0;
+        margin: 0;
+    }
+    .accueil h1.title {
+        margin-block: 20px;
+        font-size: 40px;
+    }
+    .accueil h3.secondary {
+        font-size: 30px;
+    }
+    .accueil a.btn_jeux button {
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+        font-size: 30px;
+        padding: 10px;
+    } 
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .flip {
+        position: relative;
+        display: inline-block;
+        margin-right: 2px;
+        margin-bottom: 1em;
+        width: 70vw;
+    }
+    h1 {
+        font-size: 1.9em;
+    }
+}
