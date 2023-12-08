@@ -20,7 +20,7 @@ def index():
 @jeux.route("/earth-survival", methods = ["GET"])
 @theme_required
 def earth_survival():
-    return render_template("jeux/earth-survival.html")
+    return render_template("jeux/earth-survival.html", pp = "oui")
 
 
 @jeux.route("/truth-game/", methods = ["GET"])
