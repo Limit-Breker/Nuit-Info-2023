@@ -1,6 +1,6 @@
 import json
 
-from flask import Blueprint, request, session
+from flask import Blueprint, session
 
 api = Blueprint("api", __name__, url_prefix = "/api")
 """
@@ -12,10 +12,8 @@ De cette manière toutes les urls associées a ce controller commenceront par /c
 """
 
 
-@api.route("/truth-game/<question_id>", methods = ["GET", "POST"])
+@api.route("/truth-game/<question_id>", methods = ["GET"])
 def truth_game_question(question_id):
-    if request.method == "POST":
-        ...
     try:
         with open(
                 "./src/static/data/truth-game.json", "r", encoding = "utf8"
@@ -29,10 +27,8 @@ def truth_game_question(question_id):
     return None
 
 
-@api.route("/solution/<question_id>", methods = ["GET", "POST"])
+@api.route("/solution/<question_id>", methods = ["GET"])
 def solution_question(question_id):
-    if request.method == "POST":
-        ...
     try:
         with open("./src/static/data/solution.json", "r", encoding = "utf8") as f:
             solution_data = json.load(f)
@@ -44,7 +40,7 @@ def solution_question(question_id):
     return f"{question_id}"
 
 
-@api.route("/changer_theme/<nouveau_theme>", methods = ["GET", "POST"])
+@api.route("/changer_theme/<nouveau_theme>", methods = ["GET"])
 def changer_theme(nouveau_theme):
     try:
         session["theme"] = nouveau_theme
@@ -53,7 +49,7 @@ def changer_theme(nouveau_theme):
         return {"valide": False}
 
 
-@api.route("/get-earth-survival", methods = ["GET", "POST"])
+@api.route("/get-earth-survival", methods = ["GET"])
 def get_earth_survival():
     with open("static/json/questions-earth-survival.json") as file:
         data = file.read()

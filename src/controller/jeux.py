@@ -11,13 +11,13 @@ De cette manière toutes les urls associées a ce controller commenceront par /c
 """
 
 
-@jeux.route("/", methods = ["GET", "POST"])
+@jeux.route("/", methods = ["GET"])
 @theme_required
 def index():
     return render_template("jeux/index.html")
 
 
-@jeux.route("/earth-survival", methods = ["GET", "POST"])
+@jeux.route("/earth-survival", methods = ["GET"])
 @theme_required
 def earth_survival():
     return render_template("jeux/earth-survival.html")
@@ -29,15 +29,13 @@ def truth_game_id():
     return render_template("jeux/truth-game.html")
 
 
-@jeux.route("/quizz", methods = ["GET", "POST"])
+@jeux.route("/quizz", methods = ["GET"])
 @theme_required
 def quizz():
     return render_template("jeux/quizz.html")
 
 
-@jeux.route("/memory", methods = ["GET", "POST"])
+@jeux.route("/memory", methods = ["GET"])
 @theme_required
 def memory():
     return render_template("jeux/memory.html")
-
-
