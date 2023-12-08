@@ -1,6 +1,6 @@
 import json
 
-from flask import Blueprint, request, session
+from flask import Blueprint, request, session, jsonify
 
 api = Blueprint("api", __name__, url_prefix="/api")
 """
@@ -10,7 +10,6 @@ communs = Blueprint("communs", __name__, url_prefix="/communs")
 
 De cette manière toutes les urls associées a ce controller commenceront par /communs/...
 """
-
 
 
 @api.route("/truth-game/<question_id>", methods=["GET", "POST"])
@@ -48,3 +47,10 @@ def changer_theme(nouveau_theme):
         return {"valide": True}
     except:
         return {"valide": False}
+
+
+@api.route("/get-earth-survival", methods=["GET", "POST"])
+def get_earth_survival():
+    with open('static/json/questions-earth-survival.json') as file:
+        data = file.read()
+    return data
