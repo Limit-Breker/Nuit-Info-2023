@@ -13,7 +13,7 @@ De cette manière toutes les urls associées a ce controller commenceront par /c
 
 
 @api.route("/truth-game/<question_id>", methods = ["GET", "POST"])
-def truth_game_question(question_id):
+def truth_game(question_id):
     if request.method == "POST":
         ...
     try:
@@ -26,7 +26,7 @@ def truth_game_question(question_id):
             truth_game_data = json.load(f)
     if question_id in truth_game_data:
         return truth_game_data[question_id]
-    return None
+    return {"error": "question not found"}
 
 
 @api.route("/solution/<question_id>", methods = ["GET", "POST"])
