@@ -1,0 +1,135 @@
+body {
+    background-image: url('/static/image/background.jpg'); 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 100vh;
+    margin: 0;
+    font-family: "Gill Sans", sans-serif;
+    margin-top: 50px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transparent-box {
+    width: 75%;
+    height: auto;
+    background-color: var(--color-black-prim); /* Réglez l'opacité ici (0 est transparent, 1 est opaque) */
+    border: 2px solid var(--color-white);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.reponse {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.reponse-box {
+    width: 200px;
+    height: 80px;
+    background-color: var(--color-black2);
+    border: 2px solid var(--color-black-prim);
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reponse-box button {
+    background: none;
+    border: none;
+    width: 200px;
+    height: 80px;
+    color: var(--color-white);
+}
+
+.reponse-box:hover {
+    background-color: var(--color-black);
+}
+
+.reponse-box.selected {
+    border: 5px solid #72bb53;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.reponse-box.falseSelected {
+    border: 5px solid red;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.reponse-box p {
+    margin: 0; /* Supprime la marge par défaut du paragraphe */
+}
+.reponse-box button {
+    border: none;
+    outline: none;
+    background:none;
+}
+
+#confirmButton {
+    background-color: #72bb53;
+    border-radius: 10px;
+    color: black;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    justify-content: center;
+    display: none;
+    margin-top: 20px;
+}
+
+#confirmExplButton {
+    background-color: var(--color-black-prim);
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    justify-content: center;
+    display: none;
+    margin-top: 20px;
+}
+
+.reponse-box.selected #confirmButton {
+    display: block;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+.button-rep {
+    border: none;
+    outline: none; /* Cela supprime également la bordure de mise au point lorsqu'un bouton est actif */
+}
+
+#confirmExplButton{
+    background-color: #72bb53;
+    border-radius: 10px;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    justify-content: center;
+    display: none; /* Cacher le bouton par défaut */
+    margin-top: 10px; /* Ajouter une marge pour l'espacement */
+}

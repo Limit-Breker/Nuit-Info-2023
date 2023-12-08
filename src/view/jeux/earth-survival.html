@@ -1,0 +1,44 @@
+{% extends "common/base.html" %}
+{% block title %}Earth-Surival
+{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/earth-survival.css') }}">
+{% endblock %}
+{% block javascripts2 %}
+<script src="{{ url_for('static',filename='js/earth_survival.js') }}"></script>
+{% endblock %}
+{% block body %}
+<div id="main-earth-survival">
+    <h2 id="titre" class="boite">Earth Survival</h2>
+    <div class="contenu">
+      <div id="map" class=""><img id=mapBG src="{{ url_for('static', filename='image/orangeEarth.png') }}">
+        <img id=mapFG src="{{ url_for('static', filename='image/greenEarth.png') }}"></div>
+      <div id="game">
+        <div id="compteurs" class="boite">
+          <div id="container-compteur-degre">
+            <p id="compteur-degre"></p>
+            <p id="increment-compteur-degre">+0.03°C /an</p>
+          </div>
+          <p id="date-compteur"></p>
+        </div>
+        <div id="container-question" class="boite">
+          <p id="question" class=""></p>
+          <div id="container-reponses">
+            <button class="reponse boite" id="reponse1"></button>
+            <button class="reponse boite" id="reponse2"></button>
+            <button class="reponse boite" id="reponse3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div id="popup-info" class="boite">
+    <p id="text-info">Nous sommes en <b> 2023 </b> et vous avez été choisi pour faire partie de la fine équipe d’experts aux services du GIEC et  dans les années qui vont suivre vous allez devoir réfléchir aux différentes manières de sauver notre planète bleue de son terrible destin. <br>
+      En effet, le réchauffement climatique menace <b>d'éradiquer toute vie sur Terre</b> et vous allez devoir répondre aux questions des experts dans les temps pour aider les dirigeants à prendre des décisions rapidement et pouvoir réagir. 
+      A chaque <b>mauvaise réponse</b> que vous leur donnerez, ils se serviront d’informations erronées pour prendre des décisions désastreuses qui accélèrent la descente aux enfer à la surface terrestre. 
+      A chaque <b>bonne réponse</b>, une lueur d’espoir apparaîtra et vous aurez peut-être une chance de préserver une partie de notre environnement. 
+      Le compteur en haut à gauche indique <b>l’augmentation de température à la surface de la Terre</b> par rapport à celle enregistrée en moyenne en <b> 2023 </b>, s’il dépasse les <b>6 degrés</b> toute trace de vie sur Terre sera annihilée. À vous de répondre aux questions de l’expert Mike pour que ce compteur s’arrête à temps
+    </p>
+    <button id="fermer-info">OK</button>
+  </div>
+</div>
+{% endblock %}

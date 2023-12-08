@@ -1,0 +1,58 @@
+{% extends "common/base.html" %}
+{% block title %}Truth-Games
+{% endblock %}
+
+{% block stylesheets  %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/truth-game.css') }}">
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/truth-game.js') }}"></script>
+{% endblock %}
+
+{% block body  %}
+<h2 id="resultat"></h2>
+<h1 id="titre" class="title_pages">Le jeu du VRAI ou FAUX </h1>
+<div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <div class="stats">
+                    <div class="une_stat"><p>Question <span id="current_question"></span>/10</p></div>
+                    <div class="une_stat stat_score"><p>Score : <span id="current_score"></span></p></div>
+                </div>
+                <div class="contenu">
+                    <div class="titre_carte">
+                        <h2></h2>
+                    </div>
+                    <div class="description_carte">
+                        <p></p>
+                    </div>
+
+                </div>
+                <div class="boutons">
+                    <input class="bouton bouton_faux" type="button" value="FAUX" onclick="flipProfile('Faux')"/>
+                    <input class="bouton bouton_vrai" type="button" value="VRAI" onclick="flipProfile('Vrai')"/>
+                </div>
+            </div>
+            <div class="flip-card-back">
+                <div class="contenu">
+                    <div class="titre_carte_explication">
+                        <h2></h2>
+                    </div>
+                    <div class="description_carte_explication">
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <input class="bouton bouton_question_suivante" type="button" id="question_suivante" value="Question suivante"
+           onclick="nextCard()"/>
+    <script>getCardData()</script>
+</div>
+
+
+{% endblock %}

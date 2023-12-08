@@ -1,0 +1,27 @@
+{% extends "common/base.html" %}
+{% block javascripts %}
+<script src="{{ url_for('static',filename='js/index.js') }}" defer></script>
+{% endblock %}
+
+{% block body %}
+<div class="accueil">
+    {% include "partials/backgrounds.html" %}
+    <h1 class="title">CHANGEMENT CLIMATIQUE</h1>
+    <h3 class="secondary">Le vrai du faux</h3>
+    
+    <div class="btn_jeux_container">
+        <a href="{{ url_for('jeux.index') }}" class="btn_jeux">
+            <button type="button" class="btn_games stroke1 stroke2">Découvrir nos jeux</button>
+        </a>
+    </div>
+
+</div>
+
+<img src="{{ url_for('static', filename='image/nuage.png') }}" alt="image nuage" class="nuage" id="image1">
+<img src="{{ url_for('static', filename='image/soleil.png') }}" alt="image nuage" class="soleil" id="image2">
+
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <img src="{{ url_for('static', filename='image/charlie.png') }}" hidden="" alt="image charlie" class="charlie" id="image3">
+</a>
+
+{% endblock %}

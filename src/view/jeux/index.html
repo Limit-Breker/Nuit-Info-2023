@@ -1,0 +1,57 @@
+
+{% extends "common/base.html" %}
+{% block title %}Jeux
+{% endblock %}
+{% block body %}
+<h1 class="title_pages">Choisissez votre jeu</h1>
+<div class="center">
+
+    <div class="flip">
+        <div class="front" style="background-image: url({{ url_for('static', filename='image/image_survival.png') }})">
+            <h1 class="text-shadow">Earth Survivor</h1>
+        </div>
+        <div class="back">
+            <a href="{{ url_for('jeux.earth_survival') }}">
+                <button type="button">Earth Survivor</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="flip">
+        <div class="front"
+            style="background-image: url({{ url_for('static', filename='image/image_quizz.png') }})">
+            <h1 class="text-shadow">FizzQUizz</h1>
+        </div>
+        <div class="back">
+            <a href="{{ url_for('jeux.quizz') }}">
+                <button type="button">FizzQUizz</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="flip">
+        <div class="front"
+            style="background-image: url({{ url_for('static', filename='image/image_memory.png') }})">
+            <h1 class="text-shadow">Memory</h1>
+        </div>
+        <div class="back">
+            <a href="{{ url_for('jeux.memory') }}">
+                <button type="button">Memory</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="flip">
+        <div class="front"
+            style="background-image: url({{ url_for('static', filename='image/image_vrai_faux.png') }})">
+            <h1 class="text-shadow">Vrai ou Faux</h1>
+        </div>
+        <div class="back">
+            <a href="{{ url_for('jeux.truth_game_id') }}">
+                <button type="button">Vrai ou Faux</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

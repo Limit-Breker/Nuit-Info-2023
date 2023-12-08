@@ -3,16 +3,180 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Accueil{% endblock %} - Nom du site</title>
-    <link {% block favicon %}rel="icon"
-          href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/2048px-Location_dot_black.svg.png"
-          {% endblock %}>
+    <title>{% block title %}Accueil{% endblock %} - Limit Breker</title>
+    <link {% block favicon %}rel="icon" href="{{ url_for('static', filename='image/logo_limit_breker.png') }}" {%
+          endblock %}>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS"
+            crossorigin="anonymous"></script>
 
     <!-- Exemple pour link une police google
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     -->
+    {% if session["theme"] != "random" %}
+        {% if session["theme"] == "noel" %}
+            <script>
+                function SnowStart() {
+                    for (i = 0; i < snow_no; i++) {
+                        snow_yp[i] += snow_sty[i];
+                        if (snow_yp[i] > snow_browser_height - 50) {
+                            snow_xp[i] = Math.random() * (snow_browser_width - snow_am[i] - 30);
+                            snow_yp[i] = 0;
+                            snow_stx[i] = 0.02 + Math.random() / 10;
+                            snow_sty[i] = 0.7 + Math.random();
+                        }
+                        snow_dx[i] += snow_stx[i];
+                        document.getElementById("snow_flake" + i).style.top = snow_yp[i] + "px";
+                        document.getElementById("snow_flake" + i).style.left = snow_xp[i] + snow_am[i] * Math.sin(snow_dx[i]) + "px";
+                    }
+                    snow_time = setTimeout("SnowStart()", 10);
+                }
 
+                function initialize(img_path) {
+                    console.log("initialize");
+                    console.log(img_path);
+                    snow_img = img_path;
+
+                    snow_no = 30;
+
+                    if (typeof (window.pageYOffset) == "number") {
+                        snow_browser_width = window.innerWidth;
+                        snow_browser_height = window.innerHeight;
+                    } else if (document.body && (document.body.scrollLeft || document.body.scrollTop)) {
+                        snow_browser_width = document.body.offsetWidth;
+                        snow_browser_height = document.body.offsetHeight;
+                    } else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {
+                        snow_browser_width = document.documentElement.offsetWidth;
+                        snow_browser_height = document.documentElement.offsetHeight;
+                    } else {
+                        snow_browser_width = 500;
+                        snow_browser_height = 500;
+                    }
+
+                    snow_dx = [];
+                    snow_xp = [];
+                    snow_yp = [];
+                    snow_am = [];
+                    snow_stx = [];
+                    snow_sty = [];
+
+                    for (i = 0; i < snow_no; i++) {
+                        snow_dx[i] = 0;
+                        snow_xp[i] = Math.random() * (snow_browser_width - 50);
+                        snow_yp[i] = Math.random() * snow_browser_height;
+                        snow_am[i] = Math.random() * 20;
+                        snow_stx[i] = 0.02 + Math.random() / 10;
+                        snow_sty[i] = 0.7 + Math.random();
+                        if (i > 0) document.write("<\div id=\"snow_flake" + i + "\" style=\"position:absolute;z-index:" + i + "\"><\img src=\"" + snow_img + "\" border=\"0\"><\/div>"); else document.write("<\div id=\"snow_flake0\" style=\"position:absolute;z-index:0\"><a href=\"http://peters1.dk/tools/snow.php\" target=\"_blank\"><\img src=\"" + snow_img + "\" border=\"0\"></a><\/div>");
+                    }
+                    SnowStart();
+                }
+                initialize("{{ url_for('static',filename='image/flocon.png') }}")
+            </script>
+        {% endif %}
+        <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='css/color-sets/'+session['theme']+'.css') }}">
+
+    {% elif session["theme"] == "noel" %}
+
+    {% else %}
+    <style>
+        :root {
+            --color-white: rgb( {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        });
+
+            --color-grey: rgb( {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        });
+
+            --color-grey2: rgb( {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        });
+
+            --color-black: rgb( {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        });
+
+            --color-black2: rgb( {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        });
+
+            --color-black-prim: rgb( {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        }, {
+        {
+        range(0, 256) | random
+        }
+        });
+        }
+    </style>
+    {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/base.css') }}">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Balise utilisée link les feuilles css -->
@@ -25,34 +189,47 @@
     {% block headSuppl %}{% endblock %}
 </head>
 
-<body>
-<!-- Inclusion de la barre de navigation -->
-{% include "partials/nav.html" %}
+<body {% if pp %} class="blockHeader" {% endif %}>
+    <!-- Inclusion de la barre de navigation -->
+    {% include "partials/nav.html" %}
 
-<!-- Balise utilisée pour la fonction flash (affichage d'un message lors du chargement de la page -->
-{% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        {% for category, message in messages %}
-            <div style="{% if category == 'message' %}background-color: #6ce56c;{% else %}
-                background-color: #e83c55;
-            {% endif %} color: black">
-                <ul class="flashes" style="margin-top: revert">
-                    <li>{{ message }}</li>
-                </ul>
-            </div>
-        {% endfor %}
-    {% endif %}
-{% endwith %}
+    <img class="menu_hamburger" src="{{ url_for('static',filename='image/hamburger.png') }}">
 
-<!-- Balise princcipale -->
 <div id="master">
     {% block body %}{% endblock %}
 </div>
 
-<!-- Inclusion du footer -->
+<!-- Inclusion de la barre de navigation -->
 {% include "partials/footer.html" %}
+
 </body>
 
 {% block javascripts2 %}{% endblock %}
+
+<script defer>
+    function validate(element) {
+        $.getJSON("/api/changer_theme/" + encodeURIComponent(element), function (data) {
+            if (data["valide"]) {
+                window.location.reload();
+            }
+        })
+    }
+
+
+    const header = document.querySelector("header");
+    const menuHamburger = document.querySelector(".menu_hamburger");
+    const liens = header.querySelectorAll('a');
+
+    menuHamburger.addEventListener('click', () => {
+        header.classList.toggle('menu_hamburger_active');
+
+        if (header.classList.contains('menu_hamburger_active')) {
+            document.body.style.overflow = "hidden";
+        }
+        else {
+            document.body.style.overflowY = "auto";
+        }
+    })
+</script>
 
 </html>
