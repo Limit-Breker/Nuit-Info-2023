@@ -28,7 +28,7 @@
         {"intitule" : "Le manque d'espaces présentant un potentiel d'exploitation" , "increment" : -0.01}
     ]},
 
-    {"q5intitule":"Le problème principal que rencontrent les projets de parcs photovoltaïques est :", 
+    {"intitule":"Le problème principal que rencontrent les projets de parcs photovoltaïques est :", 
     "reponse":[
         {"intitule" : "L'impact des parcs sur l’écosystème environnant" , "increment" : 0.01},
         {"intitule" : "La rareté des matières premières utilisées dans la production des panneaux" , "increment" : 0.00},
