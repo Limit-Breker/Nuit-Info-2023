@@ -1,0 +1,20 @@
+{% extends "common/base.html" %}
+{% block stylesheets  %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/solution.css') }}"">
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/solution.js') }}" defer></script>
+{% endblock %}
+{% block body %}
+<h1 class="title_pages">Les solutions face au changement climatique</h1>
+<div id="greta">
+    <div id="greta_img"><img src="{{ url_for('static', filename='image/greta.png') }}"></div>
+    <div id="block_greta"></div>
+</div>
+<div class="boutons">
+    <input class="bouton " type="button" value=""" />
+    <input class="bouton " type="button" value="" " />
+    <input class="bouton " type="button" value="" " />
+    <input class="bouton " type="button" value="" " />
+</div>
+{% endblock %}

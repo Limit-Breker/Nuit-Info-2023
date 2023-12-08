@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template,url_for,redirect
 
 from custom_paquets.decorateur import theme_required
 
@@ -22,11 +22,15 @@ def index():
 @theme_required
 def earth_survival():
     return render_template("jeux/earth-survival.html")
-@jeux.route("/truth-game", methods=['GET', 'POST'])
-def truth_game():
-    
-    return render_template("jeux/truth-game.html")
 
+@jeux.route("/truth-game/<id>", methods=['GET', 'POST'])
+def truth_game_id(id):
+    
+    return render_template("jeux/truth-game.html",id=id)
+
+@jeux.route("/truth-game")
+def truth_game():
+    return redirect(url_for("jeux.truth_game_id",id=1))
 
 @jeux.route("/quizz", methods=['GET', 'POST'])
 @theme_required
@@ -38,6 +42,11 @@ def quizz():
 @theme_required
 def memory():
     return render_template("jeux/memory.html")
+
+@jeux.route("/solution", methods=['GET', 'POST'])
+@theme_required
+def solution():
+    return render_template("jeux/solution.html")
 
 
 

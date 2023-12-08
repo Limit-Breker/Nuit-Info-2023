@@ -1,7 +1,7 @@
 {
     "1": {
         "titre": "L'activité humaine",
-        "solutions": "Le changement climatique est dû à l'activité humaine ?",
+        "description": "Le changement climatique est dû à l'activité humaine ?",
         "response": "Vrai",
         "explication": "Le changement climatique est réel et est en grande partie dû à l'activité humaine, en particulier à l'émission de gaz à effet de serre tels que le dioxyde de carbone (CO2) et le méthane."
     },

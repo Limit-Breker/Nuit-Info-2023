@@ -25,8 +25,21 @@ def truth_game_question(question_id):
             truth_game_data = json.load(f)
     if question_id in truth_game_data:
         return truth_game_data[question_id]
-    return f"Chien des bois {question_id}"
+    return f"{question_id}"
 
+@api.route("/solution/<question_id>", methods=["GET", "POST"])
+def solution_question(question_id):
+    if request.method == "POST":
+        ...
+    try:
+        with open("./src/static/data/solution.json", "r", encoding="utf8") as f:
+            solution_data = json.load(f)
+    except:
+        with open("./static/data/solution.json", "r", encoding="utf8") as f:
+            solution_data = json.load(f)
+    if question_id in solution_data:
+        return solution_data[question_id]
+    return f"{question_id}"
 
 @api.route("/changer_theme/<nouveau_theme>", methods=["GET", "POST"])
 def changer_theme(nouveau_theme):
