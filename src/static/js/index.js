@@ -2,7 +2,6 @@ const image1 = document.getElementById('image1');
 const image2 = document.getElementById('image2');
 let light;
 
-console.log(image2);
 image2.addEventListener('dragstart', (e) => {
     e.preventDefault();
 });
