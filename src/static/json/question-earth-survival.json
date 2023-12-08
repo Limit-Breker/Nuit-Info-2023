@@ -46,7 +46,7 @@
         {"intitule" : "L’usage d’électroménager peu énergivore" , "increment" : 0.00},
         {"intitule" : "L'isolation des bâtiments" , "increment" : -0.01}
    ],
-    "popup" : "L’isolation des bâtiments a été prouvé largement plus efficace que le chauffage de l’eau à l’énergie solaire ou l’usage d’électroménager peu énergivore en termes d’efficacité énergétique compte tenu du fait que le chauffage des bâtiments constitue une grande partie de la consommation d’énergie mondiale."},
+    "popup" : "L’isolation des bâtiments a été prouvée largement plus efficace que le chauffage de l’eau à l’énergie solaire ou l’usage d’électroménager peu énergivore en termes d’efficacité énergétique compte tenu du fait que le chauffage des bâtiments constitue une grande partie de la consommation d’énergie mondiale."},
 
     {"intitule":"L'amélioration de l'efficacité énergétique passe avant tout par :", 
     "reponse":[
