@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kulim+Park&display=swap');
 
 * {
@@ -289,9 +288,8 @@ img.soleil {
 img.charlie {
     position: absolute;
     right: 10%;
-    bottom: 390px;
-    width: 70px;
-    height: 70px;
+    height: 80%;
+    bottom: 10px;
     z-index: 0;
     object-fit: contain;
     opacity: .7;
@@ -313,17 +311,17 @@ img.charlie {
     z-index: 9999;
 }
 
-#listeSrc{
+#listeSrc {
     list-style: url("../image/logo.png");
     padding: 0;
     padding-left: 60px;
 }
 
-#sources{
+#sources {
     padding-left: 25px;
 }
 
-li{
+li {
     margin-bottom: 3px;
 }
 
@@ -332,8 +330,8 @@ li{
     text-decoration: none;
 }
 
-#listeSrc a:hover{
-    text-decoration:underline;
+#listeSrc a:hover {
+    text-decoration: underline;
 }
 
 h1 {
@@ -350,19 +348,19 @@ h1.title_pages {
     position: relative;
     margin-inline: 15px;
 
-    >.front,
-    >.back {
+    > .front,
+    > .back {
         display: block;
         transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
         transition-duration: .5s;
         transition-property: transform, opacity;
     }
 
-    >.front {
+    > .front {
         transform: rotateY(0deg);
     }
 
-    >.back {
+    > .back {
         position: absolute;
         opacity: 0;
         top: 0px;
@@ -373,27 +371,27 @@ h1.title_pages {
     }
 
     &:hover {
-        >.front {
+        > .front {
             transform: rotateY(180deg);
         }
 
-        >.back {
+        > .back {
             opacity: 1;
             transform: rotateY(0deg);
         }
     }
 
     &.flip-vertical {
-        >.back {
+        > .back {
             transform: rotateX(-180deg);
         }
 
         &:hover {
-            >.front {
+            > .front {
                 transform: rotateX(180deg);
             }
 
-            >.back {
+            > .back {
                 transform: rotateX(0deg);
             }
         }
@@ -407,8 +405,8 @@ h1.title_pages {
     margin-bottom: 1em;
     width: 400px;
 
-    >.front,
-    >.back {
+    > .front,
+    > .back {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -473,11 +471,11 @@ h1.title_pages {
     color: var(--color-black);
 }
 
-.imgtrop{
+.imgtrop {
     width: 50%;
 }
 
-.imgtrops{
+.imgtrops {
     width: 70%;
 }
 
@@ -488,16 +486,16 @@ h1.title_pages {
     width: 100%;
 }
 
-#titreStats{
+#titreStats {
     margin-left: 20px;
 }
 
-.chiffres{
+.chiffres {
     margin-left: 40px;
     font-weight: bold;
 }
 
-.number{
+.number {
     color: #006900;
 }
 
@@ -524,20 +522,25 @@ section.gauche, section.droite {
         object-fit: cover;
         margin-left: 2%;
     }
+
     header hr {
         margin-inline: 1%;
-    }    
+    }
+
     footer .listes {
         flex-direction: column;
     }
+
     #greta_img img {
         width: 40vw;
     }
+
     .boutons input {
         width: 80%;
         margin-inline: auto;
         white-space: wrap;
     }
+
     .row {
         flex-direction: column;
     }
@@ -547,9 +550,11 @@ section.gauche, section.droite {
     body {
         padding-top: 25px;
     }
+
     .body_content {
         min-height: calc(100vh - (25px + 43vh));
     }
+
     header {
         flex-direction: column;
         justify-content: space-between;
@@ -565,39 +570,48 @@ section.gauche, section.droite {
         border: none;
         border-radius: 0;
     }
+
     header hr {
         display: none;
     }
+
     .menu_hamburger_active { /* menu hamburger visibilité */
         margin-left: 0;
     }
+
     .menu_hamburger {
         display: block;
     }
+
     img.nuage {
         position: absolute;
         left: -40px;
         top: 0;
         margin: 0;
     }
+
     .accueil h1.title {
         margin-block: 20px;
         font-size: 40px;
     }
+
     .accueil h3.secondary {
         font-size: 30px;
     }
+
     .accueil a.btn_jeux button {
         width: auto;
         height: auto;
         border-radius: 20px;
         font-size: 30px;
         padding: 10px;
-    } 
+    }
+
     footer {
         flex-direction: column;
         align-items: center;
     }
+
     .flip {
         position: relative;
         display: inline-block;
@@ -605,6 +619,7 @@ section.gauche, section.droite {
         margin-bottom: 1em;
         width: 70vw;
     }
+
     h1 {
         font-size: 1.9em;
     }
