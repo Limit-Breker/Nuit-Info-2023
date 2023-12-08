@@ -14,17 +14,17 @@
 }
 /* Ajoutez ces styles pour positionner les boutons en bas à droite */
 .boutons {
-    bottom: 0;
-    right: 0;
-    margin: 10px; /* Ajoutez une marge pour un meilleur aspect visuel */
+    width:50%;
+    margin:auto;/* Ajoutez une marge pour un meilleur aspect visuel */
     display: flex; /* Utilisez le modèle flexbox */
     flex-direction: column; /* Disposition verticale des éléments */
     justify-content: space-between /* Alignez les boutons en bas du conteneur */
     align-items: flex-end; 
 }
-$enable-button-pointers: true;
+
 /* Styles pour rendre les boutons réactifs */
 .bouton {
+    white-space: normal;
     display: flex;
     padding: 12px 36px;
     justify-content: center;
@@ -41,8 +41,8 @@ $enable-button-pointers: true;
     font-weight: 500;
     cursor:pointer;
     text-decoration: none;
-    /* Ajoutez d'autres styles si nécessaire pour une meilleure apparence */
 }
+
 #reponse{
     display:none;
 }
