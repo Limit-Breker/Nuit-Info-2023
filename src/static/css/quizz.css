@@ -6,7 +6,6 @@
 
 .transparent-box {
     width: 300px;
-    height: 100px;
     background-color: var(--color-black-prim);
     border: 2px solid var(--color-white);
     color: white;
