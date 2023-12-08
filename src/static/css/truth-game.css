@@ -71,7 +71,10 @@
     margin:auto 50% auto 60%;
     display: none;
 }
-
+#resultat{
+    margin-top:5%;
+    text-align: center;
+}
 .flip-card-inner {
     background: rgba(217, 217, 217, 0.50);
     border-radius: 50px;
