@@ -459,18 +459,36 @@ h1.title_pages {
     }
 }
 
-.imgtrop{
+#imgtrop{
     width: 30%;
     height: 30%;
 }
 
+#imgtrops{
+    width: 100%;
+    height: 100%;
+}
+
 .gauche {
-    position: absolute;
     left: 40px;
+    margin-left: 40px;
 }
 
 .droite {
     position: absolute;
-    right: 20px;
+    right: 40px;
+    margin-right: 40px;
 }
 
+h5{
+    margin-left: 40px;
+}
+
+.chiffres{
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+.number{
+    color: #FF0000;
+}
