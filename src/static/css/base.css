@@ -21,6 +21,8 @@ body {
     background-color: var(--color-black);
     padding-top: 145px;
     color: var(--color-white);
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -123,7 +125,7 @@ header.blockHeader {
 footer {
     /*position: absolute;*/
     bottom: 0;
-    margin-top: 20px;
+    margin-top: auto;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
