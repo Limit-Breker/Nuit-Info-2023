@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kulim+Park&display=swap');
 
 * {
@@ -109,7 +110,7 @@ header a {
 }
 
 footer {
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
     margin-top: 20px;
     width: 100%;

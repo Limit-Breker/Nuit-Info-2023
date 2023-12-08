@@ -1,0 +1,36 @@
+#greta{
+    display:flex;
+}
+#block_greta{
+    width:40%;
+}
+/* Ajoutez ces styles pour positionner les boutons en bas à droite */
+#boutons {
+    position: fixed;
+    display: flex; /* Utilisez le modèle flexbox */
+    flex-direction: column; 
+    bottom: 0;
+    right: 0;
+    margin: 10px; /* Ajoutez une marge pour un meilleur aspect visuel */
+}
+
+/* Styles pour rendre les boutons réactifs */
+.bouton {
+    margin-top: 5px;
+    margin-right: 5px;
+    /* Ajoutez d'autres styles si nécessaire pour une meilleure apparence */
+}
+
+/* Ajoutez des styles de média query pour rendre les boutons réactifs */
+@media (max-width: 768px) {
+    #boutons {
+        position: static; /* Changez la position en statique pour les écrans plus petits */
+        text-align: right; /* Alignez les boutons à droite */
+        margin-top: 10px; /* Ajoutez une marge en haut pour un meilleur aspect visuel */
+    }
+
+    .bouton {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
