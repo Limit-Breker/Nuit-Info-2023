@@ -5,13 +5,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/quizz.css') }}">
 {% endblock %}
 
-<<<<<<< Updated upstream
-
-=======
-{% block body %}
-<h1 class="title_pages">Le jeux quizz</h1>
->>>>>>> Stashed changes
-
 {% block body %}
     <div class="transparent-box" id="question">
         <p>Lequel de ces transports produit le plus de CO2 par individu ?</p>
@@ -38,9 +31,4 @@
     </div>
 
     <script src="/static/js/quizz.js"></script>
-{% endblock %}
-
-{% block javascripts %}
-    {{ super() }}
-    <script src="{{ url_for('static', filename='js/quizz.js') }}"></script>
 {% endblock %}
