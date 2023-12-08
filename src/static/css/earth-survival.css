@@ -1,0 +1,133 @@
+#background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+#map {
+  position:relative;
+  margin-left:35px;
+}
+
+#mapBG {
+  position:absolute;
+}
+#mapFG {
+  position:absolute;
+}
+
+#main-earth-survival {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 25px;
+}
+
+#contenu {
+  display:flex;
+  flex-direction: row;
+}
+p  {
+  margin:0;
+}
+#game {
+  width:50%;
+  margin-left:auto;
+  margin-right:5%;
+}
+.boite {
+  background-color: lightgray;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px black;
+}
+
+#compteurs {
+  max-width: 80%;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(211,211,211,75%);
+  display: flex;
+  justify-content: space-between;
+}
+#container-compteur-degre {
+  display:flex;
+}
+
+#compteur-degre {
+  font-size: 2em;
+  font-style: bold;
+}
+
+#increment-compteur-degre {
+  padding-left: 10px;
+  font-size: 1.5em;
+  margin-top: auto;
+}
+
+#date-compteur {
+  font-size: 1.75em;
+}
+
+#titre {
+  font-size: 3.5em;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  background-color: lightgray;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px black;
+  padding: 0 10px;
+  height:min-content;
+}
+
+#container-question {
+  padding: 20px;
+  background-color: rgba(211,211,211,75%);
+  max-width: 80%;
+  margin-top: 25px;
+  margin-left: auto;
+}
+
+#question {
+  padding: 0 5px;
+  font-size: 1.1em;
+}
+
+#container-reponses {
+  display:flex;
+  flex-direction: column;
+}
+
+.reponse {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#popup-info {
+  position: absolute;
+  margin-top: 10%;
+  max-width: 50%;
+  box-shadow:0 0 0 1920px rgba(0,0,0,50%);
+  padding: 25px;
+  margin-left: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+#fermer-info {
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.invisible {
+  visibility:hidden;
+}
