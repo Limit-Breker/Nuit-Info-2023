@@ -222,12 +222,12 @@ li{
     margin-bottom: 3px;
 }
 
-.listeSrc a {
+#listeSrc a {
     color: #e6c619;
     text-decoration: none;
 }
 
-.listeSrc a:hover{
+#listeSrc a:hover{
     text-decoration:underline;
 }
 
@@ -305,7 +305,8 @@ h1.title_pages {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: var(--color-black-prim);
+        font-weight: 900;
         width: inherit;
         background-size: cover !important;
         background-position: center !important;
