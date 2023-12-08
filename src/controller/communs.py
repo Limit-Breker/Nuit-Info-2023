@@ -14,7 +14,7 @@ De cette manière toutes les urls associées a ce controller commenceront par /c
 @communs.route("/", methods=['GET', 'POST'])
 @theme_required
 def index():
-    return render_template("communs/index.html", pp='oui')
+    return render_template("communs/index.html")
 
 
 @communs.route("/stats", methods=['GET', 'POST'])
@@ -44,4 +44,4 @@ def default_session():
 @communs.route("/solution", methods=['GET', 'POST'])
 @theme_required
 def solution():
-    return render_template("communs/solution.html")
+    return render_template("communs/solution.html", pp='oui')
