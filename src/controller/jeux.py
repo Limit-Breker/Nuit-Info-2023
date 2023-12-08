@@ -41,7 +41,3 @@ def memory():
     return render_template("jeux/memory.html")
 
 
-@jeux.route("/solution", methods = ["GET", "POST"])
-@theme_required
-def solution():
-    return render_template("jeux/solution.html")

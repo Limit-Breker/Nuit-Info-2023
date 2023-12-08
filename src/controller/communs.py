@@ -35,13 +35,13 @@ def sources():
     return render_template("communs/sources.html")
 
 
-@communs.route("/solutions", methods=['GET', 'POST'])
-@theme_required
-def solutions():
-    return render_template("communs/solutions.html")
-
 
 @communs.route("/default-session", methods=['GET', 'POST'])
 def default_session():
     session["theme"] = "normal"
     return redirect(url_for("communs.index"))
+
+@communs.route("/solution", methods=['GET', 'POST'])
+@theme_required
+def solution():
+    return render_template("communs/solution.html")
