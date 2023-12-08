@@ -1,5 +1,167 @@
 {% extends "common/base.html" %}
-{% block body %}
-<h1 class="title_pages">Jeux memory</h1>
 
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/memory.css') }}" xmlns="http://www.w3.org/1999/html">
+{% endblock %}
+
+{% block body %}
+<h1 class="title_pages">Jeu du Memory</h1>
+<div class="car_main">
+
+    <div class="car_colonne" id="liste">
+        <span class="text-center fs-2">
+            <p>Votre score :</p>
+            <div id="scrore"><strong>20</strong>/20</div>
+        </span>
+        <div id="grille" class="my-5">
+            <div class="car_case" id="case0"></div>
+            <div class="car_case" id="case1"></div>
+            <div class="car_case" id="case2"></div>
+            <div class="car_case" id="case3"></div>
+
+            <div class="car_case" id="case4"></div>
+            <div class="car_case" id="case5"></div>
+            <div class="car_case" id="case6"></div>
+            <div class="car_case" id="case7"></div>
+
+            <div class="car_case" id="case8"></div>
+            <div class="car_case" id="case9"></div>
+            <div class="car_case" id="case10"></div>
+            <div class="car_case" id="case11"></div>
+
+            <div class="car_case" id="case12"></div>
+            <div class="car_case" id="case13"></div>
+            <div class="car_case" id="case14"></div>
+            <div class="car_case" id="case15"></div>
+        </div>
+        <div class="m-auto w-75">
+            <button type="button" class="car_btn form-control btn btn-secondary" onClick="window.location.reload();">
+                Nouvelle partie
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+<button hidden="hidden" id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p style="color: #151C21; text-align: center">Partie Gagnée, bravo à vous !!</p>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block javascripts2 %}
+<script type="text/javascript">
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var nb_clics = 0;
+    var mini1 = "";
+    var mini2 = "";
+    var case1 = "";
+    var case2 = "";
+    var img_ok = 0;
+    var nb_erreurs = 0;
+    var le_score = 0;
+    var depart = false;
+
+    generation();
+
+    var attente = setTimeout(function () {
+        for (var i = 0; i < 16; i++) {
+            document.getElementById('img' + i).src = "{{url_for('static',filename='image/cartes/miniz.png')}}";
+        }
+        depart = true;
+    }, 4000);
+
+    function generation() {
+        var nb_alea;
+        var nb_img = "";
+        var test = true;
+        var chaine = "";
+
+        for (var i = 0; i < 16; i++) {
+            while (test === true) {
+                nb_alea = Math.floor(Math.random() * 16) + 1;
+                if (chaine.indexOf("-" + nb_alea + "-") > -1)
+                    nb_alea = Math.floor(Math.random() * 16) + 1;
+                else {
+                    nb_img = Math.floor((nb_alea + 1) / 2);
+                    document.getElementById('case' + i).innerHTML =
+                        `<img style='cursor:pointer;' id='img${i}' src='/static/image/cartes/mini${nb_img}.png'
+                        onClick='verifier(\"img${i}\",\"mini${nb_img}\")' alt='' />`;
+                    chaine += "-" + nb_alea + "-";
+                    test = false;
+                }
+            }
+            test = true;
+        }
+    }
+
+    function verifier(limg, source) {
+        if (depart === true) {
+            nb_clics++;
+            document.getElementById(limg).src = "/static/image/cartes/" + source + ".png";
+            if (nb_clics === 1) {
+                mini1 = source;
+                case1 = limg;
+            } else {
+                mini2 = source;
+                case2 = limg;
+
+                if (case1 !== case2) {
+                    depart = false;
+                    if (mini1 !== mini2) {
+                        var attente = setTimeout(function () {
+                            document.getElementById(case1).src = "{{url_for('static',filename='image/cartes/miniz.png')}}";
+                            document.getElementById(case2).src = "{{url_for('static',filename='image/cartes/miniz.png')}}";
+                            depart = true;
+                            nb_clics = 0;
+                            nb_erreurs++;
+                            document.getElementById(case2).src = "{{url_for('static',filename='image/cartes/miniz.png')}}";
+                            depart = true;
+                            nb_clics = 0;
+                            nb_erreurs++;
+                            if (nb_erreurs < 11) le_score = 20 - nb_erreurs;
+                            document.getElementById("scrore").innerHTML = "<strong>" + le_score + "</strong>/20";
+                        }, 1000);
+                    } else {
+                        depart = true;
+                        nb_clics = 0;
+                        img_ok += 2;
+                        if (img_ok === 16) {
+                            document.getElementById('myBtn').click();
+                            document.getElementById("scrore").innerHTML = "<strong>" + le_score + "</strong>/20";
+                        }
+                    }
+                } else {
+                    if (nb_clics === 2) nb_clics = 1;
+                }
+            }
+        }
+    }
+</script>
 {% endblock %}
