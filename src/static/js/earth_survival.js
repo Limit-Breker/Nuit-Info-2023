@@ -182,7 +182,7 @@ return moisEnFrancais[numeroMois];
 function closePopup(jeu) {
   document.getElementById("popup-info").classList.add("invisible");
   console.log(textPopup.innerHTML)
-  if(textPopup.innerHTML.charAt(0) == 'B') {
+  if(textPopup.innerHTML.substring(0,14) == 'Nous sommes en') {
     ouvrePopup(jeu, "Ici la Terre, voici les données : Pour l’instant la qualité de vie sur Terre est agréable, même si les océans subissent une légère augmentation de température, entraînant des perturbations dans les écosystèmes marins. Des phénomènes tels que le blanchissement corallien, bien que sporadiques, signalent des déséquilibres environnementaux préoccupants. Les habitants du monde entier restent sourds à nos messages d’alertes, vous êtes le seul à pouvoir nous conseiller.");
   }
   else if (jeu.fin >= 0) {
