@@ -1,5 +1,30 @@
 {% extends "common/base.html" %}
-{% block body %}
-<h1>Le jeux quizz</h1>
+{% block stylesheets %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quizz.css') }}">
+{% endblock %}
 
+{% block body %}
+    <div class="transparent-box">
+        <p>Lequel de ces transports produit le plus de CO2 par individu ?</p>
+    </div>
+    <div class="reponse">
+        <div class="reponse-box">
+            <p>avion</p>
+        </div>
+        <div class="reponse-box">
+            <p>voiture</p>
+        </div>
+        <div class="reponse-box">
+            <p>vélo</p>
+        </div>
+    </div>
+    <div class="button-container">
+        <button id="confirmButton" style="display: none;">Confirmer</button>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/quizz.js') }}"></script>
 {% endblock %}
