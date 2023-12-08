@@ -86,6 +86,8 @@ function setExpl(){
 }
 
 function setQuizz(){
+    checkend()
+
     deselectAll()
 
     document.getElementsByClassName("reponse")[0].style.display = "flex"
@@ -101,8 +103,10 @@ function setQuizz(){
 }
 
 function checkend(){
+    console.log(currentQuizz)
     if (currentQuizz >= 10){
         alert("fin du quizz")
+        window.location.href = "/";
     }
 }
 
