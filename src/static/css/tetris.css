@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+#tetris {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#texte_principale {
+    text-align: center;
+    margin: auto;
+}
+
+#instructions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+canvas {
+    margin-top : 100px;
+    border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+}
+
+#score {
+    position : absolute;
+    top : 130px;
+    right : 40px;
+    font-size: 40px;
+}
