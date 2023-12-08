@@ -38,6 +38,7 @@ def changer_theme(nouveau_theme):
 
 @api.route("/get-earth-survival", methods=["GET", "POST"])
 def get_earth_survival():
-    with open('static/json/questions-earth-survival.json') as file:
+    with open('static/json/question-earth-survival.json',encoding='UTF-8') as file:
         data = file.read()
+        print(data)
     return data

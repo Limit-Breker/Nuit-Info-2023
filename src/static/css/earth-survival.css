@@ -1,6 +1,6 @@
 #main-earth-survival {
   height: 100%;
-  background-image: linear-gradient(180deg, green, red);
+  background-image: url('/static/image/background.png');
   display: flex;
   justify-content: space-evenly;
   padding-top: 5%;

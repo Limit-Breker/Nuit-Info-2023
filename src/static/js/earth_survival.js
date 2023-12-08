@@ -32,7 +32,7 @@ async function incrementer(jeu) {
   jeu.compteur += jeu.increment*5/12;
   incrementerDate(jeu.date);
   if (jeu.question === null) {
-    if (Math.random() < 0.1) {
+    if (Math.random() < 1) {
       question = await getQuestion(Math.round(Math.random() * 20));
       console.log('question trouvée');
       jeu.question = question;
@@ -78,10 +78,34 @@ function ecrire(jeu) {
   console.log(jeu.question);
   if (jeu.question != null ) {
     fieldQuestion.innerHTML = jeu.question.intitule;
+    for (let i = 0;i <3; i++) {
+      console.log(jeu.question.reponse)
+      reponses[i].innerHTML = jeu.question.reponse[i].intitule;
+    }
   }
 }
 
 async function getQuestion(x) {
+  let json;
+  await fetch('/api/get-earth-survival')
+  .then(response => {
+    // Vérifier si la réponse est OK (statut HTTP 200-299)
+    if (!response.ok) {
+      throw new Error('La requête a échoué avec le statut ' + response.status);
+    }
+    
+    // Convertir la réponse JSON en objet JavaScript
+    return response.json();
+  })
+  .then(data => {
+    // Traiter les données ici
+    json = data;
+  })
+  .catch(error => {
+    // Gérer les erreurs ici
+    console.error('Erreur lors de la récupération des données:', error);
+  });
+  return json.question[x];
 }
 
 function incrementerDate(date) {
