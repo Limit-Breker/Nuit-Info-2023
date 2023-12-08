@@ -5,6 +5,7 @@ let fieldIncrement = document.getElementById("increment-compteur-degre")
 let reponses = [...document.getElementsByClassName("reponse")];
 let containerQuestion = document.getElementById("container-question");
 let btnOk = document.getElementById("fermer-info");
+let textPopup = document.getElementById("text-info");
 let imgFG = document.getElementById("mapFG");
 
 const MAUVAISE_FIN = 0;
@@ -19,17 +20,19 @@ class Jeu {
     this.date = new Date(Date.now());
     this.fin = -1;
     this.question = null;
+    this.pause = true;
   }
 }
 
 function jouer() {
-  btnOk.onclick=closePopup;
+  btnOk.onclick=function() {document.dispatchEvent(new Event('closePopup'))};
   for (let i = 0; i<3; i++) {
     reponses[i].onclick = clicReponse;
   }
   let jeu = new Jeu();
   document.addEventListener('finJeu', function(e) { jeu.fin = e.detail.fin; })
-  document.addEventListener('reponse', function(e) { handleReponse(jeu, e.detail) })
+  document.addEventListener('reponse', async function(e) { await handleReponse(jeu, e.detail) })
+  document.addEventListener('closePopup', function(e) {closePopup(jeu)})
   ecrire(jeu);
   incrementer(jeu);
 }
@@ -38,14 +41,14 @@ async function incrementer(jeu) {
   jeu.compteur += jeu.increment*5/12;
   incrementerDate(jeu.date);
   if (jeu.question == null) {
-    if (Math.random() < 0.3) {
+    if (Math.random() < 0.1) {
       question = await getQuestion(Math.round(Math.random() * 20));
       jeu.question = question;
     }
   }
   ecrire(jeu);
   testFin(jeu);
-  if (jeu.fin < 0) {
+  if (jeu.fin < 0 && !jeu.pause) {
     setTimeout(incrementer,1000/3,jeu);
   }
 }
@@ -146,17 +149,27 @@ const moisEnFrancais = [
 return moisEnFrancais[numeroMois];
 }
 
-function closePopup() {
+function closePopup(jeu) {
   document.getElementById("popup-info").classList.add("invisible");
+  jeu.pause = false;
+  console.log(jeu.pause)
+  setTimeout(incrementer(jeu),1000/3);
 }
 
 function clicReponse(e) {
   document.dispatchEvent(new CustomEvent('reponse',{detail: e.srcElement.id.charAt(7)-1}));
 }
 
-function handleReponse(jeu, num) {
+async function handleReponse(jeu, num) {
   jeu.increment += jeu.question.reponse[num].increment;
+  await ouvrePopup(jeu,jeu.question.popup);
   jeu.question = null;
 }
 
+async function ouvrePopup(jeu, texte) {
+  jeu.pause = true;
+  textPopup.innerHTML = texte;
+  document.getElementById("popup-info").classList.remove("invisible");
+  
+}
 jouer();
