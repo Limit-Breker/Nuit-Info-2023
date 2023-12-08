@@ -22,7 +22,7 @@
     justify-content: space-between /* Alignez les boutons en bas du conteneur */
     align-items: flex-end; 
 }
-
+$enable-button-pointers: true;
 /* Styles pour rendre les boutons réactifs */
 .bouton {
     display: flex;
