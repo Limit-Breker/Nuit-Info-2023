@@ -7,9 +7,8 @@
 <div class="center">
 
     <div class="flip">
-        <div class="front"
-            style="background-image: url(../../static/image/image_survival.png)">
-            <h1 class="text-shadow">Earth Survivor</hi>
+        <div class="front" style="background-image: url({{ url_for('static', filename='image/image_survival.png') }})">
+            <h1 class="text-shadow">Earth Survivor</h1>
         </div>
         <div class="back">
             <a href="{{ url_for('jeux.earth_survival') }}">
@@ -20,8 +19,8 @@
 
     <div class="flip">
         <div class="front"
-            style="background-image: url(../../static/image/image_quizz.png)">
-            <h1 class="text-shadow">FizzQUizz</hi>
+            style="background-image: url({{ url_for('static', filename='image/image_quizz.png') }})">
+            <h1 class="text-shadow">FizzQUizz</h1>
         </div>
         <div class="back">
             <a href="{{ url_for('jeux.quizz') }}">
@@ -32,8 +31,8 @@
 
     <div class="flip">
         <div class="front"
-            style="background-image: url(../../static/image/image_memory.png)">
-            <h1 class="text-shadow">Memory</hi>
+            style="background-image: url({{ url_for('static', filename='image/image_memory.png') }})">
+            <h1 class="text-shadow">Memory</h1>
         </div>
         <div class="back">
             <a href="{{ url_for('jeux.memory') }}">
@@ -44,8 +43,8 @@
 
     <div class="flip">
         <div class="front"
-            style="background-image: url(../../static/image/image_vrai_faux.png)">
-            <h1 class="text-shadow">Vrai ou Faux</hi>
+            style="background-image: url({{ url_for('static', filename='image/image_vrai_faux.png') }})">
+            <h1 class="text-shadow">Vrai ou Faux</h1>
         </div>
         <div class="back">
             <a href="{{ url_for('jeux.truth_game_id') }}">
