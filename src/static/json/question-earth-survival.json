@@ -5,139 +5,191 @@
         {"intitule" : "Le gaspillage lors de la production des aliments" , "increment" : 0.01},
         {"intitule" : "Le gaspillage lors du transport et dans la chaîne de distribution" , "increment" : 0.00},
         {"intitule" : "Le gaspillage des ménages au moment de la consommation" , "increment" : -0.01}
-    ]},
+    ],
+    "popup" : "Le gaspillage alimentaire est davantage présent au moment de la consommation par les ménages que lorsque les aliments sont produits et transportés."},
 
     {"intitule":"Le problème principal que rencontrent les projets de parcs éoliens est :", 
     "reponse":[
         {"intitule" : "Le coût de création des parcs" , "increment" : 0.01},
         {"intitule" : "Le manque d'espaces présentant un potentiel d'exploitation" , "increment" : 0.00},
         {"intitule" : "L'opposition de riverains, d'experts, et de collectifs pro-environnement" , "increment" : -0.01}
-    ]},
+    ],
+    "popup" : "La plupart du temps c’est malheureusement l’opposition des riverains et leur volonté de préserver l’écosystème autour de chez eux qui freine davantage les projets de parcs éoliens que le manque d’espaces ou leur coût de création."},
 
     {"intitule":"Le problème principal que rencontrent les projets de parcs éoliens est :", 
     "reponse":[
         {"intitule" : "Les attaques répétées de Don Quijote de la Mancha" , "increment" : 0.01},
         {"intitule" : "La rareté des matières premières utilisées dans la production des éoliennes" , "increment" : 0.00},
         {"intitule" : "L'impact des parcs sur l’écosystème environnant" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "La création d’un parc éolien capable de fournir de grandes quantités d’énergies renouvelables implique un fort impact sur l’écosystème dû au remplacement des paysages des forêts et des habitats ce qui représente un plus fort obstacle que l’apport en matériaux pour construire chaque éolienne."},
 
     {"intitule":"Le problème principal que rencontrent les projets de parcs photovoltaïques est :", 
     "reponse":[
         {"intitule" : "L'opposition de riverains, d'experts, et de collectifs pro-environnement" , "increment" : 0.01},
         {"intitule" : "Le coût de création des parcs" , "increment" : 0.00},
         {"intitule" : "Le manque d'espaces présentant un potentiel d'exploitation" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "La création d’un parc photovoltaïque de grande taille est une tâche difficile qui nécessite une espace dégagé où la lumière est présente tout au long de la journée, en revanche les riverains et les activistes ne s’opposent pas à la création des parcs. A l’heure actuelle, le prix de construction n’est pas ce qui freine leur déploiement."},
 
-    {"q5intitule":"Le problème principal que rencontrent les projets de parcs photovoltaïques est :", 
+    {"intitule":"Le problème principal que rencontrent les projets de parcs photovoltaïques est :", 
     "reponse":[
         {"intitule" : "L'impact des parcs sur l’écosystème environnant" , "increment" : 0.01},
         {"intitule" : "La rareté des matières premières utilisées dans la production des panneaux" , "increment" : 0.00},
         {"intitule" : "Le manque de lieux accessibles et de grande taille où la lumière est présente tout au long de la journée" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Les lieux accessibles et de grande taille où la lumière est présente tout au long de la journée sont de moins en moins nombreux dus à l’explosion démographique et l'expansion des villes, tandis que la création d’un parc photovoltaïque n’impacte pas du tout l’écosystème où il est installé. Les matières premières pour les panneaux sont difficiles à produire mais ce n’est pas pour l’instant ce qui freine leur déploiement."},
 
     {"intitule":"L'amélioration de l'efficacité énergétique passe avant tout par :", 
     "reponse":[
         {"intitule" : "Le chauffage de l’eau avec l’énergie solaire" , "increment" : 0.01},
         {"intitule" : "L’usage d’électroménager peu énergivore" , "increment" : 0.00},
         {"intitule" : "L'isolation des bâtiments" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "L’isolation des bâtiments a été prouvé largement plus efficace que le chauffage de l’eau à l’énergie solaire ou l’usage d’électroménager peu énergivore en termes d’efficacité énergétique compte tenu du fait que le chauffage des bâtiments constitue une grande partie de la consommation d’énergie mondiale."},
 
     {"intitule":"L'amélioration de l'efficacité énergétique passe avant tout par :", 
     "reponse":[
         {"intitule" : "Une réduction du gaspillage à l’échelle globale" , "increment" : 0.00},
         {"intitule" : "Une réduction du gaspillage d’énergie à l’échelle individuelle" , "increment" : 0.00},
         {"intitule" : "Une amélioration de l’efficacité des transports" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "L’efficacité énergétique passe par une réduction du gaspillage à l'échelle individuelle ET globale, chacun de nous en a la responsabilité et grâce à cet effort commun nous pouvons agir à grande échelle, il faut donc agir et en parler autour de nous, ce qui n’est pas si facile au quotidien. En revanche, prendre les transports en commun et valoriser les transports électriques et durables pour réduire son empreinte carbone est un acte simple qui peut changer beaucoup de choses à l'échelle individuelle."},
 
     {"intitule":"Les principaux obstacles à l’électrification du parc automobile sont :", 
     "reponse":[
         {"intitule" : "Le manque de coopération technique entre constructeurs" , "increment" : 0.01},
         {"intitule" : "Le besoin d'avoir un réseau développé de smart grid (bornes de recharge)" , "increment" : 0.00},
         {"intitule" : "le besoin d'exploiter des métaux rares comme le lithium" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Les batteries des voitures électriques ont besoin de lithium pour fonctionner, or c’est un métal rare ce qui freine la baisse des prix et le déploiement total du parc automobile. Les smart grids ou bornes de recherches pour voitures électriques sont nécessaires et en manque, cependant comme le nombre de voitures électriques est pour l’instant limité, le manque se fait moins ressentir que le besoin de matières premières."},
 
     {"intitule":"Les principaux obstacles à l’électrification du parc automobile sont :", 
     "reponse":[
         {"intitule" : "La quantité de pollution supérieure induite par la fabrication d'un véhicule électrique" , "increment" : 0.01},
         {"intitule" : "Le plaisir de conduite moindre procuré par un véhicule électrique" , "increment" : 0.01},
         {"intitule" : "Leur prix, qui les rendent inaccessibles à une partie de la population" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Le prix des voitures électriques est très important en raison des matières premières utilisées comme le lithium. D’après des études sur les potentiels consommateurs de voitures électriques, la pollution à la construction et le plaisir de conduire une voiture polluante ne semblent pas être les raisons principales de la faible popularité de ces véhicules. En revanche, le prix est souvent trop élevé comparé aux autres types de véhicules. En France, il existe une aide à l’achat d’un véhicule électrique neuf d’une valeur de 5000 euros pour compenser cet écart."},
 
     {"intitule":"Parmi les propositions suivantes, quels environnements absorbent actuellement du carbone :", 
     "reponse":[
         {"intitule" : "Les glaciers" , "increment" : 0.01},
         {"intitule" : "La couche d’ozone" , "increment" : 0.01},
         {"intitule" : "Les océans" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Les océans absorbent le C02 présent dans l’air grâce à une dissolution du dioxyde de carbone en acide carbolique grâce à ses anions. La couche d’ozone n’absorbe pas le carbone mais elle est encombrée par une grande quantité de dioxyde de carbone qui l’empêche de se reformer. Quant aux glaciers, le réchauffement climatique fait fondre les glaciers qui relâchent du C02 et qui, pour les glaciers terrestres, font monter le niveau de la mer."},
 
     {"intitule":"Parmi les propositions suivantes, quels environnements absorbent actuellement du carbone :", 
     "reponse":[
         {"intitule" : "Le permafrost (ou pergélisol)" , "increment" : 0.02},
         {"intitule" : "Les dorsales océaniques" , "increment" : 0.01},
         {"intitule" : "Les forêts" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Les forêts absorbent le C02 présent dans l’air grâce à la photosynthèse. Les dorsales océaniques elles,  sont des zones propices aux volcans sous-marins laissant s'échapper de faibles quantité de carbone de manière naturelle. Cependant, le permafrost est une zone glaciaire où d'énormes quantité de C02 se sont stockées pendant des millions d’années. Aujourd’hui sa fonte liée au réchauffement de l’atmosphère terrestre menace de faire augmenter la quantité de gaz à effet de serre de manière drastique, elle n’absorbe donc pas du tout le C02 !"},
 
     {"intitule":"Au niveau mondial, Quels secteurs émettent le plus de CO2  :", 
     "reponse":[
         {"intitule" : "Culture" , "increment" : 0.01},
         {"intitule" : "Logement" , "increment" : 0.00},
         {"intitule" : "Industrie" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "D’après les données du ministère de la transition écologique en 2022, les émissions de C02 en France proviennent à 18% de l’industrie, à 16% du logement et à moins de 12% du secteur de la Culture."},
 
     {"intitule":"Au niveau mondial, Quels secteurs émettent le plus de CO2  :", 
     "reponse":[
         {"intitule" : "Spatial" , "increment" : 0.01},
         {"intitule" : "Transport" , "increment" : -0.01},
         {"intitule" : "Agriculture" , "increment" : 0.00}
-    ]},
+   ],
+    "popup" : "D’après les données du ministère de la transition écologique en 2022, les émissions de C02 en France proviennent à 41% des transports, à 4% du logement et à moins de 4% du secteur spatial."},
 
     {"intitule":"Le cycle du carbone est :", 
     "reponse":[
         {"intitule" : "Le cycle de vie d'un atome de carbone" , "increment" : 0.01},
         {"intitule" : "Le processus de transformation de la matière organique en matière fossile (charbon, pétrole, gaz) " , "increment" : 0.01},
         {"intitule" : "L'échange de CO2 entre la Terre et l'atmosphère" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Le cycle du carbone est le processus naturel par lequel le carbone circule entre l'atmosphère, les océans, la biosphère (les êtres vivants), et la lithosphère(la croûte terrestre), et donc le chemin d’un atome de carbone sur Terre et non pas son cycle de vie ou sa transformation."},
 
     {"intitule":"Le cycle du carbone est :", 
     "reponse":[
         {"intitule" : "Causé par l'activité humaine" , "increment" : 0.01},
         {"intitule" : "Indépendant de l'activité humaine" , "increment" : 0.01},
         {"intitule" : "Perturbé par l'activité humaine" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Le cycle du carbone existait déjà avant l’apparition de l’activité humaine, il n’est donc pas causé par l’activité humaine, en revanche il n’est pas indépendant de l’activité humaine non plus : depuis l’industrialisation au 19ème siècle, le dioxyde de carbone est relâché en masse dans l’atmosphère par de nombreuses combustions liées aux différents secteurs d’activité de notre société moderne."},
 
     {"intitule":"Les tourbières sont :", 
     "reponse":[
         {"intitule" : "Une source d’émissions de CO2, qu'il est donc nécessaire de reboiser" , "increment" : 0.01},
         {"intitule" : "Des zones à risque qui contiennent du CO2 et qu’il faut sécuriser" , "increment" : 0.01},
         {"intitule" : "Un puits naturel de carbone, qu'il est donc nécessaire de préserver" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Une tourbière est un type d'écosystème humide riche en végétaux formés dans des conditions de sol saturé en eau. Les tourbières sont des écosystèmes précieux qui absorbent d’énormes quantités de CO2, mais elles sont également menacées par des activités humaines telles que le drainage pour l'agriculture, ce ne sont ni des zones à risque ni des sources d'émissions de CO2 mais bien des puits naturels de carbone."},
 
     {"intitule":"Les tourbières sont :", 
     "reponse":[
         {"intitule" : "Neutres en carbone (n'absorbent ni n'émettent de CO2), mais à préserver pour la biodiversité qu'elles abritent" , "increment" : 0.01},
         {"intitule" : "Neutres en carbone (n'absorbent ni n'émettent de CO2), à cultiver car fertiles" , "increment" : 0.01},
         {"intitule" : "Négatives en carbone, à protéger des industriels en recherche d’expansion" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Une tourbière est un type d'écosystème humide riche en végétaux formés dans des conditions de sol saturé en eau. Les tourbières sont des écosystèmes précieux qui absorbent d’énormes quantités de CO2, mais elles sont également menacées par des activités humaines telles que le drainage pour l'agriculture, elles ne sont donc pas neutres en carbone et ne sont surtout pas à des zones à cultiver mais bien des puits naturels de carbone !"},
 
     {"intitule":"Quel est, à l'heure actuelle, le(s) principal(aux) obstacle(s) à l'emploi de biocarburant à grande échelle ?", 
     "reponse":[
         {"intitule" : "Les plantes à l'origine du biocarburant ne poussent que dans des conditions spécifiques, les terres adaptées manquent" , "increment" : 0.01},
         {"intitule" : "Les moteurs à carburants fossiles ne sont pas convertibles, et les véhicules adaptés sont encore rares" , "increment" : 0.01},
         {"intitule" : "Cela nécessite de consacrer beaucoup de terres agricoles pour cultiver la matière première " , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Le plus gros obstacle à l’emploi de biocarburants ne sont ni les conditions nécessaires pour faire pousser les plantes destinées à leur fabrication ni un problème de moteur mais tout simplement, la place dans les exploitations agricoles qui sont déjà surexploitées. Pour mettre en place la production massive de ces plantes, il faudrait envisager de nouvelles méthodes comme par exemple créer des zones agricoles durables dans les forêts en conservant l’intégralité des arbres et en utilisant des machines plus transportables et de petite taille pour préserver l'état de la forêt et de sa biodiversité. Ces méthodes ont déjà été envisagées par des grandes firmes de production d’énergie."},
 
     {"intitule":"Quel est, à l'heure actuelle, le(s) principal(aux) obstacle(s) à l'emploi de biocarburant à grande échelle ?", 
     "reponse":[
         {"intitule" : "Les coûts de production des biocarburants sont encore trop élevés pour être compétitifs face aux carburants fossiles" , "increment" : 0.01},
         {"intitule" : "De par leur faible efficience, et des émissions issues de leur production, les biocarburants restent trop polluants" , "increment" : 0.01},
         {"intitule" : "Les espaces pour cultiver sont limités" , "increment" : -0.01}
-    ]},
+   ],
+    "popup" : "Le plus gros obstacle à l’emploi de biocarburants ne sont ni les coûts de production pour faire pousser les plantes destinées à leur fabrication ni un problème de pollution à la création (le résultat reste toujours bien meilleur que celui des énergies fossiles)  mais tout simplement, la place dans les exploitations agricoles qui sont déjà surexploitées. Pour mettre en place la production massive de ces plantes, il faudrait envisager de nouvelles méthodes comme par exemple créer des zones agricoles durables dans les forêts en conservant l’intégralité des arbres et en utilisant des machines plus transportables et de petite taille pour préserver l'état de la forêt et de sa biodiversité. Ces méthodes ont déjà été envisagées par des grandes firmes de production d’énergie."},
+
+    {"intitule":"Comment réagir face à la famine liée à la disparition des terres agricoles à l'échelle mondiale ?", 
+    "reponse":[
+        {"intitule" : "Commencer Culture Hydroponique et Aéroponique" , "increment" : -0.02},
+        {"intitule" : "Ne pas changer commencer d’autres types d’agricultures intensives qui risquent de détruire encore la planète  mais réduire sa consommation" , "increment" : 0.01},
+        {"intitule" : "Accroître la culture de la Terre avec des Engrais azotés qui permettent un meilleur rendement sur une même quantité de sol utilisé" , "increment" : 0.05}
+   ],
+    "popup" : "La Culture Hydroponique et la Culture Aéroponique sont deux techniques futuristes de produire des nutriments dans des situations extrêmes et avec peu de ressources. Cela nécessite cependant des calculs précis et des études avancées, car ces deux techniques se base sur un rendement entre ressources utilisées et ressources reçues par les végétaux de 100%, toutes les ressources sont dans un endroit clos que ce soit une laine de verre (Hydroponique) ou un nuage de nutriment ( Aéroponique ) qui recyclent tous les nutriments et les ressources pour les fournir à la plante coûte que coûte. Les engrais azotés en revanche sont des produits chimiques extrêmement nocifs pour l’environnement."},
+
+    {"intitule":"Comment réagir face à la famine liée à la disparition des terres agricoles à l'échelle individuelle ?", 
+    "reponse":[
+        {"intitule" : "Abandonner les ressources naturelles peu nutritives et se concentrer sur les réserves de nourriture sous vide" , "increment" : 0.02},
+        {"intitule" : "Produire de la nourriture à partir des insectes encore vivants" , "increment" : -0.02},
+        {"intitule" : "Se procurer des sachets de réhydratation et des sucres rapides pour avoir un maximum d'énergie sur une longue période de temps" , "increment" : 0.02}
+   ],
+    "popup" : "Les ressources naturelles ne doivent pas être abandonnées mais conservées et les réserves sous vide doivent être économisées tandis que les sachets de réhydratation et le sucre ne permettent pas de résister à la famine et ne sont pas présents en assez grande quantité. Produire de nouvelles formes de nourritures à base d'insectes est une excellente solution."},
+
+    {"intitule":"Comment réagir face à la pénurie d’eau liée au réchauffement de l’atmosphère et à la sécheresse à l'échelle mondiale ?", 
+    "reponse":[
+        {"intitule" : "Utiliser les ressources d'énergie pour exploiter la désalinisation des océans" , "increment" : 0.01},
+        {"intitule" : "Ne pas conserver l’eau, ça couperait le cycle de l’eau et il n’y aurait pas de renouvellement l’eau serait épuisé trop rapidement" , "increment" : 0.01},
+        {"intitule" : "Développer des technologie de filtration de l’eau des pluies acides et des eaux grises" , "increment" : -0.02}
+   ],
+    "popup" : "Dessaliniser les océans remplis d’acide carbonique due à l’augmentation des gaz à effet de serre semble quasiment impossible dans un contexte où l'énergie est à utiliser avec parcimonie. Il faut donc conserver l’eau et la filtrer."},
+
+    {"intitule":"Quels sont les cataclysmes auxquels il faut se préparer en priorité ?", 
+    "reponse":[
+        {"intitule" : "Se préparer aux ouragans" , "increment" : -0.02},
+        {"intitule" : "Se préparer aux pandémies liées au dérèglement de la biodiversité et à la fonte du permafrost libérant des virus anciens" , "increment" : 0.01},
+        {"intitule" : "se préparer aux radiations et à l’effondrement du champs magnétique terrestre en construisant des abris anti radiation pour les populations" , "increment" : 0.03}
+   ],
+    "popup" : "L’effondrement du champ magnétique terrestre et une pandémie mondiale sont des éléments peut liés au réchauffement climatique et donc moins probable que l’apparition de nombreux ouragans dont il faut se protéger."},
 
     {"intitule":"D’après les connaissances que vous avez acquises pendant votre survie au travers de cette prévision de l’avenir de notre planète bleue, laquelle de ces propositions serait un meilleur exemple de solution de transition écologique ?", 
     "reponse":[
         {"intitule" : "Le contrôle et la limitation des naissances" , "increment" : 0.04},
         {"intitule" : "La limitation volontaire des avancées techniques, dès lors qu'elles peuvent nuire à la nature" , "increment" : 0.02},
         {"intitule" : "L'amélioration de l'efficacité énergétique des bâtiments (limitation des pertes énergétiques par exemple)" , "increment" : -0.03}
-    ]}
+    ],
+    "popup" : "Le contrôle des naissances a été employé par la Chine au 20ème siècle pour limiter une croissance démographique exponentielle. Cependant, cela reste une solution temporaire qui modifie trop peu notre mode de vie et de consommation. D’autre part, le fait de limiter nos avancées techniques pour revenir à un état désindustrialisé n’est pas une solution durable et ne ferait que retarder le développement des pays qui ne polluent pas encore autant que les pays les plus riches. Empêcher l’augmentation du niveau de vie et faire reculer la société humaine représente une solution drastique qui prendrait énormément de temps et qui n’a pas été démontrée, étant donné que le réchauffement climatique continuera même après un arrêt total de l’industrie. En effet, il apparaît clairement que nos avancées technologiques sont les seuls moyens de faire machine arrière dans les années à venir, et que le fait de les limiter n’est pas la bonne solution. Si nous concentrons nos avancées techniques vers des solutions durables, nous avons un espoir de stopper le réchauffement critique de la Terre."}
     ]
 }
